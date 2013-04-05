@@ -57,7 +57,12 @@ class Gui(windows.Gui):
         """
         Start browser and load website.
         """
-        command = config['command'] or r'c:\progra~1\mozilla.org\seamon~1\seamonkey.exe'
+        this.major = config['major']
+        if config['major'] > 1:
+            defcmd = r'c:\progra~1\seamonkey\seamonkey.exe'
+        else:
+            defcmd = r'c:\progra~1\mozilla.org\seamonkey\seamonkey.exe'
+        command = config['command'] or defcmd
         print 'running', command
         try:
             import subprocess
@@ -70,8 +75,22 @@ class Gui(windows.Gui):
 
     def find_scrollable(self):
         """Find scrollable window."""
-        seamonkey = self.find_window_by_title_suffix(' SeaMonkey')
-        return self.get_child_window(seamonkey)
+        if self.major > 1:
+            hwnd = win32gui.WindowFromPoint((self.width/2, self.height/2))
+            for dummy in range(20):
+                if not hwnd:
+                    return None
+                if self.verbose >= 3:
+                    print 'handle', hwnd
+                    print 'classname', win32gui.GetClassName(hwnd)
+                    print 'text', win32gui.GetWindowText(hwnd)
+                    print
+                if win32gui.GetClassName(hwnd) == 'MozillaWindowClass':
+                    return hwnd
+                hwnd = win32gui.GetParent(hwnd)
+        else:
+            seamonkey = self.find_window_by_title_suffix(' SeaMonkey')
+            return self.get_child_window(seamonkey)
 
 
 # Test scrolling from command line
