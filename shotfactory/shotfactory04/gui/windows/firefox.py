@@ -24,6 +24,7 @@ __author__ = "$Author: hawk $"
 
 import os
 import time
+import win32gui
 from win32com.shell import shellcon
 from win32com.shell import shell
 from shotfactory04.gui import windows
@@ -57,6 +58,7 @@ class Gui(windows.Gui):
         """
         Start browser and load website.
         """
+        self.major = config['major']
         command = config['command'] or r'c:\progra~1\mozill~1\firefox.exe'
         print 'running', command
         try:
@@ -70,7 +72,7 @@ class Gui(windows.Gui):
 
     def find_scrollable(self):
         """Find scrollable window."""
-        if config['major'] > 3:
+        if self.major > 3:
             hwnd = win32gui.WindowFromPoint((self.width/2, self.height/2))
             for dummy in range(20):
                 if not hwnd:

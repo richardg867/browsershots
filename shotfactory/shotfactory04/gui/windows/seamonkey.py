@@ -24,6 +24,7 @@ __author__ = "$Author: johann $"
 
 import os
 import time
+import win32gui
 from win32com.shell import shellcon
 from win32com.shell import shell
 from shotfactory04.gui import windows

@@ -23,7 +23,7 @@ import time
 from win32com.shell import shellcon
 from win32com.shell import shell
 from shotfactory04.gui import windows
-
+from shotfactory04.utils import short_filename
 
 class Gui(windows.Gui):
     """
@@ -61,11 +61,15 @@ class Gui(windows.Gui):
         """
         Close the browser.
         """
-        name = os.path.basename(self.command.split(" ")[0])
-        os.system('pv.exe -kf %s "2>nul" > nul' % name)
-        short = short_filename(name)
-        if short != name:
-            os.system('pv.exe -kf %s "2>nul" > nul' % short)
+        try:
+            if "command" in self.__dict__:
+                name = os.path.basename(self.command.split(" ")[0])
+                os.system('pv.exe -kf %s "2>nul" > nul' % name)
+                short = short_filename(name)
+                if short != name:
+                    os.system('pv.exe -kf %s "2>nul" > nul' % short)
+        except:
+            doNothing = ""
 
 
 # Test scrolling from command line
