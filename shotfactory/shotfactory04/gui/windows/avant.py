@@ -15,7 +15,7 @@
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 """
-GUI-specific interface functions for Google Chrome on Microsoft Windows.
+GUI-specific interface functions for Avant Browser on Microsoft Windows.
 """
 
 __revision__ = "$Rev: 3053 $"
@@ -29,21 +29,23 @@ import win32con
 from win32com.shell import shellcon
 from win32com.shell import shell
 from shotfactory04.gui import windows
+from shotfactory04.gui.windows import msie as base
 
-
-class Gui(windows.Gui):
+class Gui(base.Gui):
     """
-    Special functions for Chrome on Windows.
+    Special functions for Avant on Windows.
     """
-
+    
     def reset_browser(self):
         """
         Delete previous session and browser cache.
         """
+        # Remove crash data
         appdata = shell.SHGetFolderPath(0, shellcon.CSIDL_LOCAL_APPDATA, 0, 0)
         self.delete_if_exists(os.path.join(
-            appdata, 'Google', 'Chrome', 'User Data', '*'))
-
+            appdata, 'Avant Profiles', '.default', '*.opg'))
+        pass
+    
     def start_browser(self, config, url, options):
         """
         Start browser and load website.
@@ -58,16 +60,7 @@ class Gui(windows.Gui):
         else:
             subprocess.Popen([command, url])
         print "Sleeping %d seconds while page is loading." % options.wait
-        time.sleep(options.wait - 10)
-        self.maximize()
-        time.sleep(10)
-
-    def maximize(self):
-        """Maximize the browser window."""
-        window = self.find_maximizable()
-        if window:
-             win32gui.PostMessage(window,
-                 win32con.WM_SYSCOMMAND, win32con.SC_MAXIMIZE)
+        time.sleep(options.wait)
 
     def find_maximizable(self):
         """Find window to maximize."""
