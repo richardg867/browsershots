@@ -57,7 +57,7 @@ class Gui(windows.Gui):
         """
         Start browser and load website.
         """
-        this.major = config['major']
+        self.major = config['major']
         if config['major'] > 1:
             defcmd = r'c:\progra~1\seamonkey\seamonkey.exe'
         else:
