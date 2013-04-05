@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}Debug View{% endblock %}
+
+{% block content %}
+<h1>Submitting new screenshot requests</h1>
+
+<pre>
+url_form.is_bound: {{ url_form.is_bound }}
+options_form.is_bound: {{ options_form.is_bound }}
+linux_browsers.is_bound: {{ linux_browsers.is_bound }}
+windows_browsers.is_bound: {{ windows_browsers.is_bound }}
+mac_browsers.is_bound: {{ mac_browsers.is_bound }}
+</pre>
+
+<pre>
+url_form.is_valid: {{ url_form.is_valid }}
+options_form.is_valid: {{ options_form.is_valid }}
+linux_browsers.is_valid: {{ linux_browsers.is_valid }}
+windows_browsers.is_valid: {{ windows_browsers.is_valid }}
+mac_browsers.is_valid: {{ mac_browsers.is_valid }}
+</pre>
+
+<pre>
+url: {{ url }}
+website: {{ website.id }}
+request_group: {{ request_group.id }}
+maximum wait: {{ minutes }} minutes
+</pre>
+
+<pre>
+{% for request in request_list %}
+{{ request }}
+{% endfor %}
+</pre>
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block title %}{{ _("page not found")|capfirst }}{% endblock %}
+
+{% block content %}
+<h1>{{ _("page not found")|capfirst }}</h1>
+<p class="admonition error">{{ _("The requested page was not found.") }}</p>
+<p>Please <a href="mailto:johann@browsershots.org">send email</a> if you think this is a bug.</p>
+{% endblock %}

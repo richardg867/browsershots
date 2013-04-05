@@ -1,0 +1,1679 @@
+# Danish translation for shotserver
+# Copyright (c) 2007 Rosetta Contributors and Canonical Ltd 2007
+# This file is distributed under the same license as the shotserver package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2007.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: shotserver\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-01-31 19:00+0100\n"
+"PO-Revision-Date: 2007-12-17 10:06+0000\n"
+"Last-Translator: Kent Grady <mcgreedy@gmail.com>\n"
+"Language-Team: Danish <da@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2008-01-31 11:04+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#: accounts/views.py:65
+msgid "You're already signed in"
+msgstr "Du er allerede logget ind"
+
+#: accounts/views.py:66
+msgid "Please log out and then try again."
+msgstr "Log venligst ud og prøv så igen."
+
+#: accounts/views.py:75
+msgid "Username"
+msgstr "Brugernavn"
+
+#: accounts/views.py:76
+msgid "Password"
+msgstr "Adgangskode"
+
+#: accounts/views.py:93
+msgid "Please enable cookies in your browser."
+msgstr "TIllad venligst 'cookies' i din browser."
+
+#: accounts/views.py:99
+msgid "Incorrect username or password."
+msgstr "Der var en fejl i det indtastede brugernavn eller kodeord."
+
+#: accounts/views.py:101
+msgid "This account is inactive."
+msgstr "Denne konto er inaktiv."
+
+#: accounts/views.py:103 accounts/views.py:203
+msgid "Welcome to Browsershots!"
+msgstr "Velkommen til Browsershots!"
+
+#: accounts/views.py:104
+msgid "let me in"
+msgstr "luk mig ind"
+
+#: accounts/views.py:111
+msgid "Forgot your password?"
+msgstr "Glemt dit kodeord?"
+
+#: accounts/views.py:112
+msgid "Create a new account?"
+msgstr "Lav en ny bruger-konto?"
+
+#: accounts/views.py:127
+msgid "logged out"
+msgstr "logget ud"
+
+#: accounts/views.py:129
+msgid "You have successfully logged out."
+msgstr "Du er nu logget ud."
+
+#: accounts/views.py:200 accounts/templates/accounts/profile.html:8
+#, python-format
+msgid "Hi %(first_name)s!"
+msgstr "Hej %(first_name)s!"
+
+#: accounts/views.py:229
+msgid "too many verification emails"
+msgstr "for mange verifikations e-mails"
+
+#: accounts/views.py:230
+msgid "There were too many email requests from your IP in the last 24 hours."
+msgstr "Der var for mange e-mail anmodninger fra din IP de seneste 24 timer."
+
+#: accounts/views.py:231 factories/views.py:58 start/views.py:86
+#: start/templates/start/start.html:20
+msgid "Please try again later."
+msgstr "Prøv venligst igen senere."
+
+#: accounts/views.py:234
+msgid "email verification"
+msgstr "e-mail verifikation"
+
+#: accounts/views.py:236
+msgid "send email"
+msgstr "send e-mail"
+
+#: accounts/views.py:254
+msgid "email error"
+msgstr "e-mail fejl"
+
+#: accounts/views.py:255
+msgid "Could not send email."
+msgstr "Kunne ikke afsende e-mail."
+
+#: accounts/views.py:257
+msgid "email sent"
+msgstr "e-mail sendt"
+
+#: accounts/views.py:258
+#, python-format
+msgid "A verification email was sent to %(address)s."
+msgstr "En bekræftelses e-mail er sendt til %(address)s."
+
+#: accounts/views.py:259
+msgid "Check your email inbox and follow the instructions in the message."
+msgstr ""
+"Check din e-mail indbakke og følg instruktionerne i den mail du har modtaget."
+
+#: accounts/views.py:260
+msgid "If your email provider uses graylisting, it may take a few minutes."
+msgstr ""
+"Hvis din e-mail udbyder bruger \"graylisting\" kan det tage et par minutter."
+
+#: accounts/views.py:279
+msgid "username"
+msgstr "brugernavn"
+
+#: accounts/views.py:282
+msgid "first name"
+msgstr "fornavn"
+
+#: accounts/views.py:285
+msgid "last name"
+msgstr "efternavn"
+
+#: accounts/views.py:294
+msgid "Username must start with a lowercase letter."
+msgstr "Brugernavn skal starte med en lille bogstav."
+
+#: accounts/views.py:298
+msgid ""
+"Username may contain only lowercase letters, digits, underscore, hyphen."
+msgstr "Brugernavn må kun indeholde små tegn, tal, understreg og bindestreg."
+
+#: accounts/views.py:301
+msgid "This username is reserved."
+msgstr "Dette brugernavn er reserveret."
+
+#: accounts/views.py:310 browsers/views.py:49
+msgid "password"
+msgstr "kodeord"
+
+#: accounts/views.py:313
+msgid "again"
+msgstr "igen"
+
+#: accounts/views.py:323
+#, python-format
+msgid "The password must have %d or more characters."
+msgstr "Kodeord skal have %d eller flere tegn."
+
+#: accounts/views.py:327
+msgid "The password must not be completely numeric."
+msgstr "Kodeordet må ikke kun bestå af tal."
+
+#: accounts/views.py:340
+msgid "Repeat password is not the same."
+msgstr "Det gentagne kodeord er ikke det samme."
+
+#: accounts/views.py:361
+msgid "This username is already taken."
+msgstr "Dette brugernavn er allerede taget."
+
+#: accounts/views.py:375
+msgid "Wrong IP address"
+msgstr "Forkert IP-adresse"
+
+#: accounts/views.py:376
+msgid "The verification email was requested from a different IP address."
+msgstr "Verifikations e-mailen sendt blev sendt fra en anden IP-adresse."
+
+#: accounts/views.py:378
+msgid "Bad verification code"
+msgstr "Forkert verifikations kode"
+
+#: accounts/views.py:379
+msgid "The verification code has no email address."
+msgstr "Verifikations koden har ingen e-mail adresse."
+
+#: accounts/views.py:381
+msgid "Verification code expired"
+msgstr "Verifikations koden er udløbet"
+
+#: accounts/views.py:382
+msgid "The verification email was requested more than 24 hours ago."
+msgstr "Bekræftelses e-mailen blev sendt for mere end 30 minutter siden."
+
+#: accounts/views.py:396
+msgid "choose a new password"
+msgstr "vælg et nyt kodeorod"
+
+#: accounts/views.py:398
+msgid "change password"
+msgstr "skift kodeord"
+
+#: accounts/views.py:405
+msgid "Password changed"
+msgstr "Kodeord ændret"
+
+#: accounts/views.py:406
+msgid "Your new password has been saved."
+msgstr "Dit nye kodeord er blevet gemt."
+
+#: accounts/views.py:407 accounts/views.py:431
+msgid "Click the link in the top right corner to log in."
+msgstr "Klik på linket i øverste højre hjørne for at logge ind."
+
+#: accounts/views.py:419
+msgid "create a new account"
+msgstr "lav en ny bruger-konto"
+
+#: accounts/views.py:421
+msgid "create account"
+msgstr "lav bruger-konto"
+
+#: accounts/views.py:429
+msgid "Account created"
+msgstr "Konto oprettet"
+
+#: accounts/views.py:430
+msgid "A new user account was created."
+msgstr "En ny bruger-konto blev lavet."
+
+#: accounts/templates/accounts/profile.html:5
+msgid "profile"
+msgstr "profil"
+
+#: accounts/templates/accounts/profile.html:11
+msgid "This is your private profile page. Only you can see it."
+msgstr "Dette er din private profil. Kun du kan se den."
+
+#: accounts/templates/accounts/profile.html:18
+msgid "month"
+msgstr ""
+
+#: accounts/templates/accounts/profile.html:19
+#, fuzzy
+msgid "total screenshots"
+msgstr "screenshots"
+
+#: accounts/templates/accounts/profile.html:20
+#, fuzzy
+msgid "from my factories"
+msgstr "fabrikker"
+
+#: accounts/templates/accounts/profile.html:21
+msgid "percent"
+msgstr ""
+
+#: accounts/templates/accounts/profile.html:36
+msgid "your screenshot factories"
+msgstr "dinne screenshot fabrikker"
+
+#: accounts/templates/accounts/profile.html:50
+msgid "Register a new screenshot factory?"
+msgstr "Registrer en ny screenshot fabrik?"
+
+#: accounts/templates/accounts/profile.html:51
+#: factories/templates/factories/details.html:71
+msgid "Register this browser for screenshots?"
+msgstr "Registrer denne browser for screenshots?"
+
+#: accounts/templates/accounts/profile.html:55
+msgid "recent factory errors"
+msgstr "seneste fabrik-fejl"
+
+#: accounts/templates/accounts/profile.html:59 browsers/models.py:93
+#: browsers/views.py:47 factories/models.py:95 factories/models.py:207
+#: factories/models.py:233 factories/models.py:254 messages/models.py:35
+#: nonces/models.py:39 requests/models.py:389 screenshots/models.py:115
+#: screenshots/templates/screenshots/details.html:58
+msgid "factory"
+msgstr "fabrik"
+
+#: accounts/templates/accounts/profile.html:60
+msgid "code"
+msgstr "kode"
+
+#: accounts/templates/accounts/profile.html:61
+msgid "message"
+msgstr "besked"
+
+#: accounts/templates/accounts/profile.html:62
+msgid "age"
+msgstr "alder"
+
+#: accounts/templates/accounts/profile.html:78
+msgid "account balance"
+msgstr "konto balance"
+
+#: browsers/models.py:39 browsers/models.py:64 factories/models.py:52
+#: factories/templates/factories/details.html:33 platforms/models.py:34
+#: platforms/models.py:58 sponsors/models.py:37 websites/models.py:47
+msgid "name"
+msgstr "navn"
+
+#: browsers/models.py:40
+msgid "e.g. Gecko / KHTML / AppleWebKit"
+msgstr "f.eks. Gecko / KTHML /AppleWebkit"
+
+#: browsers/models.py:42 browsers/models.py:67 platforms/models.py:64
+msgid "maker"
+msgstr "lavet af"
+
+#: browsers/models.py:49 browsers/models.py:105
+#: factories/templates/factories/details.html:35
+#: screenshots/templates/screenshots/details.html:42
+msgid "engine"
+msgstr "motor"
+
+#: browsers/models.py:50
+msgid "engines"
+msgstr "\"engines\""
+
+#: browsers/models.py:65
+msgid "e.g. Firefox / MSIE / Safari"
+msgstr "f.eks. Firefox / MSIE / Safari"
+
+#: browsers/models.py:69
+msgid "terminal"
+msgstr "terminal"
+
+#: browsers/models.py:69
+msgid "Is this a text-mode browser?"
+msgstr "Er dette en \"text-mode\" browser?"
+
+#: browsers/models.py:71
+msgid "unusual"
+msgstr "usædvanlig"
+
+#: browsers/models.py:71
+msgid "Hide from recent screenshot overview?"
+msgstr "Gem fra seneste screenshot oversigt?"
+
+#: browsers/models.py:78 browsers/models.py:97 requests/models.py:381
+msgid "browser group"
+msgstr "browser gruppe"
+
+#: browsers/models.py:79
+msgid "browser groups"
+msgstr "browser gruppe"
+
+#: browsers/models.py:95
+msgid "user agent"
+msgstr "\"user agent\""
+
+#: browsers/models.py:99 features/models.py:60 features/models.py:81
+#: features/models.py:102 platforms/models.py:60
+msgid "version"
+msgstr "version"
+
+#: browsers/models.py:101 requests/models.py:383
+msgid "major"
+msgstr "stor"
+
+#: browsers/models.py:103 requests/models.py:385
+msgid "minor"
+msgstr "mindre"
+
+#: browsers/models.py:107
+msgid "engine version"
+msgstr "\"engine version\""
+
+#: browsers/models.py:109 factories/templates/factories/details.html:36
+#: requests/models.py:62 screenshots/templates/screenshots/details.html:46
+#: start/forms/features.py:66
+msgid "Javascript"
+msgstr "Javascript"
+
+#: browsers/models.py:111 factories/templates/factories/details.html:37
+#: requests/models.py:64 screenshots/templates/screenshots/details.html:50
+#: start/forms/features.py:68
+msgid "Java"
+msgstr "Java"
+
+#: browsers/models.py:113 factories/templates/factories/details.html:38
+#: requests/models.py:66 screenshots/templates/screenshots/details.html:54
+#: start/forms/features.py:70
+msgid "Flash"
+msgstr "Flash"
+
+#: browsers/models.py:115 factories/templates/factories/details.html:42
+msgid "command"
+msgstr "kommando (command)"
+
+#: browsers/models.py:116
+msgid "Leave empty to use default command."
+msgstr "Lad være blank for at bruge default værdi."
+
+#: browsers/models.py:118
+msgid "active"
+msgstr "aktiv"
+
+#: browsers/models.py:119
+msgid "Designates that this browser is currently installed."
+msgstr "Fortæller om browseren er installeret."
+
+#: browsers/models.py:121 factories/models.py:69
+#: factories/templates/factories/details.html:39
+msgid "last upload"
+msgstr "sidste upload"
+
+#: browsers/models.py:123 factories/models.py:71
+#: factories/templates/factories/details.html:40
+#: requests/templates/requests/overview.html:17
+msgid "uploads per hour"
+msgstr "uploads per time"
+
+#: browsers/models.py:125 factories/models.py:73
+#: factories/templates/factories/details.html:41
+#: requests/templates/requests/overview.html:18
+msgid "uploads per day"
+msgstr "uploads per dag"
+
+#: browsers/models.py:127 factories/models.py:80
+#: factories/templates/factories/details.html:14 nonces/models.py:43
+msgid "created"
+msgstr "oprettet"
+
+#: browsers/models.py:149 requests/models.py:393
+#: requests/templates/requests/overview.html:15 screenshots/models.py:117
+#: screenshots/templates/screenshots/details.html:38
+msgid "browser"
+msgstr "browser"
+
+#: browsers/models.py:150
+msgid "browsers"
+msgstr "browsere"
+
+#: browsers/models.py:176
+msgid "deactivate"
+msgstr "deaktiver"
+
+#: browsers/models.py:179
+msgid "activate"
+msgstr "aktivér"
+
+#: browsers/views.py:57
+msgid "Unknown factory name."
+msgstr "Ukendt fabriksnavn."
+
+#: browsers/views.py:67
+msgid "Password mismatch."
+msgstr "Uidentiske kodeord."
+
+#: browsers/templates/browsers/add.html:5
+#: browsers/templates/browsers/add.html:8
+msgid "add a new browser version"
+msgstr "tilføj en ny browser version"
+
+#: browsers/templates/browsers/add.html:20
+#: factories/templates/factories/details.html:18
+#: screenshots/templates/screenshots/details.html:116
+#: start/templates/start/start.html:37
+msgid "submit"
+msgstr "send ind"
+
+#: browsers/templates/browsers/add.html:23
+msgid "updates"
+msgstr "opdateringer"
+
+#: browsers/templates/browsers/add.html:25
+msgid ""
+"You can also use this page when you've changed settings or updated the "
+"browser."
+msgstr ""
+"Du kan også bruge denne side, når du har ændret indstillinger eller "
+"opdateret browseren."
+
+#: browsers/templates/browsers/add.html:26
+msgid ""
+"If the same browser is already registered for your factory, it will be "
+"replaced."
+msgstr ""
+"Hvis den samme browser allerede er registreret for din fabrik vil den blive "
+"erstattet."
+
+#: browsers/templates/browsers/add.html:29
+msgid "other options"
+msgstr "andre muligheder"
+
+#: browsers/templates/browsers/add.html:30
+#, python-format
+msgid ""
+"If your browser group or rendering engine is not available, please write to %"
+"(email)s."
+msgstr ""
+"Hvis din browser gruppe eller operativ system ikke er til at komme i kontakt "
+"med, så skriv venligst til %(email)s."
+
+#: browsers/templates/browsers/add.html:44 features/models.py:34
+#: start/forms/features.py:46
+msgid "enabled"
+msgstr "aktiveret"
+
+#: browsers/templates/browsers/add.html:44
+#: browsers/templates/browsers/add.html:48 features/models.py:36
+#: start/forms/features.py:43
+msgid "disabled"
+msgstr "deaktiveret"
+
+#: common/templates/404.html:3 common/templates/404.html.py:6
+msgid "page not found"
+msgstr "side ikke fundet"
+
+#: common/templates/404.html:7
+msgid "The requested page was not found."
+msgstr "Siden du bad om blev ikke fundet."
+
+#: common/templates/500.html:3 common/templates/500.html.py:6
+msgid "internal server error"
+msgstr "intern server fejl"
+
+#: common/templates/base.html:24
+msgid "home"
+msgstr "hjem"
+
+#: common/templates/base.html:25 factories/models.py:256
+#: screenshots/models.py:143 screenshots/models.py:301
+msgid "screenshots"
+msgstr "screenshots"
+
+#: common/templates/base.html:26
+msgid "queue"
+msgstr "kø"
+
+#: common/templates/base.html:27 factories/models.py:96
+msgid "factories"
+msgstr "fabrikker"
+
+#: common/templates/base.html:28
+msgid "search"
+msgstr "søg"
+
+#: common/templates/base.html:34
+msgid "signed in as"
+msgstr "logged ind som"
+
+#: common/templates/base.html:35
+msgid "logout"
+msgstr "logud"
+
+#: common/templates/base.html:37
+msgid "login"
+msgstr "login"
+
+#: common/templatetags/hosting_provider.py:45
+#, python-format
+msgid "hosted by %(provider)s"
+msgstr "hosted af %(provider)s"
+
+#: common/templatetags/human.py:51
+#, python-format
+msgid "%(seconds)d s"
+msgstr "%(seconds)d s"
+
+#: common/templatetags/human.py:54 requests/views.py:126
+#, python-format
+msgid "%(minutes)d min"
+msgstr "%(minutes)d min"
+
+#: common/templatetags/human.py:57
+#, python-format
+msgid "%(hours)d h"
+msgstr "%(hours)d t"
+
+#: common/templatetags/human.py:59
+#, python-format
+msgid "%(days)d d"
+msgstr "%(days)d d"
+
+#: common/templatetags/human.py:104
+#, python-format
+msgid "%(bytes)s bytes"
+msgstr "%(bytes)s bytes"
+
+#: common/templatetags/sql_queries.py:55
+#, python-format
+msgid "%(count)d database queries"
+msgstr "%(count)d database forespørgsler"
+
+#: factories/models.py:53
+msgid "Hostname (lowercase)"
+msgstr "Hostname (små tegn)"
+
+#: factories/models.py:55
+msgid "administrator"
+msgstr "administrator"
+
+#: factories/models.py:57 factories/templates/factories/details.html:12
+#: screenshots/templates/screenshots/details.html:62 sponsors/models.py:56
+msgid "sponsor"
+msgstr "sponsor"
+
+#: factories/models.py:59 factories/templates/factories/details.html:16
+#: factories/templates/factories/details.html:20
+#: screenshots/templates/screenshots/details.html:66
+msgid "hardware"
+msgstr "hardware"
+
+#: factories/models.py:60
+msgid "e.g. ThinkPad R32, P4 1.8 GHz, 768 MB"
+msgstr "f.eks. ThinkPad R32, P4 1.8 GHz, 768 MB"
+
+#: factories/models.py:62 factories/templates/factories/details.html:17
+#: factories/templates/factories/details.html:21 platforms/models.py:71
+#: screenshots/templates/screenshots/details.html:70
+msgid "operating system"
+msgstr "operativ system"
+
+#: factories/models.py:64 requests/models.py:72
+msgid "IP"
+msgstr "IP"
+
+#: factories/models.py:65
+msgid "The last poll came from this IP address."
+msgstr "Den sidste afstemning kom fra denne IP adresse."
+
+#: factories/models.py:67
+msgid "last poll"
+msgstr "sidste afstemning"
+
+#: factories/models.py:75
+#, fuzzy
+msgid "errors per day"
+msgstr "uploads per dag"
+
+#: factories/models.py:77 requests/models.py:334
+msgid "queue estimate"
+msgstr "anslået kø"
+
+#: factories/models.py:78
+msgid "Seconds between screenshot request and upload."
+msgstr "Sekunder mellem screenshot forespørgsel og upload."
+
+#: factories/models.py:210 screenshots/models.py:119 sponsors/models.py:44
+msgid "width"
+msgstr "bredde"
+
+#: factories/models.py:212 screenshots/models.py:121 sponsors/models.py:45
+msgid "height"
+msgstr "højde"
+
+#: factories/models.py:219 start/forms/options.py:64
+msgid "screen size"
+msgstr "skærm størrelse"
+
+#: factories/models.py:220 factories/templates/factories/details.html:78
+msgid "screen sizes"
+msgstr "skærm størrelser"
+
+#: factories/models.py:236 factories/templates/factories/details.html:109
+#: factories/templates/factories/details.html:115 requests/models.py:60
+msgid "bits per pixel"
+msgstr "bits per pixel"
+
+#: factories/models.py:243 start/forms/options.py:66
+msgid "color depth"
+msgstr "farve dybde"
+
+#: factories/models.py:244 factories/templates/factories/details.html:104
+msgid "color depths"
+msgstr "farve dybder"
+
+#: factories/models.py:255
+#, fuzzy
+msgid "date"
+msgstr "opdateringer"
+
+#: factories/views.py:56 start/views.py:84
+msgid "out of service"
+msgstr "ude af drift"
+
+#: factories/views.py:57 start/views.py:85
+msgid "No active screenshot factories."
+msgstr "Ingen aktive screenshot fabrikker."
+
+#: factories/views.py:77 factories/views.py:88 factories/views.py:106
+#, python-format
+msgid "Value %d is too small."
+msgstr "Værdi %d er for lille."
+
+#: factories/views.py:79 factories/views.py:90 factories/views.py:108
+#, python-format
+msgid "Value %d is too big."
+msgstr "Værdi %d er for stor."
+
+#: factories/views.py:114 requests/views.py:143 requests/views.py:148
+msgid "invalid request"
+msgstr "ugyldig anmodning"
+
+#: factories/views.py:119
+msgid "permission denied"
+msgstr "adgang nægtet"
+
+#: factories/views.py:150
+msgid "This browser is already inactive."
+msgstr "Denne browser er allerede inaktiv."
+
+#: factories/views.py:196
+msgid "This screen size is already enabled."
+msgstr "Dette brugernavn er allerede taget."
+
+#: factories/views.py:198 factories/views.py:211
+msgid "Invalid data."
+msgstr "Invalid data."
+
+#: factories/views.py:209
+msgid "This color depth is already enabled."
+msgstr "Denne farve dybde er allerede aktiveret."
+
+#: factories/views.py:295
+msgid "Name must start with a lowercase letter."
+msgstr "Navn skal starte med små bogstaver."
+
+#: factories/views.py:299
+msgid "Name may contain only lowercase letters, digits, underscore, hyphen."
+msgstr "Navn må kun indeholde: små bogstaver, tal, understreg og bindestreg."
+
+#: factories/views.py:302
+msgid "This name is reserved."
+msgstr "Dette navn er reserveret."
+
+#: factories/views.py:319
+msgid "This name is already taken."
+msgstr "Dette navn er allerede taget."
+
+#: factories/views.py:338
+msgid "register a new screenshot factory"
+msgstr "registrer en ny screenshot-fabrik"
+
+#: factories/views.py:339
+msgid "register"
+msgstr "registrer"
+
+#: factories/templates/factories/details.html:5
+#: factories/templates/factories/details.html:8
+#, python-format
+msgid "Screenshot Factory %(name)s"
+msgstr "Screenshot fabrik %(name)s"
+
+#: factories/templates/factories/details.html:13
+msgid "admin"
+msgstr "admin"
+
+#: factories/templates/factories/details.html:26
+msgid "installed browsers"
+msgstr "installerede browsere"
+
+#: factories/templates/factories/details.html:34
+msgid "short version"
+msgstr "kort version"
+
+#: factories/templates/factories/details.html:66
+msgid "No browsers registered for this factory."
+msgstr "Ingen browsere registrerede for denne fabrik."
+
+#: factories/templates/factories/details.html:85
+#: factories/templates/factories/details.html:110
+msgid "add"
+msgstr "tilføj"
+
+#: factories/templates/factories/details.html:91
+#: factories/templates/factories/details.html:116
+msgid "remove"
+msgstr "fjern"
+
+#: factories/templates/factories/details.html:95
+#: factories/templates/factories/details.html:120
+msgid "default only"
+msgstr "standard kun"
+
+#: factories/templates/factories/details.html:127
+#: screenshots/templates/screenshots/overview.html:4
+#: screenshots/templates/screenshots/overview.html:7
+msgid "recent screenshots"
+msgstr "seneste screenshots"
+
+#: factories/templates/factories/details.html:134
+msgid "recent problem reports"
+msgstr "seneste problem rapporter"
+
+#: factories/templates/factories/details.html:137
+#, python-format
+msgid "%(interval)s ago"
+msgstr "%(interval)s siden"
+
+#: factories/templates/factories/overview.html:5
+#: factories/templates/factories/overview.html:8
+msgid "screenshot factories"
+msgstr "screenshot fabrikker"
+
+#: features/models.py:61 features/models.py:82
+msgid "e.g. 1.4 / 1.5 / 1.6"
+msgstr "f.eks. 1.4 / 1.5 / 1.6"
+
+#: features/models.py:67
+msgid "Javascript version"
+msgstr "Javascript version"
+
+#: features/models.py:68
+msgid "Javascript versions"
+msgstr "Javascript versioner"
+
+#: features/models.py:88
+msgid "Java version"
+msgstr "Java version"
+
+#: features/models.py:89
+msgid "Java versions"
+msgstr "Java versioner"
+
+#: features/models.py:103
+msgid "e.g. 5 / 6 / 7 / 8 / 9"
+msgstr "f.eks. 5 / 6 / 7 / 8 / 9"
+
+#: features/models.py:109
+msgid "Flash version"
+msgstr "Flash version"
+
+#: features/models.py:110
+msgid "Flash versions"
+msgstr "Flash versioner"
+
+#: messages/models.py:37 screenshots/models.py:347
+msgid "error code"
+msgstr "fejl kode"
+
+#: messages/models.py:39 screenshots/models.py:349
+msgid "error message"
+msgstr "fejl besked"
+
+#: messages/models.py:41
+msgid "occurred"
+msgstr "forekom"
+
+#: messages/models.py:49
+msgid "factory error message"
+msgstr "fabrik fejl besked"
+
+#: messages/models.py:50
+msgid "factory error messages"
+msgstr "fabrik fejl beskeder"
+
+#: nonces/models.py:35 screenshots/models.py:109
+msgid "hashkey"
+msgstr "hash nøgle"
+
+#: nonces/models.py:37 screenshots/models.py:353
+msgid "IP address"
+msgstr "IP-adresse"
+
+#: nonces/models.py:41
+msgid "email"
+msgstr "e-mail"
+
+#: nonces/models.py:54
+msgid "nonce"
+msgstr "nonce"
+
+#: nonces/models.py:55
+msgid "nonces"
+msgstr "nonce'er"
+
+#: platforms/models.py:37
+msgid "position"
+msgstr "position"
+
+#: platforms/models.py:46 platforms/models.py:56 requests/models.py:379
+#: requests/templates/requests/overview.html:14
+msgid "platform"
+msgstr "platform"
+
+#: platforms/models.py:47
+msgid "platforms"
+msgstr "platforme"
+
+#: platforms/models.py:62
+msgid "codename"
+msgstr "kodenavn"
+
+#: platforms/models.py:72
+msgid "operating systems"
+msgstr "operativ systemer"
+
+#: requests/models.py:54 screenshots/models.py:113 websites/models.py:92
+msgid "website"
+msgstr "hjemmeside"
+
+#: requests/models.py:56
+msgid "screen width"
+msgstr "skærm bredde"
+
+#: requests/models.py:58
+msgid "screen height"
+msgstr "skærm højde"
+
+#: requests/models.py:68 start/forms/special.py:35
+#, fuzzy
+msgid "only my own factories"
+msgstr "fabrikker"
+
+#: requests/models.py:70
+msgid "submitter"
+msgstr "forfatter"
+
+#: requests/models.py:74 websites/models.py:49 websites/models.py:84
+msgid "submitted"
+msgstr "indtastet"
+
+#: requests/models.py:76
+msgid "expire"
+msgstr "udløbe"
+
+#: requests/models.py:94 requests/models.py:377
+msgid "request group"
+msgstr "anmod om gruppe"
+
+#: requests/models.py:95
+msgid "request groups"
+msgstr "anmod om grupper"
+
+#: requests/models.py:104
+msgid "screenshot request group"
+msgstr "anmod screenshot gruppe"
+
+#: requests/models.py:125
+#, python-format
+msgid "submitted %(interval)s ago"
+msgstr "indtastet %(interval)s siden"
+
+#: requests/models.py:139
+#, python-format
+msgid "expires in %(interval)s"
+msgstr "udløber om %(interval)s"
+
+#: requests/models.py:144
+msgid "extend"
+msgstr "forlæng"
+
+#: requests/models.py:154
+#, fuzzy, python-format
+msgid "Only for screenshot factories run by %(admin)s"
+msgstr "dinne screenshot fabrikker"
+
+#: requests/models.py:164 start/forms/options.py:41
+#, python-format
+msgid "%(width)d pixels wide"
+msgstr "%(width)d pixels bred"
+
+#: requests/models.py:167 start/forms/options.py:54
+#, python-format
+msgid "%(color_depth)d bits per pixel"
+msgstr "%(color_depth)d bits per pixel"
+
+#: requests/models.py:220
+msgid "Your screenshots will appear here when they are uploaded."
+msgstr ""
+"Dit screenshot vil blive placeret her, når det er blevet uploadet til "
+"serveren."
+
+#: requests/models.py:222
+msgid "[Reload this page] or bookmark it and come back later."
+msgstr ""
+"\"Refresh\" denne side, eller lav et bookmark af den og kom tilbage senere."
+
+#: requests/models.py:224
+msgid "Your screenshot requests have expired."
+msgstr "Dine screenshot anmodninger er udløbet."
+
+#: requests/models.py:234
+#, python-format
+msgid "%(count)d browsers selected"
+msgstr "%(count)d browsere valgt"
+
+#: requests/models.py:242
+#, python-format
+msgid "%(count)d starting"
+msgstr "%(count)d starter"
+
+#: requests/models.py:244
+#, python-format
+msgid "%(count)d loading"
+msgstr "%(count)d indlæser"
+
+#: requests/models.py:246 requests/models.py:249
+#, python-format
+msgid "%(count)d uploaded"
+msgstr "%(count)d uploadet"
+
+#: requests/models.py:252
+#, python-format
+msgid "%(count)d failed"
+msgstr "%(count)d fejlede"
+
+#: requests/models.py:255
+#, python-format
+msgid "%(count)d expired"
+msgstr "%(count)d udløbet"
+
+#: requests/models.py:330
+#, python-format
+msgid "%(min_interval)s to %(max_interval)s"
+msgstr "%(min_interval)s til %(max_interval)s"
+
+#: requests/models.py:332
+msgid "details"
+msgstr "detaljer"
+
+#: requests/models.py:358
+msgid "download all screenshots"
+msgstr "download alle screenshots"
+
+#: requests/models.py:361
+#, python-format
+msgid "download %(count)d screenshots"
+msgstr "download %(count)d screenshots"
+
+#: requests/models.py:387
+msgid "priority"
+msgstr "prioritet"
+
+#: requests/models.py:391
+msgid "locked"
+msgstr "låst"
+
+#: requests/models.py:396
+msgid "redirected"
+msgstr "videresendt"
+
+#: requests/models.py:398 screenshots/models.py:142 screenshots/models.py:345
+msgid "screenshot"
+msgstr "screenshot"
+
+#: requests/models.py:415
+msgid "request"
+msgstr "anmodning"
+
+#: requests/models.py:416
+msgid "requests"
+msgstr "anmodninger"
+
+#: requests/models.py:439 screenshots/models.py:125
+#: screenshots/templates/screenshots/details.html:94
+msgid "uploaded"
+msgstr "uploadet"
+
+#: requests/models.py:441
+msgid "failed"
+msgstr "mislykkedes"
+
+#: requests/models.py:443
+msgid "loading"
+msgstr "indlæser"
+
+#: requests/models.py:445
+msgid "starting"
+msgstr "starter"
+
+#: requests/views.py:118
+msgid "expired"
+msgstr "udløbet"
+
+#: requests/views.py:122
+msgid "unavailable"
+msgstr "ikke tilgængelig"
+
+#: requests/views.py:144
+msgid "You must send a POST request to this page."
+msgstr "Du er nødt til at sende en \"HTTP POST request\" til denne side."
+
+#: requests/views.py:149
+msgid "You must specify a numeric request group ID."
+msgstr "Du er nødt til at specificere en numerisk anmodnings gruppe ID."
+
+#: requests/views.py:154
+msgid "request group expired"
+msgstr "anmodningsgruppe udløbet"
+
+#: requests/views.py:155
+#, python-format
+msgid "This request group already expired %d minutes ago."
+msgstr "Denne anmodnings side er udløbet %d minutter siden."
+
+#: requests/views.py:158 websites/templates/websites/details.html:38
+#: websites/templates/websites/unknown.html:14
+msgid "Request new screenshots?"
+msgstr "Anmod om nye screenshots?"
+
+#: requests/templates/requests/details.html:9
+#: screenshots/templates/screenshots/details.html:23
+#: websites/templates/websites/details.html:9
+#, python-format
+msgid "for %(url)s"
+msgstr "til %(url)s"
+
+#: requests/templates/requests/overview.html:5
+#: requests/templates/requests/overview.html:8
+msgid "screenshot request queue"
+msgstr "screenshot anmodnings kø"
+
+#: requests/templates/requests/overview.html:16
+msgid "pending requests"
+msgstr "afventer anmodninger"
+
+#: requests/templates/requests/overview.html:34
+msgid "No pending requests."
+msgstr "Ingen afventende anmodninger."
+
+#: screenshots/models.py:38
+msgid "This is not the requested browser."
+msgstr "Dette er ikke den anmodede browser."
+
+#: screenshots/models.py:39
+msgid "This is not the requested operating system."
+msgstr "Dette er ikke det anmodede operativ system."
+
+#: screenshots/models.py:41
+msgid "This is not the requested Javascript version."
+msgstr "Dette er ikke den anmodede Javascript version."
+
+#: screenshots/models.py:42
+msgid "This is not the requested Java version."
+msgstr "Dette er ikke den anmodede Java version."
+
+#: screenshots/models.py:43
+msgid "This is not the requested Flash version."
+msgstr "Dette er ikke den anmodede Flash version."
+
+#: screenshots/models.py:44
+msgid "A language pack needs to be installed."
+msgstr "Der er nødt til at blive installeret en sprog-pakke."
+
+#: screenshots/models.py:46
+msgid "There is a dialog box in front of the browser window."
+msgstr "Der er en dialogboks foran browser vinduet."
+
+#: screenshots/models.py:47
+msgid "The browser window is not maximized."
+msgstr "Browser vinduet er ikke maksimeret (fuld skærm)."
+
+#: screenshots/models.py:48
+msgid "The page is not finished loading."
+msgstr "Siden blev ikke færdig med at indlæse."
+
+#: screenshots/models.py:52
+#, python-format
+msgid "This is not %(browser)s."
+msgstr "Dette er ikke %(browser)s."
+
+#: screenshots/models.py:53
+#, python-format
+msgid "This is not %(operating_system)s."
+msgstr "Dette er ikke %(operating_system)s."
+
+#: screenshots/models.py:55
+#, python-format
+msgid "Javascript is not %(javascript)s."
+msgstr "Javascript er ikke %(javascript)s."
+
+#: screenshots/models.py:56
+#, python-format
+msgid "Java is not %(java)s."
+msgstr "Java er ikke %(java)s."
+
+#: screenshots/models.py:57
+#, python-format
+msgid "Flash is not %(flash)s."
+msgstr "Flash er ikke %(flash)s."
+
+#: screenshots/models.py:111
+msgid "user"
+msgstr "bruger"
+
+#: screenshots/models.py:123
+msgid "colors"
+msgstr "farver"
+
+#: screenshots/models.py:273
+msgid "first"
+msgstr "første"
+
+#: screenshots/models.py:274
+msgid "previous"
+msgstr "forrige"
+
+#: screenshots/models.py:275
+msgid "next"
+msgstr "næste"
+
+#: screenshots/models.py:276
+msgid "last"
+msgstr "sidste"
+
+#: screenshots/models.py:287
+#, python-format
+msgid "%(index)d out of %(total)d"
+msgstr "%(index)d ud af %(total)d"
+
+#: screenshots/models.py:311
+#, python-format
+msgid "with %(browser)s"
+msgstr "med %(browser)s"
+
+#: screenshots/models.py:322
+#, python-format
+msgid "on %(platform)s"
+msgstr "på %(platform)s"
+
+#: screenshots/models.py:351
+msgid "reported"
+msgstr "rapporteret"
+
+#: screenshots/models.py:361
+msgid "problem report"
+msgstr "fejl-rapport"
+
+#: screenshots/models.py:362
+msgid "problem reports"
+msgstr "fejl-rapporter"
+
+#: screenshots/views.py:117
+msgid "HTML is not allowed here."
+msgstr "HTML er ikke tilladt her."
+
+#: screenshots/views.py:121
+msgid "URLs are not allowed here."
+msgstr "URL er ikke tilladt her."
+
+#: screenshots/templates/screenshots/details.html:28
+msgid "Click for full size."
+msgstr "Klik for fuld størrelse."
+
+#: screenshots/templates/screenshots/details.html:74
+msgid "dimensions"
+msgstr "dimensioner"
+
+#: screenshots/templates/screenshots/details.html:78
+msgid "file size"
+msgstr "fil størrelse"
+
+#: screenshots/templates/screenshots/details.html:82
+msgid "requested"
+msgstr "anmodet"
+
+#: screenshots/templates/screenshots/details.html:86
+msgid "started"
+msgstr "startet"
+
+#: screenshots/templates/screenshots/details.html:90
+msgid "page loaded"
+msgstr "side indlæst"
+
+#: screenshots/templates/screenshots/details.html:101
+msgid "Report a problem with this screenshot?"
+msgstr "Rapporter en fejl ved dette screenshot?"
+
+#: sponsors/models.py:39
+msgid "slug"
+msgstr "snegl"
+
+#: sponsors/models.py:40
+msgid "This is used to generate the link to the logo image."
+msgstr "Dette er brugt til at generere linket til logoet."
+
+#: sponsors/models.py:42 websites/models.py:75
+msgid "URL"
+msgstr "URL"
+
+#: sponsors/models.py:47
+msgid "premium"
+msgstr "hoved"
+
+#: sponsors/models.py:48
+msgid "Premium sponsors are always shown on the front page."
+msgstr "Hovedsponsorer er altid vist på forsiden."
+
+#: sponsors/models.py:50
+msgid "front page"
+msgstr "forside"
+
+#: sponsors/models.py:57
+msgid "sponsors"
+msgstr "sponsorer"
+
+#: start/views.py:66
+msgid "login required"
+msgstr "login er nødvendigt"
+
+#: start/views.py:67
+msgid "Anonymous screenshot requests are not allowed."
+msgstr "Anonyme screenshot anmodninger er ikke tilladte."
+
+#: start/views.py:70
+msgid "Please log in with your username and password."
+msgstr "Log venligst ind med dit brugernavn og adgangskode."
+
+#: start/views.py:229
+#, python-format
+msgid ""
+"There were already %(count)d screenshot requests for this website today."
+msgstr ""
+
+#: start/views.py:230
+#, python-format
+msgid ""
+"You have already requested %(count)d screenshots for this website today."
+msgstr ""
+
+#: start/views.py:232
+#, python-format
+msgid "There were already %(count)d screenshot requests for %(domain)s today."
+msgstr ""
+
+#: start/views.py:233
+#, python-format
+msgid "You have already requested %(count)d screenshots for %(domain)s today."
+msgstr ""
+
+#: start/views.py:235
+#, python-format
+msgid "There were already %(count)d screenshot requests from your IP today."
+msgstr ""
+
+#: start/views.py:236
+#, fuzzy, python-format
+msgid "You have already requested %(count)d screenshots today."
+msgstr "download %(count)d screenshots"
+
+#: start/views.py:238
+#, fuzzy
+msgid "Please create a user account."
+msgstr "lav en ny bruger-konto"
+
+#: start/views.py:239
+msgid "Please sign up for priority processing."
+msgstr ""
+
+#: start/views.py:240
+#, fuzzy, python-format
+msgid "Please write to %(email)s."
+msgstr "Læs venligst %(faq)s"
+
+#: start/views.py:290
+msgid "all"
+msgstr ""
+
+#: start/views.py:291
+#, fuzzy
+msgid "none"
+msgstr "nonce"
+
+#: start/forms/features.py:35 start/forms/options.py:36
+#: start/forms/options.py:49
+msgid "don't care"
+msgstr "ligeglad"
+
+#: start/forms/special.py:36
+#, fuzzy
+msgid "Test your own screenshot factories with priority."
+msgstr "dinne screenshot fabrikker"
+
+#: start/forms/url.py:56
+msgid "Enter your web address here:"
+msgstr "Indtast din web-adresse her:"
+
+#: start/forms/url.py:94
+#, python-format
+msgid "URL scheme %(scheme)s is not supported."
+msgstr "URL skema %(scheme)s er ikke understøttet."
+
+#: start/forms/url.py:99
+msgid "Malformed URL (server name not specified)."
+msgstr "Ukorrekt URL (server navn er ikke speciferet)."
+
+#: start/forms/url.py:102
+msgid "Malformed URL (spaces in server name)."
+msgstr "Ukorrekt URL (mellemrum i servernavn)."
+
+#: start/forms/url.py:131
+#, fuzzy, python-format
+msgid "Domain name %(domain)s is disallowed."
+msgstr "Server IP adresse %(ip)s er ikke tilladt."
+
+#: start/forms/url.py:136
+#, python-format
+msgid "Could not resolve IP address for %(hostname)s."
+msgstr "Kunne ikke finde en IP adresse til %(hostname)s."
+
+#: start/forms/url.py:152
+#, python-format
+msgid "Server IP address %(ip)s is disallowed."
+msgstr "Server IP adresse %(ip)s er ikke tilladt."
+
+#: start/forms/url.py:179
+#, python-format
+msgid "Could not get robots.txt from %(hostname)s."
+msgstr "Kunne ikke hentet robots.txt fra %(hostname)s."
+
+#: start/forms/url.py:190
+#, python-format
+msgid "Browsershots was blocked by %(robots_txt_url)s."
+msgstr "Browsershots var blokeret af %(robots_txt_url)s."
+
+#: start/forms/url.py:191
+#, python-format
+msgid "Please read the %(faq)s."
+msgstr "Læs venligst %(faq)s."
+
+#: start/forms/url.py:202
+#, python-format
+msgid "Could not connect to %(hostname)s."
+msgstr "Kunne ikke tilslutte til %(hostname)s."
+
+#: start/forms/url.py:204
+#, python-format
+msgid "Could not send HTTP request to %(hostname)s."
+msgstr "Kunne ikke sende HTTP forspørgsel til %(hostname)s."
+
+#: start/forms/url.py:206
+#, python-format
+msgid "Could not get page content from %(hostname)s."
+msgstr "Kunne ikke hente indhold fra %(hostname)s."
+
+#: start/forms/url.py:249
+msgid "Malformed URL (database integrity error)."
+msgstr "Ukorrekt URL (database integritets fejl)."
+
+#: start/forms/url.py:271
+#, python-format
+msgid "Server failed to respond within %d seconds."
+msgstr "Serveren svarede ikke indenfor %d sekunder."
+
+#: start/templates/start/start.html:9 start/templates/start/start.html:12
+msgid "Test your web design in different browsers"
+msgstr "Test dit webdesign i forskellige browsere"
+
+#: start/templates/start/start.html:21
+msgid "Do you need more screenshots per day?"
+msgstr ""
+
+#: start/templates/start/start.html:26
+msgid "Click here for results from previous screenshot requests:"
+msgstr ""
+
+#: start/templates/start/start.html:50
+#, fuzzy
+msgid "select"
+msgstr "vælg alle"
+
+#: start/templates/start/start.html:83
+msgid "project links"
+msgstr "projekt links"
+
+#: start/templates/start/start.html:85
+msgid "documentation"
+msgstr "dokumentation"
+
+#: start/templates/start/start.html:86
+msgid "mailing lists"
+msgstr "mailing liste"
+
+#: start/templates/start/start.html:87
+msgid "XML-RPC interface"
+msgstr "XML-RPC interface"
+
+#: start/templates/start/start.html:88
+msgid "source code"
+msgstr "kildekode"
+
+#: start/templates/start/start.html:89
+msgid "downloads"
+msgstr "downloads"
+
+#: start/templates/start/start.html:90
+msgid "translations"
+msgstr "oversættelser"
+
+#: start/templates/start/start.html:95
+msgid "What is Browsershots?"
+msgstr "Hvad er Browsershots?"
+
+#: start/templates/start/start.html:97
+msgid ""
+"Browsershots makes screenshots of your web design in different browsers."
+msgstr ""
+"Browsershots laver screenshots af dit webdesign i forskellige browsere."
+
+#: start/templates/start/start.html:98
+msgid "It is a free open-source online service created by Johann C. Rocholl."
+msgstr "Det er en gratis open-source service startet af Johann C. Rocholl."
+
+#: start/templates/start/start.html:99
+msgid "When you submit your web address, it will be added to the job queue."
+msgstr ""
+"Når du indtaster din web-adresse, bliver den sat i køen til \"behandling\"."
+
+#: start/templates/start/start.html:100
+msgid ""
+"A number of distributed computers will open your website in their browser."
+msgstr ""
+"Et vis antal af distribuerede computere vil åbne din hjemmeside i deres "
+"browser."
+
+#: start/templates/start/start.html:101
+msgid ""
+"Then they will make screenshots and upload them to the central server here."
+msgstr ""
+"Så vil de tage screenshots af din hjemmeside og uploade dem til den centrale "
+"server her."
+
+#: start/templates/start/start.html:107
+msgid "latest news"
+msgstr "seneste nyheder"
+
+#: start/templates/start/start.html:119
+msgid "premium sponsors"
+msgstr "hovedsponsorerer"
+
+#: websites/models.py:38
+msgid "Missing slash after the hostname."
+msgstr "Mangler skråstreg efter hostname."
+
+#: websites/models.py:57 websites/models.py:78
+msgid "domain"
+msgstr "domæne"
+
+#: websites/models.py:58
+msgid "domains"
+msgstr "domæner"
+
+#: websites/models.py:80
+msgid "profanities"
+msgstr "skældsord"
+
+#: websites/models.py:82
+msgid "fetched"
+msgstr "hentet"
+
+#: websites/models.py:93
+msgid "websites"
+msgstr "hjemmesider"
+
+#: websites/templates/websites/details.html:5
+#: websites/templates/websites/details.html:8
+msgid "website overview"
+msgstr "hjemmeside oversigt"
+
+#: websites/templates/websites/details.html:42
+#: websites/templates/websites/unknown.html:18
+msgid "other pages on the same domain"
+msgstr "andre sider på det samme domæne"
+
+#: websites/templates/websites/unknown.html:5
+#: websites/templates/websites/unknown.html:8
+msgid "unknown website"
+msgstr "ukendt website"
+
+#: websites/templates/websites/unknown.html:11
+msgid "This address was never submitted, or removed after inactivity."
+msgstr ""
+"Denne adresse er aldrig blevet tilføjet, eller er blevet fjernet efter "
+"inaktivitet."
+
+#~ msgid "hardware architecture"
+#~ msgstr "hardware arkitektur"
+
+#~ msgid "architecture"
+#~ msgstr "arkitektur"
+
+#~ msgid "architectures"
+#~ msgstr "arkitekturer"
+
+#~ msgid "sender"
+#~ msgstr "afsender"
+
+#~ msgid "receiver"
+#~ msgstr "modtager"
+
+#~ msgid "points"
+#~ msgstr "punkter"
+
+#~ msgid "paid"
+#~ msgstr "betalt"
+
+#~ msgid "transaction"
+#~ msgstr "transaktion"
+
+#~ msgid "transactions"
+#~ msgstr "transaktioner"
+
+#~ msgid "considered"
+#~ msgstr "overvejet"
+
+#~ msgid "balance"
+#~ msgstr "balance"
+
+#~ msgid "balances"
+#~ msgstr "balancer"
+
+#~ msgid "bid"
+#~ msgstr "bud"
+
+#~ msgid "bids"
+#~ msgstr "bud"
+
+#~ msgid "account"
+#~ msgstr "konto"
+
+#~ msgid "This is your private account page. Only you can see it."
+#~ msgstr "Dette er din private bruger side. Kun du kan se den."
+
+#~ msgid "points received"
+#~ msgstr "point modtaget"
+
+#~ msgid "points paid"
+#~ msgstr "point betalt"
+
+#~ msgid "log in"
+#~ msgstr "login"
+
+#~ msgid "sign in"
+#~ msgstr "log in"
+
+#~ msgid "Your username and password didn't match."
+#~ msgstr "Der var en fejl i det indtastede brugernavn og kodeord."
+
+#~ msgid "Please try again."
+#~ msgstr "Forsøg venligst igen."
+
+#~ msgid "content"
+#~ msgstr "indhold"
+
+#~ msgid "e.g. i686 / PPC"
+#~ msgstr "f.eks. i686 / PPC"
+
+#~ msgid "Premium sponsors are shown on the front page."
+#~ msgstr "Hovedsponsorer er altid vist på forsiden."
+
+#~ msgid "already signed in"
+#~ msgstr "allerede logget ind"
+
+#~ msgid "You're already signed in."
+#~ msgstr "Du er allerede logget ind."
+
+#~ msgid "A verification email was sent to %(email)s."
+#~ msgstr "En verifikations e-mail blev sendt til %(email)s."
+
+#~ msgid "Already signed in"
+#~ msgstr "Du er allerede logget ind"
+
+#~ msgid "You already have a user account, and you're currently signed in."
+#~ msgstr "Du har allerede en bruger-konto og du er logget ind."
+
+#~ msgid "The verification email was requested more than 30 minutes ago."
+#~ msgstr "Verifikations e-mailen blev sendt for mere end 30 minutter siden."
+
+#~ msgid "usage report"
+#~ msgstr "forbrugs-rapport"
+
+#~ msgid "FQDN"
+#~ msgstr "FQDN"
+
+#~ msgid "server status"
+#~ msgstr "server status"
+
+#~ msgid "deselect all"
+#~ msgstr "afvælg alle"

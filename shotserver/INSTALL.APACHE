@@ -1,0 +1,98 @@
+= Install the ShotServer with Apache =
+
+For a production system, you don't want to use the development server that 
+comes with Django. Here's how you set up Apache for Browsershots.
+
+{{{
+sudo apt-get install apache2 libapache2-mod-python
+}}}
+
+Create directory for log files:
+{{{
+sudo mkdir -p /var/log/apache2/v04.browsershots.org/
+}}}
+
+Enable mod_rewrite:
+{{{
+sudo a2enmod rewrite
+}}}
+
+Then put the following in /etc/apache2/sites-available/v04.browsershots.org:
+
+{{{
+ExtendedStatus On
+NameVirtualHost *:80
+<VirtualHost *:80>
+    ServerName browsershots.example.com # FQDN
+    ServerAlias browsershots # Local alias
+    ServerAdmin webmaster@example.com
+    ServerSignature On
+
+    LogLevel warn
+    ErrorLog /var/log/apache2/v04.browsershots.org/error.log
+    CustomLog /var/log/apache2/v04.browsershots.org/access.log combined
+
+    DocumentRoot /var/www/v04.browsershots.org
+    <Directory /var/www/v04.browsershots.org>
+        Options -Indexes
+
+        RewriteEngine On
+        RewriteBase /
+
+        # Force canonical hostname.
+        RewriteCond %{HTTP_HOST} !^browsershots.example.com(|:80)$
+        RewriteRule ^(.*)$ http://browsershots.example.com/$1 [R,L]
+
+        # Static files at server root
+        RewriteRule ^(favicon.ico|robots.txt)$ static/$1 [L]
+
+        # Force HTTPS for secure pages (uncomment next line to enable)
+        # RewriteRule ^(admin|accounts)(/.*)$ https://browsershots.org/$1$2 
+[R,L]
+    </Directory>
+
+    <Location />
+        SetHandler python-program
+        PythonHandler django.core.handlers.modpython
+        SetEnv DJANGO_SETTINGS_MODULE shotserver04.settings
+        PythonDebug Off
+        PythonAutoReload Off
+    </Location>
+
+    <Location /png>
+        SetHandler None
+    </Location>
+
+    <Location /static>
+        SetHandler None
+    </Location>
+
+    <Location /media>
+        SetHandler None
+    </Location>
+
+    <Location /server-status>
+        SetHandler server-status
+    </Location>
+</VirtualHost>
+
+# Local variables:
+# mode: apache
+# end:
+}}}
+
+Make sure that file is the first symlink in /etc/apache/sites-enabled and 
+then restart Apache:
+
+{{{
+sudo a2dissite default
+sudo a2ensite v04.browsershots.org
+sudo apache2ctl restart
+}}}
+
+Create some symlinks for static content:
+{{{
+cd /var/www/v04.browsershots.org/
+sudo ln -s /usr/lib/python2.5/site-packages/shotserver04/static
+sudo ln -s /usr/lib/python2.5/site-packages/django/contrib/admin/media
+}}}

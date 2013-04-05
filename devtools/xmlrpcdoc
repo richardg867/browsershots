@@ -1,0 +1,25 @@
+#!/usr/bin/env python
+"""
+Get documentation from XML-RPC server with introspection
+Copyright (C) 2006 Johann C. Rocholl <johann@rocholl.net>
+Free software, licensed under the terms of the GNU GPL
+"""
+__revision__ = '$Rev: 1356 $'
+import sys, xmlrpclib, time
+if len(sys.argv) != 2:
+    print "usage: %s http://www.example.com/RPC2" % sys.argv[0]
+    sys.exit(1)
+server = xmlrpclib.Server(sys.argv[1])
+methods = server.system.listMethods()
+for method in methods:
+    signatures = server.system.methodSignature(method)
+    if isinstance(signatures, list):
+        for signature in signatures:
+            result = signature.pop(0)
+            print "%s(%s) => %s" % (method, ', '.join(signature), result)
+    else:
+        print "%s (%s)" % (method, signatures)
+    doc = server.system.methodHelp(method)
+    print '    ' + doc.replace('\n', '\n    ') + '\n'
+print sys.argv[1]
+print time.strftime("%Y-%m-%d %H:%M:%S %z")

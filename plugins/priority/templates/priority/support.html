@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}{{ _("priority processing")|capfirst }}{% endblock %}
+
+{% block content %}
+<h1>{{ _("priority processing")|capfirst }}</h1>
+
+<p class="admonition hint"><strong>Questions?</strong> Please write to
+<a href="mailto:johann@browsershots.org">johann@browsershots.org</a> and
+I'll be happy to assist you.</p>
+
+<p>You may also find the following links useful.</p>
+
+<ul>
+<li><a href="http://trac.browsershots.org/wiki">Documentation</a> and
+<a href="http://trac.browsershots.org/wiki/FrequentlyAskedQuestions">FAQ</a></li>
+<li><a href="http://trac.browsershots.org/blog">Latest news</a></li>
+<li><a href="http://lists.browsershots.org/">Mailing lists (with archives)</a></li>
+</ul>
+{% endblock %}

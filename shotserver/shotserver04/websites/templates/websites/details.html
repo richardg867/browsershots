@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load human %}
+{% load ads %}
+
+{% block title %}{{ _("website overview")|capfirst }}{% endblock %}
+
+{% block content %}
+<h1>{{ _("website overview")|capfirst }}</h1>
+<p>{% blocktrans with website|human_link as url %}for {{ url }}{% endblocktrans %}</p>
+
+{{ website_details_head_extra|safe }}
+{% show_ad skyscraper %}
+
+{% if pages_list %}
+<div class="paginator">
+Pages:
+{% for link in pages_list %}{{ link|safe }}
+{% endfor %}
+</div>
+{% endif %}
+
+{% for request_group in request_group_list %}
+<h2 class="requestgroup">{{ request_group|human_link }}</h2>
+<form action="/requests/extend/" method="post">
+<ul class="requestgroup">
+{{ request_group.options }}
+{{ request_group.time_since_submitted }}
+{% if request_group.is_pending %}
+{{ request_group.time_until_expire }}
+{{ request_group.queue_estimate }}
+{% endif %}
+{{ request_group.queue_overview }}
+</ul>
+</form>
+{{ request_group.previews }}
+{% endfor %}
+
+<p class="clear-left">
+<a href="/?url={{ website.url|urlencode }}">{{ _("Request new screenshots?") }}</a>
+</p>
+
+{% if domain_website_list %}
+<h2>{{ _("other pages on the same domain")|capfirst }}</h2>
+<ul>
+{% for website in domain_website_list %}
+<li>{{ website|human_link }}</li>
+{% endfor %}
+</ul>
+{% endif %}
+
+{% show_ad leaderboard %}
+{% endblock %}

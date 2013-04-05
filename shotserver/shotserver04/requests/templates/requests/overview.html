@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load human %}
+{% load ads %}
+
+{% block title %}{{ _("screenshot request queue")|capfirst }}{% endblock %}
+
+{% block content %}
+<h1>{{ _("screenshot request queue")|capfirst }}</h1>
+
+{% show_ad skyscraper %}
+
+{% if browser_list %}
+<table class="requests vertical">
+<thead>
+<tr>
+<th>{{ _("platform")|capfirst }}</th>
+<th>{{ _("browser")|capfirst }}</th>
+<th>{{ _("pending requests")|capfirst|human_br }}</th>
+<th>{{ _("uploads per hour")|capfirst|human_br }}</th>
+<th>{{ _("uploads per day")|capfirst|human_br }}</th>
+</tr>
+</thead>
+<tbody>
+{% for browser in browser_list|dictsortreversed:"pending_requests" %}
+<tr class="{% cycle row1,row2 %}">
+<td>{{ browser.platform.name }}</td>
+<td>{{ browser.browser_group.name }} {{ browser.major }}.{{ browser.minor }}</td>
+<td>{{ browser.pending_requests }}</td>
+<td>{{ browser.uploads_per_hour }}</td>
+<td>{{ browser.uploads_per_day }}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+{% else %}
+<p>{{ _("No pending requests.") }}</p>
+{% endif %}
+
+{% show_ad leaderboard %}
+{% endblock %}

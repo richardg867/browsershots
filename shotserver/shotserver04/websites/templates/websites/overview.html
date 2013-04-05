@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% load human %}
+{% load ads %}
+
+{% block title %}Submitted Websites{% endblock %}
+
+{% block content %}
+<h1>Submitted Websites</h1>
+
+{% show_ad skyscraper %}
+
+<div id="toolbar">
+<form id="changelist-search" action="" method="get">
+<div><!-- DIV needed for valid HTML -->
+<label for="searchbar"><img src="/media/img/admin/icon_searchbox.png" alt="Search" /></label>
+<input type="text" size="40" name="q" value="{{ search_query }}" id="searchbar" />
+<input type="submit" value="Go" />
+</div>
+</form>
+</div>
+<script type="text/javascript">document.getElementById("searchbar").focus();</script>
+
+{% if request_group_list %}
+<table>
+<thead>
+<tr>
+<th>Submitted</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+{% for request_group in request_group_list %}
+<tr class="{% cycle row1,row2 %}">
+<td>{{ request_group.submitted|human_timesince }}</td>
+<td>{{ request_group.website|human_link }}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+{% else %}
+<p>No websites found.</p>
+{% endif %}
+{% if is_paginated %}
+<p>
+{% if has_previous %}
+<a href="/factories/page{{ previous }}/">Previous</a>
+{% endif %}
+Page {{ page }} of {{ pages }}
+{% if has_next %}
+<a href="/factories/page{{ next }}/">Next</a>
+{% endif %}
+</p>
+{% endif %}
+
+{% show_ad leaderboard %}
+{% endblock %}

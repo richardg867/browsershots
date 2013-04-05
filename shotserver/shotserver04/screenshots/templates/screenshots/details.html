@@ -1,0 +1,134 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load human %}
+{% load ads %}
+
+{% block head_extra %}
+<script type="text/javascript" src="/static/js/jquery.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+$(function(){
+  $("div#report-form").hide();
+  $("a#report").click(function(){
+    $("div#report-form").toggle();
+  });
+});
+// ]]>
+</script>
+{% endblock %}
+
+{% block title %}{{ screenshot.browser }} / {{ screenshot.factory.operating_system }}{% endblock %}
+
+{% block content %}
+<h1>{{ screenshot.browser }} / {{ screenshot.factory.operating_system }}</h1>
+<p>{% blocktrans with screenshot.website|human_link as url %}for {{ url }}{% endblocktrans %}</p>
+
+{% show_ad skyscraper %}
+
+<div class="large-preview">
+<a href="{{ screenshot.get_png_url }}"><img
+src="{{ screenshot.get_large_url }}"
+alt="{{ screenshot.browser }}" title="{{ _("Click for full size.") }}"
+width="512" height="{{ screenshot.get_large_height }}"
+/></a>
+</div>
+
+<table class="detail">
+{{ screenshot.website_navigation }}
+{{ screenshot.browser_navigation }}
+{{ screenshot.platform_navigation }}
+<tr class="separator">
+<th>{{ _("browser")|capfirst }}:</th>
+<td>{{ screenshot.browser }}</td>
+</tr>
+<tr>
+<th>{{ _("engine")|capfirst }}:</th>
+<td>{{ screenshot.browser.engine }} {{ screenshot.browser.engine_version }}</td>
+</tr>
+<tr>
+<th>{{ _("Javascript") }}:</th>
+<td>{{ screenshot.browser.javascript }}</td>
+</tr>
+<tr>
+<th>{{ _("Java") }}:</th>
+<td>{{ screenshot.browser.java }}</td>
+</tr>
+<tr>
+<th>{{ _("Flash") }}:</th>
+<td>{{ screenshot.browser.flash }}</td>
+</tr>
+<tr class="separator">
+<th>{{ _("factory")|capfirst }}:</th>
+<td>{{ screenshot.factory|human_link }}</td>
+</tr>
+{% if screenshot.factory.sponsor %}<tr>
+<th>{{ _("sponsor")|capfirst }}:</th>
+<td>{{ screenshot.factory.sponsor|human_link }}</td>
+</tr>{% endif %}
+{% if screenshot.factory.hardware %}<tr>
+<th>{{ _("hardware")|capfirst }}:</th>
+<td>{{ screenshot.factory.hardware }}</td>
+</tr>{% endif %}
+<tr>
+<th>{{ _("operating system")|capfirst }}:</th>
+<td>{{ screenshot.factory.operating_system }}</td>
+</tr>
+<tr class="separator">
+<th>{{ _("dimensions")|capfirst }}:</th>
+<td>{{ screenshot.width }}x{{ screenshot.height }}</td>
+</tr>
+<tr>
+<th>{{ _("file size")|capfirst }}:</th>
+<td>{{ screenshot.bytes|filesizeformat }}</td>
+</tr>
+<tr class="separator">
+<th>{{ _("requested")|capfirst }}:</th>
+<td>{{ request.request_group.submitted|human_datetime }}</td>
+</tr>
+<tr>
+<th>{{ _("started")|capfirst }}:</th>
+<td>{{ request.locked|human_datetime }}</td>
+</tr>
+<tr>
+<th>{{ _("page loaded")|capfirst }}:</th>
+<td>{{ request.redirected|human_datetime }}</td>
+</tr>
+<tr>
+<th>{{ _("uploaded")|capfirst }}:</th>
+<td>{{ screenshot.uploaded|human_datetime }}</td>
+</tr>
+</table>
+
+{% if problem_form %}
+<div id="problem-report" class="clear-left">
+<p><a id="report" name="report" href="#report">{{ _("Report a problem with this screenshot?") }}</a></p>
+<div id="report-form{% if problem_form.message.errors %}-errors{% endif %}">
+<form action="#report" method="post" id="problem_form">
+<ul class="no-bullets">
+{% for choice in problem_form.fields.code.choices %}
+{% if choice.1 %}<li><label><input type="radio" value="{{ choice.0 }}" name="code" /> {{ choice.1 }}</label></li>{% endif %}{% endfor %}
+<li>
+<input type="radio" value="999" name="code" />
+{{ message_field }}
+<span class="hint">{{ problem_form.fields.message.help_text }}</span>
+</li>
+</ul>
+{% for error in problem_form.message.errors %}
+<p class="admonition error">{{ error }}</p>
+{% endfor %}
+<p><input type="submit" name="submit" value="{{ _("submit")|capfirst }}" /></p>
+</form>
+</div>
+</div>
+{% endif %}
+
+<div id="try-again" class="clear-left">
+<p>
+<a href="/?browsers={{ screenshot.browser.browser_group.name|lower }}&amp;url={{ screenshot.website.url }}">Request a new screenshot of {{ screenshot.browser.browser_group.name }}?</a><br />
+<a href="/?browsers={{ screenshot.factory.operating_system.platform.name|lower }}_{{ screenshot.browser.browser_group.name|lower }}&amp;url={{ screenshot.website.url }}">Request a new screenshot of {{ screenshot.browser.browser_group.name }} on {{ screenshot.factory.operating_system.platform.name }}?</a><br />
+<a href="/?browsers={{ screenshot.factory.operating_system.platform.name|lower }}_{{ screenshot.browser.browser_group.name|lower }}_{{ screenshot.browser.major }}_{{ screenshot.browser.minor }}&amp;url={{ screenshot.website.url }}">Request a new screenshot of {{ screenshot.browser.browser_group.name }} {{ screenshot.browser.major }}.{{ screenshot.browser.minor }} on {{ screenshot.factory.operating_system.platform.name }}?</a><br />
+</p>
+</div>
+
+{% show_ad leaderboard %}
+{% endblock %}

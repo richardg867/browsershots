@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load human %}
+
+{% block title %}{{ _("unknown website")|capfirst }}{% endblock %}
+
+{% block content %}
+<h1>{{ _("unknown website")|capfirst }}</h1>
+<p>{{ url }}</p>
+
+<p class="admonition error">{{ _("This address was never submitted, or removed after inactivity.") }}</p>
+
+<p class="clear">
+<a href="/?url={{ url|urlencode }}">{{ _("Request new screenshots?") }}</a>
+</p>
+
+{% if domain_website_list %}
+<h2>{{ _("other pages on the same domain")|capfirst }}</h2>
+<ul>
+{% for website in domain_website_list %}
+<li>{{ website|human_link }}</li>
+{% endfor %}
+</ul>
+{% endif %}
+{% endblock %}

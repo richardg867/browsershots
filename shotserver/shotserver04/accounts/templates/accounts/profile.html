@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load human %}
+
+{% block title %}{{ _("profile")|capfirst }}{% endblock %}
+
+{% block content %}
+<h1>{% blocktrans with http_request.user.first_name as first_name %}Hi {{ first_name }}!{% endblocktrans %}</h1>
+
+<p class="admonition hint">
+{{ _("This is your private profile page. Only you can see it.") }}
+</p>
+
+{% if month_totals %}
+<table class="totals vertical">
+<thead>
+<tr>
+<th>{{ _("month")|capfirst|human_br }}</th>
+<th>{{ _("total screenshots")|capfirst|human_br }}</th>
+<th>{{ _("from your factories")|capfirst|human_br }}</th>
+<th>{{ _("percent")|capfirst|human_br }}</th>
+<th>{{ _("revenue")|capfirst|human_br }}</th>
+</tr>
+</thead>
+{% for month, total, user_total, percent, revenue in month_totals %}
+<tr class="{% cycle row1,row2 %}">
+<td>{{ month }}</td>
+<td style="text-align:right">{{ total }}</td>
+<td style="text-align:right">{{ user_total }}</td>
+<td style="text-align:right">{{ percent }}</td>
+<td style="text-align:right">&euro;{{ revenue }}</td>
+</tr>
+{% endfor %}
+</table>
+{% endif %}
+
+{% if user_has_priority_until %}
+<p>
+You have priority processing until {{ user_has_priority_until|human_date }}
+({{ user_has_priority_until|timeuntil }} remaining).<br />
+<a href="/invoices/">{{ _("Print an invoice for your payment?") }}</a>
+</p>
+{% endif %}
+
+{% if factory_list %}
+<h2>{{ _("your screenshot factories")|capfirst }}</h2>
+<table class="factories vertical">
+<thead>
+<tr>{{ factory_table_header }}</tr>
+</thead>
+<tbody>
+{% for factory in factory_list %}
+<tr class="{% cycle row1,row2 %}">{{ factory.table_row }}</tr>
+{% endfor %}
+</tbody>
+</table>
+{% endif %}
+
+<p>
+<a href="/factories/add/">{{ _("Register a new screenshot factory?") }}</a><br />
+<a href="/browsers/add/">{{ _("Register this browser for screenshots?") }}</a><br />
+</p>
+{% endblock %}

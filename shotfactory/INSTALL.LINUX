@@ -1,0 +1,36 @@
+= Installing the screenshot factory on Linux =
+
+This page has been updated to work with Browsershots 0.4.
+
+== Install prerequisites ==
+
+{{{
+sudo apt-get install tightvncserver netpbm xautomation scrot subversion
+}}}
+
+== Get the screenshot factory source code ==
+
+{{{
+svn checkout http://svn.browsershots.org/trunk/shotfactory/
+}}}
+
+== Adjust config files ==
+
+Change the file '''~/.vnc/xstartup''' to the following three lines. This 
+will set a white background and then run nothing except the window manager. 
+Be sure to remove any reference to xterm because it gets in the way.
+
+{{{
+#!/bin/sh
+xsetroot -solid "#FFFFFF"
+x-window-manager &
+}}}
+
+== Run ==
+
+{{{
+cd shotfactory
+screen -L python shotfactory.py
+}}}
+
+See INSTALL for registration and troubleshooting tips.

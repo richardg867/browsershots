@@ -1,0 +1,130 @@
+{% extends "adbase.html" %}
+{% load i18n %}
+{% load human %}
+
+{% block head_extra %}
+<script src="/static/js/select.js" type="text/javascript"></script>
+{% endblock %}
+
+{% block title %}{{ _("Test your web design in different browsers")|capfirst }}{% endblock %}
+
+{% block content %}
+<h1>{{ _("Test your web design in different browsers")|capfirst }}</h1>
+<form action="/" method="post" id="startform">
+{% for error in url_form.url.errors %}
+<p class="admonition error">{{ error }}</p>
+{% endfor %}
+
+{% if usage_limited %}
+<p class="admonition error">
+{{ usage_limited.message }} {{ _("Please try again later.") }}<br />
+<a href="{{ usage_limited.solution_url }}">{{ _("Do you need more screenshots per day?") }} {{ usage_limited.solution }}</a>
+</p>
+{% endif %}
+
+{% if usage_limited.websites %}
+<p>{{ _("Click here for results from previous screenshot requests:") }}</p>
+<ul>
+{% for website in usage_limited.websites %}
+<li>{{ website|human_link }}</li>
+{% endfor %}
+</ul>
+{% endif %}
+
+<div class="extra_gray">
+<div class="blue background" id="inputurl">
+<p>{{ url_form.url.label }}</p>
+<div id="submit_div"><input class="button" id="id_submit" name="submit" type="submit" value="{{ _("submit")|capfirst }}" /></div>
+<div id="url_div">{{ url_form.url }}</div>
+<div class="clear">&nbsp;</div>
+</div>
+
+<div class="gray background browsers">
+{% for browser_form in browser_forms %}
+<div class="platform_browsers{% if browser_form.is_first %} first{% else %} not_first{% endif %}{% if browser_form.is_last %} last{% else %} not_last{% endif %}">
+<h2>{{ browser_form.platform.name }} <img src="/static/icons/os/{{ browser_form.platform_name }}.png" alt="" /></h2>
+{{ browser_form }}
+</div>
+{% endfor %}
+<div id="selectors" class="clear">
+{{ _("select")|capfirst }}: {{ selectors }}
+</div>
+</div>
+
+{% if show_special_form %}
+<div class="gray background special">
+{% for check in special_form %}
+{{ check }} <label for="id_{{ check.name }}" title="{{ check.help_text }}">{{ check.label|capfirst }}</label>
+{% endfor %}
+<div class="clear">&nbsp;</div>
+</div>
+{% endif %}
+
+<div class="gray background options">
+{% for select in options_form %}
+<div class="request_options">
+<label for="id_{{ select.name }}">{{ select.label|capfirst }}</label><br />
+{{ select }}
+</div>
+{% endfor %}
+{% for select in features_form %}
+<div class="request_options">
+<label for="id_{{ select.name }}">{{ select.label|capfirst }}</label><br />
+{{ select }}
+</div>
+{% endfor %}
+<div class="clear">&nbsp;</div>
+</div>
+</div>
+</form>
+
+<div class="extra-content">
+<div id="links">
+<h2>{{ _("project links")|capfirst }}</h2>
+<ul>
+<li><a href="http://trac.browsershots.org/">{{ _("documentation")|capfirst }}</a></li>
+<li><a href="http://lists.browsershots.org/">{{ _("mailing lists")|capfirst }}</a></li>
+<li><a href="http://api.browsershots.org/">{{ _("XML-RPC interface")|capfirst }}</a></li>
+<li><a href="http://svn.browsershots.org/">{{ _("source code")|capfirst }}</a></li>
+<li><a href="http://sourceforge.net/project/showfiles.php?group_id=202792">{{ _("downloads")|capfirst }}</a></li>
+<li><a href="https://translations.launchpad.net/shotserver/0.4/+pots/shotserver">{{ _("translations")|capfirst }}</a></li>
+</ul>
+</div>
+
+<div id="about">
+<h2>{{ _("What is Browsershots?") }}</h2>
+<p>
+{{ _("Browsershots makes screenshots of your web design in different browsers.") }}
+{{ _("It is a free open-source online service created by Johann C. Rocholl.") }}
+{{ _("When you submit your web address, it will be added to the job queue.") }}
+{{ _("A number of distributed computers will open your website in their browser.") }}
+{{ _("Then they will make screenshots and upload them to the central server here.") }}
+</p>
+</div>
+
+{% if news_list %}
+<div id="news">
+<h2><a href="http://trac.browsershots.org/blog">{{ _("latest news")|capfirst }}</a></h2>
+<ul>
+{% load human %}
+{% for entry in news_list %}
+<li>{{ entry|human_link }} <span class="news-date">{{ entry.pubdate|human_date }}</span></li>
+{% endfor %}
+</ul>
+</div>
+{% endif %}
+
+{% if sponsors_list %}
+<div id="sponsors">
+<h2>{{ _("premium sponsors")|capfirst }}</h2>
+<ul class="no-bullet">
+{% for sponsor in sponsors_list %}
+<li>{{ sponsor.logo }}</li>
+{% endfor %}
+</ul>
+</div>
+{% endif %}
+
+<div class="clear">&nbsp;</div>
+</div>
+{% endblock %}

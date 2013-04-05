@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% load human %}
+
+{% block title %}{{ _("priority processing")|capfirst }}{% endblock %}
+
+{% block content %}
+<h1>{{ _("priority processing")|capfirst }}</h1>
+
+{% if user_has_priority_until %}
+<p>
+You have priority processing until {{ user_has_priority_until|human_date }}
+({{ user_has_priority_until|timeuntil }} remaining).<br />
+<a href="/invoices/">{{ _("Print an invoice for your payment?") }}</a>
+</p>
+{% else %}
+<ul>
+<li>Your screenshot requests will be processed immediately.</li>
+<li>You will often get 30 to 50 screenshots within 2 to 5 minutes.</li>
+<li>Get screenshots of any web address, as often as you want.</li>
+<li>Instant activation when you pay with PayPal.</li>
+<li>No need to extend requests to avoid expiration.</li>
+<li>Your screenshots are private (only you will see them, or somebody who already knows your URL).</li>
+<li>Ad-free web interface.</li>
+<li>Dedicated email support from
+<a href="mailto:johann@browsershots.org">johann@browsershots.org</a>.</li>
+<li>Your payment supports an open-source project.</li>
+</ul>
+{% if http_request.user.is_anonymous %}
+<p>The price for one month is <strong>&euro;10 EUR</strong> or <strong>$15 USD</strong>.<br />
+If you purchase priority for a whole year, you'll get 12 months for the price of 10.</p>
+<p class="admonition hint">The PayPal buttons will appear here when you
+<a href="/accounts/login/?next=/priority/">log in</a>.<br />
+Please <a href="/accounts/email/">create a user account</a> first
+if you don't have one.</p>
+{% else %}
+{% for duration, currencies_list in durations_list %}
+{% ifequal duration '1 year' %}
+<p class="admonition new">Get 12 months of priority processing for the price of 10!</p>
+{% endifequal %}
+{% for symbol, amount, currency in currencies_list %}
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<p>
+<input type="hidden" name="cmd" value="_xclick" />
+<input type="hidden" name="business" value="payment@browsershots.org" />
+<input type="hidden" name="item_name" value="Priority processing for {{ http_request.user.username }}" />
+<input type="hidden" name="amount" value="{{ amount }}" />
+<input type="hidden" name="no_shipping" value="1" />
+<input type="hidden" name="return" value="http://browsershots.org/priority/thankyou/" />
+<input type="hidden" name="cancel_return" value="http://browsershots.org/priority/support/" />
+<input type="hidden" name="no_note" value="1" />
+<input type="hidden" name="currency_code" value="{{ currency }}" />
+<input type="hidden" name="lc" value="US" />
+<input type="hidden" name="bn" value="PP-BuyNowBF" />
+<input type="image" src="https://www.paypal.com/en_US/i/btn/x-click-but01.gif" border="0" name="submit" alt="Make payments with PayPal - it's fast, free and secure!"
+class="floatleft" style="margin-top:4px" />
+Priority processing for <strong>{{ http_request.user.username }}</strong><br />
+{{ duration|safe }} for <strong>{{ symbol|safe }}{{ amount }}</strong> {{ currency }}
+</p>
+</form>
+{% endfor %}
+{% endfor %}
+{% endif %}
+{% endif %}
+{% endblock %}

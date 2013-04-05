@@ -1,0 +1,364 @@
+body {
+  font-family: "Trebuchet MS", sans-serif;
+  background-color: white;
+  color: black;
+  margin: 0;
+  padding: 0;
+}
+
+div#content {
+  position: absolute;
+  top: 20px;
+  left: 50px;
+  right: 50px;
+  padding: 0 0 1em;
+}
+
+div#setlang {
+  position: absolute;
+  top: 30px;
+  right: 50px;
+}
+
+ul#mainmenu {
+  position: absolute;
+  top: 0;
+  left: 50px;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+ul#mainmenu li {
+  margin: 0;
+  padding: 5px 10px 0 0;
+  float: left;
+  font-size: 14px;
+  text-align: center;
+  vertical-align: bottom;
+  background-position: 50% 50%;
+}
+ul#mainmenu a,
+div#account a { font-weight: bold; }
+
+div#account {
+  font-size: 14px;
+  position: absolute;
+  top: 0;
+  right: 50px;
+  padding: 5px 0 0;
+}
+div#account span { padding: 0 0 0 10px; }
+
+.debug {
+  font-size: x-small;
+  color: gray;
+}
+p.debug {
+  clear: both;
+  margin: 20px 0 0;
+}
+.debug :link { color: gray; }
+.debug :visited { color: gray; }
+
+p.footer {
+  clear: both;
+  font-size: smaller;
+}
+
+table { border-collapse: collapse; }
+th, td { padding: 0 1ex 4px 0; }
+tr.row1 { background-color: #EEE; }
+tr.row2 { background-color: #FFF; }
+
+h1, h2 {
+  margin: 10px 0;
+  clear: left;
+}
+
+pre.signature { font-weight: bold; }
+
+div.previews { position: relative; }
+div.preview { margin: 0 8px 8px 0; }
+img.preview { position: absolute; }
+
+div.large-preview,
+div.screenshot-details {
+  float: left;
+  margin: 0 2em 1em 0;
+}
+
+ul.errorlist {
+  color: black;
+  background-color: #F99;
+  border: 1px solid red;
+  padding-top: 1ex;
+  padding-bottom: 1ex;
+}
+
+img { border: none; }
+
+div.screenshot { margin: 0 16px 0 0; }
+
+dl { margin: 0; }
+dt { font-weight: bold; }
+
+div.background {
+  clear: both;
+  background-repeat: repeat-x;
+  padding: 0;
+}
+div.background h2 { margin: 0; }
+
+div.blue {
+  background-color: #016;
+  background-image: url(blue.jpg);
+  color: white;
+}
+div.blue div#url_div {
+  padding: 0 140px 0 16px;
+}
+div.blue input#id_url {
+  width: 100%;
+}
+div.blue div#submit_div {
+  position: absolute;
+  right: 16px;
+  width: 100px;
+}
+div.blue input#id_submit {
+  width: 100%;
+}
+div.blue p {
+  margin: 0 0 0 16px;
+  padding-top: 16px;
+}
+div.blue ul.errorlist { margin: 0 0 16px; }
+
+div.gray, div.extra_gray { background-color: #e4e4e4; }
+div.gray {
+  background-image: url(gray.jpg);
+  background-position: bottom left;
+}
+div.browsers {
+  background-image: none;
+  border-bottom: 1px solid #bbb;
+  padding-top: 0;
+}
+div.special {
+  background-image: none;
+  border-bottom: 1px solid #bbb;
+  padding: 8px 0 0 16px;
+}
+div.browsers input,
+div.special input {
+  padding-left: 0;
+  margin-left: 0;
+}
+div.options select {
+  width: 150px;
+}
+
+.clear { clear: both; }
+.clear-left { clear: left; }
+.clear-right { clear: right; }
+.floatleft {
+  float: left;
+  margin: 0 1em 1em 0;
+}
+.platform_browsers {
+  float: left;
+  margin: 16px 0 0;
+}
+div.browsers div.not_last {
+  border-right: 1px solid #bbb;
+  margin-right: -1px;
+}
+.platform_browsers h2 { padding-left: 16px; }
+.browsers_column,
+.request_options {
+  float: left;
+  width: 160px;
+  padding-left: 16px;
+}
+.request_options {
+  padding-top: 16px;
+}
+.browsers_column img {
+  vertical-align: middle;
+}
+
+div.large-preview { position: relative; }
+div.previous-screenshot {
+  position: absolute;
+  left: 0;
+}
+div.next-screenshot {
+  position: absolute;
+  right: 0;
+}
+
+th, td {
+  text-align: left;
+  vertical-align: top;
+}
+table.vertical th { vertical-align: bottom; }
+
+tr.separator {
+  border-top: 1px solid #ccc;
+}
+tr.separator th,
+tr.separator td {
+  padding-top: 4px;
+}
+
+td.index,
+td.arrows { white-space: nowrap; }
+
+h2.requestgroup {
+  margin-bottom: 0;
+}
+ul.requestgroup {
+  margin: 0 0 1ex;
+  padding: 0;
+  list-style-type: none;
+}
+div.estimates h3 { margin: 0; }
+div.estimates {
+  float: left;
+  margin: 0 16px 16px 0;
+}
+
+input#id_user_agent { width: 60em; }
+input#id_major, input#id_minor { width: 3em; }
+input#id_version, input#id_engine_version { width: 8em; }
+
+span.hint {
+  font-size: smaller;
+  color: gray;
+}
+
+p.admonition {
+  padding: 6px 6px 6px 36px;
+  background-repeat: no-repeat;
+  background-position: 4px 4px;
+  border: 1px solid;
+}
+p.admonition a { text-decoration: underline; }
+p.new {
+  background-image: url(new.png);
+  background-color: #fed;
+  border-color: #ff8000;
+}
+p.hint {
+  background-image: url(lightbulb.png);
+  background-color: #ddf;
+  border-color: #00f;
+}
+p.warning {
+  background-image: url(warning.png);
+  background-color: #ffc;
+  border-color: #ff0;
+}
+p.error {
+  background-image: url(error.png);
+  background-color: #fcc;
+  border-color: #f00;
+}
+p.success {
+  background-image: url(success.png);
+  background-color: #cfc;
+  border-color: #0f0;
+}
+tr.highlight,
+tr.highlight td {
+  background-color: #fe8;
+}
+
+div.caption {
+  font-size: 10px;
+  color: gray;
+  text-align: center;
+  line-height: 8px;
+}
+
+ul {
+  margin-top: 0;
+  padding: 0 0 0 1em;
+}
+
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+:link { color: #016; }
+:visited { color: #048; }
+
+tr.inactive { color: gray; }
+tr.inactive td.browser { text-decoration: line-through; }
+
+div#selectors {
+  font-size: smaller;
+  margin: 0;
+  padding: 8px 16px;
+}
+
+div.paginator {
+  position: absolute;
+  right: 0;
+  margin: 1em 0 1em 1em;
+  text-align: right;
+  width: 400px;
+}
+div.paginator a.page {
+  padding: 0 4px;
+  border: 1px solid #ccc;
+}
+div.paginator a.current {
+  border: 1px solid black;
+  background-color: #ccc;
+  color: black;
+}
+
+div.extra-content {
+  padding: 1em 0;
+}
+div.extra-content h2 { margin-bottom: 0; }
+div.extra-content div { float: left; }
+div#about {
+  width: 19em;
+  margin-right: 4em;
+}
+div#about p { margin: 0; }
+div#news { width: 19em; }
+div#links { margin-right: 4em; }
+div.extra-content ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+div.extra-content li {
+  text-indent: -2em;
+  padding: 0;
+  margin: 0 0 0 2em;
+}
+.news-date {
+  font-size: 80%;
+  color: gray;
+}
+
+ul.no-bullets {
+  padding: 0;
+  list-style-type: none;
+}
+ul.no-bullets li {
+  padding: 0;
+  margin: 0;
+}
+
+div#leaderboard {
+  margin: 1em 0;
+  clear: left;
+}
+div#skyscraper {
+  margin: 0 0 1em 1em;
+  float: right;
+}

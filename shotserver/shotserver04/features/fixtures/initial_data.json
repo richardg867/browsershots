@@ -1,0 +1,198 @@
+[
+    {
+        "pk": 3, 
+        "model": "features.javascript", 
+        "fields": {
+            "version": "1.0"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "features.javascript", 
+        "fields": {
+            "version": "1.1"
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "features.javascript", 
+        "fields": {
+            "version": "1.2"
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "features.javascript", 
+        "fields": {
+            "version": "1.3"
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "features.javascript", 
+        "fields": {
+            "version": "1.4"
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "features.javascript", 
+        "fields": {
+            "version": "1.5"
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "features.javascript", 
+        "fields": {
+            "version": "1.6"
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "features.javascript", 
+        "fields": {
+            "version": "1.7"
+        }
+    }, 
+    {
+        "pk": 11, 
+        "model": "features.javascript", 
+        "fields": {
+            "version": "1.8"
+        }
+    }, 
+    {
+        "pk": 12, 
+        "model": "features.javascript", 
+        "fields": {
+            "version": "1.9"
+        }
+    }, 
+    {
+        "pk": 13, 
+        "model": "features.javascript", 
+        "fields": {
+            "version": "2.0"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "features.javascript", 
+        "fields": {
+            "version": "disabled"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "features.javascript", 
+        "fields": {
+            "version": "enabled"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "features.java", 
+        "fields": {
+            "version": "1.3"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "features.java", 
+        "fields": {
+            "version": "1.4"
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "features.java", 
+        "fields": {
+            "version": "1.5"
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "features.java", 
+        "fields": {
+            "version": "1.6"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "features.java", 
+        "fields": {
+            "version": "disabled"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "features.java", 
+        "fields": {
+            "version": "enabled"
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "features.flash", 
+        "fields": {
+            "version": "10"
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "features.flash", 
+        "fields": {
+            "version": "11"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "features.flash", 
+        "fields": {
+            "version": "5"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "features.flash", 
+        "fields": {
+            "version": "6"
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "features.flash", 
+        "fields": {
+            "version": "7"
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "features.flash", 
+        "fields": {
+            "version": "8"
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "features.flash", 
+        "fields": {
+            "version": "9"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "features.flash", 
+        "fields": {
+            "version": "disabled"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "features.flash", 
+        "fields": {
+            "version": "enabled"
+        }
+    }
+]

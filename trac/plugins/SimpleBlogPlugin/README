@@ -1,0 +1,10 @@
+This is a plugin for creating a very simple blog with Trac. Just make
+a wiki page for each post and start the page name with "Blog", for
+example "BlogFirstPost".
+
+SimpleBlogPlugin
+http://svn.browsershots.org/trunk/trac/plugins/SimpleBlogPlugin/
+http://trac.browsershots.org/browser/trunk/trac/plugins/SimpleBlogPlugin/
+
+Trac
+http://trac.edgewall.org/

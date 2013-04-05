@@ -1,0 +1,26 @@
+[
+    {
+        "pk": 2, 
+        "model": "revenue.nonprofit", 
+        "fields": {
+            "url": "http://www.fsf.org/", 
+            "name": "Free Software Foundation"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "revenue.nonprofit", 
+        "fields": {
+            "url": "http://www.fsfeurope.org/", 
+            "name": "Free Software Foundation Europe"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "revenue.nonprofit", 
+        "fields": {
+            "url": "http://www.python.org/psf/", 
+            "name": "Python Software Foundation"
+        }
+    }
+]

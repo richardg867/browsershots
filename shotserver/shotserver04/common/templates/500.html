@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}{{ _("internal server error")|capfirst }}{% endblock %}
+
+{% block content %}
+<h1>{{ _("internal server error")|capfirst }}</h1>
+
+<p class="admonition error">The server encountered an internal error
+or misconfiguration and was unable to complete your request.</p>
+
+<p>Please contact the <a href="mailto:johann@browsershots.org">server
+administrator</a> and inform them of the time the error occurred, and
+anything you might have done that may have caused the error.</p>
+
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}{{ method_name }} - XML-RPC Method Help{% endblock %}
+
+{% block content %}
+<h1>{{ method_name }}</h1>
+<pre class="signature">
+{% for signature in signature_lines %}{{ signature }}
+{% endfor %}</pre>
+{{ docstring }}
+<p><a href="..">Back to the list of supported methods</a></p>
+{% endblock %}

@@ -1,0 +1,86 @@
+{% extends "adbase.html" %}
+{% load human %}
+
+{% block title %}{{ _("usage report")|capfirst }}{% endblock %}
+
+{% block content %}
+<h1>{{ _("usage report")|capfirst }}</h1>
+
+<p class="admonition hint">Top-ten lists by the number of request
+groups submitted in the last {{ plaintext }}.</p>
+
+<p>Choose other intervals:
+{% for interval in usage_intervals_list %}{% ifequal interval usage_interval %}<strong>{{ interval }}</strong>
+{% else %}<a href="/status/usage/{{ interval }}/">{{ interval }}</a>
+{% endifequal %}{% endfor %}</p>
+
+<table class="websites vertical floatleft">
+<thead>
+<tr>
+<th></th>
+<th>{{ _("website")|capfirst }}</th>
+</tr>
+</thead>
+<tbody>
+{% for website in website_list %}
+<tr class="{% cycle row1,row2 %}">
+<td>{{ website.request_groups_per_day }}</td>
+<td>{{ website|human_link }}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+
+<table class="domains vertical floatleft">
+<thead>
+<tr>
+<th></th>
+<th>{{ _("domain")|capfirst }}</th>
+</tr>
+</thead>
+<tbody>
+{% for domain in domain_list %}
+<tr class="{% cycle row1,row2 %}">
+<td>{{ domain.request_groups_per_day }}</td>
+<td>{{ domain }}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+
+<table class="users vertical floatleft">
+<thead>
+<tr>
+<th></th>
+<th>{{ _("user")|capfirst }}</th>
+</tr>
+</thead>
+<tbody>
+{% for user in user_list %}
+<tr class="{% cycle row1,row2 %}">
+<td>{{ user.request_groups_per_day }}</td>
+<td><a href="/status/user/{{ user }}/">{{ user }}</a></td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+
+<table class="ips vertical floatleft">
+<thead>
+<tr>
+<th></th>
+<th>{{ _("IP") }}</th>
+<th>{{ _("FQDN") }}</th>
+</tr>
+</thead>
+<tbody>
+{% for ip, fqdn, request_groups_per_day in ip_list %}
+<tr class="{% cycle row1,row2 %}">
+<td>{{ request_groups_per_day }}</td>
+<td>{{ ip }}</td>
+<td>{{ fqdn }}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+{% endblock %}

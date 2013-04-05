@@ -1,0 +1,36 @@
+= Screenshot factory installation instructions =
+
+Specific instructions for all supported platforms:
+
+ * INSTALL.LINUX
+ * INSTALL.WIN
+ * INSTALL.MAC
+
+== Register your factory ==
+
+ * If you don't have a password yet, please 
+[https://browsershots.org/accounts/email/ create a user account].
+ * If you get an error saying '''Factory not found with name=...''', please 
+[https://browsershots.org/factories/add/ register your screenshot factory].
+ * If you get '''No browsers registered for factory ...''', please visit 
+[https://browsershots.org/browsers/add/ this page] with each of your 
+browsers.
+
+== Troubleshooting ==
+
+ * Run '''shotfactory.py -h''' (or '''--help''') to see a list of command 
+line options.
+ * Run '''shotfactory.py -v''' (or '''--verbose''') to see more output, 
+including error messages from helper programs.
+ * On Linux, you can run '''xvncviewer :1''' to see the virtual screen of 
+the VNC server while a screenshot request is processed.
+ * You can also look at the files '''pgdn01.ppm''' or '''browsershot.png''' 
+to see if there's a problem.
+ * The file '''shotfactory.log''' contains error messages for failed 
+screenshot requests.
+ * If you use '''screen -L''', the file '''screenlog.0''' will contain the 
+full output of the shotfactory script.
+ * On Windows, if you run '''shotfactory.exe''' directly with a double 
+click, the terminal window may be closed immediately when an error occurs. 
+Try to start the terminal first and then run the program from the command 
+line to avoid this issue.

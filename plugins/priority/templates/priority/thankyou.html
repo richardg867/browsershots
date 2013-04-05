@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}{{ _("priority processing")|capfirst }}{% endblock %}
+
+{% block content %}
+<h1>{{ _("priority processing")|capfirst }}</h1>
+
+<p class="admonition success"><strong>Thank you</strong>
+for supporting the Browsershots project!</p>
+
+<p>You should receive an email shortly to confirm your priority activation.<br />
+Please write to <a href="mailto:payment@browsershots.org">payment@browsershots.org</a>
+if you have questions or feedback.</p>
+
+<ul>
+<li><a href="/screenshots/">Your screenshots</a></li>
+<li><a href="/websites/">Your websites</a></li>
+<li><a href="/accounts/profile/">Your profile</a></li>
+</ul>
+{% endblock %}

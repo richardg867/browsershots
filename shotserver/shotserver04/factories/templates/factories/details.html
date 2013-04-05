@@ -1,0 +1,194 @@
+{% extends "adbase.html" %}
+{% load i18n %}
+{% load human %}
+
+{% block title %}{% blocktrans with factory.name as name %}Screenshot Factory {{ name }}{% endblocktrans %}{% endblock %}
+
+{% block content %}
+<h1>{% blocktrans with factory.name as name %}Screenshot Factory {{ name }}{% endblocktrans %}</h1>
+
+{% if factory_result %}<p class="admonition success">{{ factory_result }}</p>{% endif %}
+<form action="{{ factory.get_absolute_url }}" method="post">
+<table>
+{% if factory.sponsor %}<tr class="row2"><th>{{ _("sponsor")|capfirst }}:</th><td>{{ factory.sponsor|human_link }}</td></tr>{% endif %}
+<tr class="row1"><th>{{ _("admin")|capfirst }}:</th><td>{{ factory.admin }}</td></tr>
+<tr class="row2"><th>{{ _("created")|capfirst }}:</th><td>{{ factory.created }}</td></tr>
+{% if admin_logged_in %}
+<tr class="row1"><th>{{ _("hardware")|capfirst }}:</th><td>{{ factory_form.hardware }}</td></tr>
+<tr class="row2"><th>{{ _("operating system")|capfirst }}:</th><td>{{ factory_form.operating_system }}</td></tr>
+<tr><th></th><td><input type="submit" name="submit_details" value="{{ _("submit")|capfirst }}" /></td></tr>
+{% else %}
+{% if factory.hardware %}<tr class="row1"><th>{{ _("hardware")|capfirst }}:</th><td>{{ factory.hardware }}</td></tr>
+{% endif %}<tr class="row2"><th>{{ _("operating system")|capfirst }}:</th><td>{{ factory.operating_system }}</td></tr>
+{% endif %}
+</table>
+</form>
+
+<h2><a name="browsers">{{ _("installed browsers")|capfirst }}</a></h2>
+
+{% if browser_result %}<p class="admonition success">{{ browser_result }}</p>{% endif %}
+{% if browser_list %}
+<form action="{{ factory.get_absolute_url }}" method="post">
+<table class="browsers vertical">
+<thead>
+<tr>
+<th>{{ _("name")|capfirst|human_br }}</th>
+<th>{{ _("short version")|capfirst|human_br }}</th>
+<th>{{ _("engine")|capfirst|human_br }}</th>
+<th>{{ _("Javascript")|human_br }}</th>
+<th>{{ _("Java")|human_br }}</th>
+<th>{{ _("Flash")|human_br }}</th>
+<th>{{ _("last upload")|capfirst|human_br }}</th>
+<th>{{ _("last error")|capfirst|human_br }}</th>
+<th>{{ _("uploads per hour")|capfirst|human_br }}</th>
+<th>{{ _("uploads per day")|capfirst|human_br }}</th>
+{% if show_commands %}<th>{{ _("command")|capfirst|human_br }}</th>{% endif %}
+{% if admin_logged_in %}<th></th>{% endif %}
+</tr>
+</thead>
+<tbody>
+{% for browser in browser_list %}
+<tr class="{% cycle row1,row2 %}{% if browser.active %} active{% else %} inactive{% endif %}{% ifequal browser highlight %} highlight{% endifequal %}" title="{{ browser.user_agent }}">
+<td class="browser">{{ browser }}</td>
+<td>{{ browser.major }}.{{ browser.minor }}</td>
+<td>{% if browser.engine %}{{ browser.engine }}{% endif %} {{ browser.engine_version }}</td>
+<td>{{ browser.javascript }}</td>
+<td>{{ browser.java }}</td>
+<td>{{ browser.flash }}</td>
+<td>{{ browser.last_upload|human_timesince }}</td>
+<td>{{ browser.last_error|human_timesince }}</td>
+<td>{% if browser.uploads_per_hour %}{{ browser.uploads_per_hour }}{% endif %}</td>
+<td>{% if browser.uploads_per_day %}{{ browser.uploads_per_day }}{% endif %}</td>
+{% if show_commands %}<td>{{ browser.command }}</td>{% endif %}
+{% if admin_logged_in %}<td>{{ browser.activation_button }}</td>{% endif %}
+</tr>
+{% endfor %}
+</tbody>
+</table>
+</form>
+{% else %}
+<p class="admonition warning">{{ _("No browsers registered for this factory.") }}</p>
+{% endif %}
+
+{% if admin_logged_in %}
+<ul>
+<li><a href="/browsers/add/?factory={{ factory.name }}">{{ _("Register this browser for screenshots?") }}</a></li>
+</ul>
+{% endif %}
+
+<form action="{{ factory.get_absolute_url }}#screensizes" method="post">
+<div style="float: left; margin: 0 2em 0 0;">
+<h2><a name="screensizes">{{ _("screen sizes")|capfirst }}</a></h2>
+{% if screen_size_result %}<p class="admonition success">{{ screen_size_result }}</p>{% endif %}
+{% for error in screensize_form.errors.width %}<p class="admonition error">{{ error }}</p>{% endfor %}
+{% for error in screensize_form.errors.height %}<p class="admonition error">{{ error }}</p>{% endfor %}
+<table class="screensizes vertical">
+{% if admin_logged_in %}
+<tr>
+<td>{{ screensize_form.width }}x{{ screensize_form.height }}</td>
+<td><input type="submit" name="add_size" value="{{ _("add")|capfirst }}" /></td>
+</tr>
+{% endif %}
+{% for screensize in screensize_list %}
+<tr class="{% cycle row1,row2 %}{% ifequal screensize highlight %} highlight{% endifequal %}">
+<td>{{ screensize }}</td>
+{% if admin_logged_in %}<td><input type="submit" name="remove_size_{{ screensize }}" value="{{ _("remove")|capfirst }}" /></td>
+{% endif %}</tr>
+{% endfor %}
+{% if not screensize_list and not admin_logged_in %}
+<tr><td>{{ _("default only")|capfirst }}.</td></tr>
+{% endif %}
+</table>
+</div>
+</form>
+
+<form action="{{ factory.get_absolute_url }}#colordepths" method="post">
+<div style="float: left; margin: 0 2em 0 0;">
+<h2><a name="colordepths">{{ _("color depths")|capfirst }}</a></h2>
+{% if color_depth_result %}<p class="admonition success">{{ color_depth_result }}</p>{% endif %}
+{% for error in colordepth_form.errors.depth %}<p class="admonition error">{{ error }}</p>{% endfor %}
+<table class="colordepths vertical">
+{% if admin_logged_in %}
+<tr>
+<td>{{ colordepth_form.depth }} {{ _("bits per pixel") }}</td>
+<td><input type="submit" name="add_depth" value="{{ _("add")|capfirst }}" /></td>
+</tr>
+{% endif %}
+{% for colordepth in colordepth_list %}
+<tr class="{% cycle row1,row2 %}{% ifequal colordepth highlight %} highlight{% endifequal %}">
+<td>{{ colordepth }} {{ _("bits per pixel") }}</td>
+{% if admin_logged_in %}<td><input type="submit" name="remove_depth_{{ colordepth }}" value="{{ _("remove")|capfirst }}" /></td>
+{% endif %}</tr>
+{% endfor %}
+{% if not colordepth_list and not admin_logged_in %}
+<tr><td>{{ _("default only")|capfirst }}.</td></tr>
+{% endif %}
+</table>
+</div>
+</form>
+
+{% if screenshot_list %}
+<h2><a name="screenshots">{{ _("recent screenshots")|capfirst }}</a></h2>
+{% for screenshot in screenshot_list|dictsort:"id" %}
+{{ screenshot.preview_div_with_browser }}
+{% endfor %}
+{% endif %}
+
+{% if problems_list %}
+<h2><a name="problems">{{ _("recent problem reports")|capfirst }}</a></h2>
+<p>
+{{ _("The following problems were reported manually.") }}
+{{ _("For every problem report, there's probably 10 to 100 users who had the same problem but didn't report it.") }}
+{{ _("Click on the error code for documentation, or the error message to see the screenshot.") }}
+</p>
+{% if problem_report_result %}<p class="admonition success">{{ problem_report_result }}</p>{% endif %}
+<table class="problems vertical">
+<thead>
+<tr>
+<th>{{ _("code")|capfirst }}</th>
+<th>{{ _("message")|capfirst }}</th>
+<th>{{ _("browser")|capfirst }}</th>
+<th>{{ _("age")|capfirst }}</th>
+</tr>
+</thead>
+<tbody>
+{% for problem in problems_list %}
+<tr class="{% cycle row1,row2 %}{% ifequal problem highlight %} highlight{% endifequal %}">
+<td>{% if problem.help_available %}<a href="http://trac.browsershots.org/wiki/FactoryErrors#a{{ problem.code }}">{% endif %}{{ problem.code }}{% if problem.help_available %}</a>{% endif %}</td>
+<td>{{ problem|human_link }}</td>
+<td>{{ problem.screenshot.browser.browser_group }} {{ problem.screenshot.browser.major}}.{{ problem.screenshot.browser.minor }}</td>
+<td>{{ problem.reported|human_timesince }}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+{% endif %}
+
+{% if errors_list %}
+<h2><a name="errors">{{ _("recent factory errors")|capfirst }}</a></h2>
+<p>
+{{ _("The following errors were detected automatically on the server.") }}
+{{ _("Click on the error code for documentation, or the error message to see the screenshot.") }}
+</p>
+<table class="errors vertical">
+<thead>
+<tr>
+<th>{{ _("code")|capfirst }}</th>
+<th>{{ _("message")|capfirst }}</th>
+<th>{{ _("browser")|capfirst }}</th>
+<th>{{ _("age")|capfirst }}</th>
+</tr>
+</thead>
+<tbody>
+{% for error in errors_list %}
+<tr class="{% cycle row1,row2 %}">
+<td>{% if error.help_available %}<a href="http://trac.browsershots.org/wiki/FactoryErrors#a{{ error.code }}">{% endif %}{{ error.code }}{% if error.help_available %}</a>{% endif %}</td>
+<td>{% if error.hashkey %}<a href="http://api.browsershots.org/png/original/{{ error.hashkey.0 }}{{ error.hashkey.1 }}/{{ error.hashkey }}.png">{% endif %}{{ error.message }}{% if error.hashkey %}</a>{% endif %}</td>
+<td>{% if error.request %}{{ error.request.browser_group }} {{ error.request.major}}.{{ error.request.minor }}{% endif %}</td>
+<td>{{ error.occurred|human_timesince }}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+{% endif %}
+{% endblock %}

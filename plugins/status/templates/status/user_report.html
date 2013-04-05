@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load human %}
+
+{% block title %}{{ _("user report")|capfirst }}{% endblock %}
+
+{% block content %}
+<h1>{{ _("user report")|capfirst }}</h1>
+
+<table>
+<tr>
+<th>Group</th>
+<td>Requests</td>
+<th>Priority</th>
+<th>Submitted</th>
+<th>Javascript</th>
+<th>Java</th>
+<th>Flash</th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+{% for group in request_groups_list %}
+<tr class="{% cycle row1,row2 %}">
+<td><a href="/requests/{{ group.id }}/" title="{{ group.website.url }}">{{ group.id }}</a></td>
+<td>{{ group.request_set.count }}</td>
+<td>{{ group.priority }}</td>
+<td>{{ group.submitted|timesince }}</td>
+<td>{% if group.javascript %}{{ group.javascript }}{% endif %}</td>
+<td>{% if group.java %}{{ group.java }}{% endif %}</td>
+<td>{% if group.flash %}{{ group.flash }}{% endif %}</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+{% endfor %}
+</table>
+{% endblock%}

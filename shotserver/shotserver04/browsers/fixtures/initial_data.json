@@ -1,0 +1,436 @@
+[
+    {
+        "pk": 4, 
+        "model": "browsers.engine", 
+        "fields": {
+            "name": "AppleWebKit", 
+            "maker": "Apple"
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "browsers.engine", 
+        "fields": {
+            "name": "Dillo", 
+            "maker": ""
+        }
+    }, 
+    {
+        "pk": 11, 
+        "model": "browsers.engine", 
+        "fields": {
+            "name": "ELinks", 
+            "maker": ""
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "browsers.engine", 
+        "fields": {
+            "name": "Gecko", 
+            "maker": "Mozilla"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "browsers.engine", 
+        "fields": {
+            "name": "KHTML", 
+            "maker": "KDE"
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "browsers.engine", 
+        "fields": {
+            "name": "Libwww", 
+            "maker": "w3.org"
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "browsers.engine", 
+        "fields": {
+            "name": "Libwww-FM", 
+            "maker": "w3.org"
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "browsers.engine", 
+        "fields": {
+            "name": "Links", 
+            "maker": ""
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "browsers.engine", 
+        "fields": {
+            "name": "MSIE", 
+            "maker": "Microsoft"
+        }
+    }, 
+    {
+        "pk": 13, 
+        "model": "browsers.engine", 
+        "fields": {
+            "name": "NetFront", 
+            "maker": "ACCESS"
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "browsers.engine", 
+        "fields": {
+            "name": "Netscape", 
+            "maker": "Netscape"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "browsers.engine", 
+        "fields": {
+            "name": "Opera", 
+            "maker": "Opera"
+        }
+    }, 
+    {
+        "pk": 12, 
+        "model": "browsers.engine", 
+        "fields": {
+            "name": "W3M", 
+            "maker": ""
+        }
+    }, 
+    {
+        "pk": 32, 
+        "model": "browsers.browsergroup", 
+        "fields": {
+            "terminal": false, 
+            "unusual": false, 
+            "name": "Avant", 
+            "maker": ""
+        }
+    }, 
+    {
+        "pk": 22, 
+        "model": "browsers.browsergroup", 
+        "fields": {
+            "terminal": false, 
+            "unusual": false, 
+            "name": "BonEcho", 
+            "maker": "Mozilla"
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "browsers.browsergroup", 
+        "fields": {
+            "terminal": false, 
+            "unusual": false, 
+            "name": "Camino", 
+            "maker": ""
+        }
+    }, 
+    {
+        "pk": 23, 
+        "model": "browsers.browsergroup", 
+        "fields": {
+            "terminal": false, 
+            "unusual": false, 
+            "name": "DeerPark", 
+            "maker": "Mozilla"
+        }
+    }, 
+    {
+        "pk": 18, 
+        "model": "browsers.browsergroup", 
+        "fields": {
+            "terminal": false, 
+            "unusual": true, 
+            "name": "Dillo", 
+            "maker": ""
+        }
+    }, 
+    {
+        "pk": 26, 
+        "model": "browsers.browsergroup", 
+        "fields": {
+            "terminal": true, 
+            "unusual": false, 
+            "name": "ELinks", 
+            "maker": ""
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "browsers.browsergroup", 
+        "fields": {
+            "terminal": false, 
+            "unusual": false, 
+            "name": "Epiphany", 
+            "maker": ""
+        }
+    }, 
+    {
+        "pk": 17, 
+        "model": "browsers.browsergroup", 
+        "fields": {
+            "terminal": false, 
+            "unusual": false, 
+            "name": "Firebird", 
+            "maker": "Mozilla"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "browsers.browsergroup", 
+        "fields": {
+            "terminal": false, 
+            "unusual": false, 
+            "name": "Firefox", 
+            "maker": "Mozilla"
+        }
+    }, 
+    {
+        "pk": 14, 
+        "model": "browsers.browsergroup", 
+        "fields": {
+            "terminal": false, 
+            "unusual": true, 
+            "name": "Flock", 
+            "maker": "Mozilla"
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "browsers.browsergroup", 
+        "fields": {
+            "terminal": false, 
+            "unusual": false, 
+            "name": "Galeon", 
+            "maker": ""
+        }
+    }, 
+    {
+        "pk": 25, 
+        "model": "browsers.browsergroup", 
+        "fields": {
+            "terminal": false, 
+            "unusual": false, 
+            "name": "GranParadiso", 
+            "maker": "Mozilla"
+        }
+    }, 
+    {
+        "pk": 29, 
+        "model": "browsers.browsergroup", 
+        "fields": {
+            "terminal": false, 
+            "unusual": false, 
+            "name": "Iceape", 
+            "maker": "Mozilla"
+        }
+    }, 
+    {
+        "pk": 20, 
+        "model": "browsers.browsergroup", 
+        "fields": {
+            "terminal": false, 
+            "unusual": false, 
+            "name": "Iceweasel", 
+            "maker": "GNU"
+        }
+    }, 
+    {
+        "pk": 28, 
+        "model": "browsers.browsergroup", 
+        "fields": {
+            "terminal": false, 
+            "unusual": false, 
+            "name": "K-Meleon", 
+            "maker": ""
+        }
+    }, 
+    {
+        "pk": 21, 
+        "model": "browsers.browsergroup", 
+        "fields": {
+            "terminal": false, 
+            "unusual": false, 
+            "name": "Kazehakase", 
+            "maker": ""
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "browsers.browsergroup", 
+        "fields": {
+            "terminal": false, 
+            "unusual": false, 
+            "name": "Konqueror", 
+            "maker": "KDE"
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "browsers.browsergroup", 
+        "fields": {
+            "terminal": true, 
+            "unusual": false, 
+            "name": "Links", 
+            "maker": ""
+        }
+    }, 
+    {
+        "pk": 11, 
+        "model": "browsers.browsergroup", 
+        "fields": {
+            "terminal": true, 
+            "unusual": false, 
+            "name": "Lynx", 
+            "maker": ""
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "browsers.browsergroup", 
+        "fields": {
+            "terminal": false, 
+            "unusual": false, 
+            "name": "MSIE", 
+            "maker": "Microsoft"
+        }
+    }, 
+    {
+        "pk": 24, 
+        "model": "browsers.browsergroup", 
+        "fields": {
+            "terminal": false, 
+            "unusual": false, 
+            "name": "Minefield", 
+            "maker": "Mozilla"
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "browsers.browsergroup", 
+        "fields": {
+            "terminal": false, 
+            "unusual": false, 
+            "name": "Mozilla", 
+            "maker": "Mozilla"
+        }
+    }, 
+    {
+        "pk": 15, 
+        "model": "browsers.browsergroup", 
+        "fields": {
+            "terminal": false, 
+            "unusual": true, 
+            "name": "Navigator", 
+            "maker": "Netscape"
+        }
+    }, 
+    {
+        "pk": 27, 
+        "model": "browsers.browsergroup", 
+        "fields": {
+            "terminal": false, 
+            "unusual": false, 
+            "name": "NetFront", 
+            "maker": "ACCESS"
+        }
+    }, 
+    {
+        "pk": 19, 
+        "model": "browsers.browsergroup", 
+        "fields": {
+            "terminal": false, 
+            "unusual": false, 
+            "name": "Netscape", 
+            "maker": "Netscape"
+        }
+    }, 
+    {
+        "pk": 31, 
+        "model": "browsers.browsergroup", 
+        "fields": {
+            "terminal": false, 
+            "unusual": false, 
+            "name": "OmniWeb", 
+            "maker": "OmniGroup"
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "browsers.browsergroup", 
+        "fields": {
+            "terminal": false, 
+            "unusual": false, 
+            "name": "Opera", 
+            "maker": "Opera"
+        }
+    }, 
+    {
+        "pk": 16, 
+        "model": "browsers.browsergroup", 
+        "fields": {
+            "terminal": false, 
+            "unusual": false, 
+            "name": "Phoenix", 
+            "maker": "Mozilla"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "browsers.browsergroup", 
+        "fields": {
+            "terminal": false, 
+            "unusual": false, 
+            "name": "Safari", 
+            "maker": "Apple"
+        }
+    }, 
+    {
+        "pk": 13, 
+        "model": "browsers.browsergroup", 
+        "fields": {
+            "terminal": false, 
+            "unusual": false, 
+            "name": "SeaMonkey", 
+            "maker": "Mozilla"
+        }
+    }, 
+    {
+        "pk": 30, 
+        "model": "browsers.browsergroup", 
+        "fields": {
+            "terminal": false, 
+            "unusual": false, 
+            "name": "Shiira", 
+            "maker": ""
+        }
+    }, 
+    {
+        "pk": 12, 
+        "model": "browsers.browsergroup", 
+        "fields": {
+            "terminal": true, 
+            "unusual": false, 
+            "name": "W3M", 
+            "maker": ""
+        }
+    }, 
+    {
+        "pk": 33, 
+        "model": "browsers.browsergroup", 
+        "fields": {
+            "terminal": false, 
+            "unusual": false, 
+            "name": "iCab", 
+            "maker": ""
+        }
+    }
+]

@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}{{ form_title|capfirst }}{% endblock %}
+
+{% block content %}
+<h1>{{ form_title|capfirst }}</h1>
+
+{% for error in form_errors %}
+<p class="admonition error">{{ error }}</p>
+{% endfor %}
+
+{{ form_extra_before|safe }}
+<form action="{{ form_action }}" method="post">
+<table>
+{{ form }}
+<tr><th></th><td>
+{{ form_hidden|safe }}
+<input type="submit" value="{{ form_submit|capfirst }}" />
+</td></tr>
+</table>
+</form>
+{% if form_javascript %}
+<script type="text/javascript">
+{{ form_javascript|safe }}
+</script>
+{% endif %}
+{{ form_extra|safe }}
+{% endblock %}

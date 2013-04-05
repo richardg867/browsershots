@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% load ads %}
+
+{% block leaderboard %}
+{% if not http_request.is_secure %}
+{% if not http_request.user.is_authenticated %}
+<div id="leaderboard">{% ads_leaderboard %}</div>
+{% endif %}
+{% endif %}
+{% endblock %}

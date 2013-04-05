@@ -1,0 +1,485 @@
+[
+    {
+        "pk": 1, 
+        "model": "platforms.platform", 
+        "fields": {
+            "position": 1, 
+            "name": "Linux"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "platforms.platform", 
+        "fields": {
+            "position": 2, 
+            "name": "Windows"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "platforms.platform", 
+        "fields": {
+            "position": 3, 
+            "name": "Mac OS"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "platforms.platform", 
+        "fields": {
+            "position": 4, 
+            "name": "BSD"
+        }
+    }, 
+    {
+        "pk": 20, 
+        "model": "platforms.operatingsystem", 
+        "fields": {
+            "platform": 1, 
+            "codename": "Current", 
+            "version": "", 
+            "name": "Arch", 
+            "maker": ""
+        }
+    }, 
+    {
+        "pk": 21, 
+        "model": "platforms.operatingsystem", 
+        "fields": {
+            "platform": 1, 
+            "codename": "Woody", 
+            "version": "3.0", 
+            "name": "Debian", 
+            "maker": ""
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "platforms.operatingsystem", 
+        "fields": {
+            "platform": 1, 
+            "codename": "Sarge", 
+            "version": "3.1", 
+            "name": "Debian", 
+            "maker": ""
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "platforms.operatingsystem", 
+        "fields": {
+            "platform": 1, 
+            "codename": "Etch", 
+            "version": "4.0", 
+            "name": "Debian", 
+            "maker": ""
+        }
+    }, 
+    {
+        "pk": 28, 
+        "model": "platforms.operatingsystem", 
+        "fields": {
+            "platform": 1, 
+            "codename": "Lenny", 
+            "version": "Testing", 
+            "name": "Debian", 
+            "maker": ""
+        }
+    }, 
+    {
+        "pk": 30, 
+        "model": "platforms.operatingsystem", 
+        "fields": {
+            "platform": 1, 
+            "codename": "Sid", 
+            "version": "Unstable", 
+            "name": "Debian", 
+            "maker": ""
+        }
+    }, 
+    {
+        "pk": 18, 
+        "model": "platforms.operatingsystem", 
+        "fields": {
+            "platform": 1, 
+            "codename": "", 
+            "version": "7", 
+            "name": "Fedora", 
+            "maker": "Red Hat"
+        }
+    }, 
+    {
+        "pk": 34, 
+        "model": "platforms.operatingsystem", 
+        "fields": {
+            "platform": 4, 
+            "codename": "", 
+            "version": "5.5", 
+            "name": "FreeBSD", 
+            "maker": ""
+        }
+    }, 
+    {
+        "pk": 31, 
+        "model": "platforms.operatingsystem", 
+        "fields": {
+            "platform": 4, 
+            "codename": "", 
+            "version": "6.3", 
+            "name": "FreeBSD", 
+            "maker": ""
+        }
+    }, 
+    {
+        "pk": 32, 
+        "model": "platforms.operatingsystem", 
+        "fields": {
+            "platform": 4, 
+            "codename": "", 
+            "version": "7.0", 
+            "name": "FreeBSD", 
+            "maker": ""
+        }
+    }, 
+    {
+        "pk": 33, 
+        "model": "platforms.operatingsystem", 
+        "fields": {
+            "platform": 4, 
+            "codename": "", 
+            "version": "7.1", 
+            "name": "FreeBSD", 
+            "maker": ""
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "platforms.operatingsystem", 
+        "fields": {
+            "platform": 1, 
+            "codename": "", 
+            "version": "2006.0", 
+            "name": "Gentoo", 
+            "maker": ""
+        }
+    }, 
+    {
+        "pk": 25, 
+        "model": "platforms.operatingsystem", 
+        "fields": {
+            "platform": 1, 
+            "codename": "", 
+            "version": "2006.1", 
+            "name": "Gentoo", 
+            "maker": ""
+        }
+    }, 
+    {
+        "pk": 26, 
+        "model": "platforms.operatingsystem", 
+        "fields": {
+            "platform": 1, 
+            "codename": "", 
+            "version": "2007.0", 
+            "name": "Gentoo", 
+            "maker": ""
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "platforms.operatingsystem", 
+        "fields": {
+            "platform": 2, 
+            "codename": "Panther", 
+            "version": "10.3", 
+            "name": "Mac OS X", 
+            "maker": "Apple"
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "platforms.operatingsystem", 
+        "fields": {
+            "platform": 2, 
+            "codename": "Tiger", 
+            "version": "10.4", 
+            "name": "Mac OS X", 
+            "maker": "Apple"
+        }
+    }, 
+    {
+        "pk": 11, 
+        "model": "platforms.operatingsystem", 
+        "fields": {
+            "platform": 2, 
+            "codename": "Leopard", 
+            "version": "10.5", 
+            "name": "Mac OS X", 
+            "maker": "Apple"
+        }
+    }, 
+    {
+        "pk": 39, 
+        "model": "platforms.operatingsystem", 
+        "fields": {
+            "platform": 1, 
+            "codename": "Tycho", 
+            "version": "2008.0", 
+            "name": "Mandriva", 
+            "maker": ""
+        }
+    }, 
+    {
+        "pk": 40, 
+        "model": "platforms.operatingsystem", 
+        "fields": {
+            "platform": 1, 
+            "codename": "Cooker", 
+            "version": "2008.1", 
+            "name": "Mandriva", 
+            "maker": ""
+        }
+    }, 
+    {
+        "pk": 38, 
+        "model": "platforms.operatingsystem", 
+        "fields": {
+            "platform": 4, 
+            "codename": "", 
+            "version": "3.1", 
+            "name": "NetBSD", 
+            "maker": ""
+        }
+    }, 
+    {
+        "pk": 37, 
+        "model": "platforms.operatingsystem", 
+        "fields": {
+            "platform": 4, 
+            "codename": "", 
+            "version": "4.0", 
+            "name": "NetBSD", 
+            "maker": ""
+        }
+    }, 
+    {
+        "pk": 36, 
+        "model": "platforms.operatingsystem", 
+        "fields": {
+            "platform": 4, 
+            "codename": "", 
+            "version": "4.1", 
+            "name": "OpenBSD", 
+            "maker": ""
+        }
+    }, 
+    {
+        "pk": 35, 
+        "model": "platforms.operatingsystem", 
+        "fields": {
+            "platform": 4, 
+            "codename": "", 
+            "version": "4.2", 
+            "name": "OpenBSD", 
+            "maker": ""
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "platforms.operatingsystem", 
+        "fields": {
+            "platform": 1, 
+            "codename": "Ac", 
+            "version": "2.0", 
+            "name": "PLD", 
+            "maker": ""
+        }
+    }, 
+    {
+        "pk": 19, 
+        "model": "platforms.operatingsystem", 
+        "fields": {
+            "platform": 1, 
+            "codename": "Th", 
+            "version": "3.0", 
+            "name": "PLD", 
+            "maker": ""
+        }
+    }, 
+    {
+        "pk": 41, 
+        "model": "platforms.operatingsystem", 
+        "fields": {
+            "platform": 1, 
+            "codename": "", 
+            "version": "Titanium", 
+            "name": "PLD", 
+            "maker": "Hawk"
+        }
+    }, 
+    {
+        "pk": 22, 
+        "model": "platforms.operatingsystem", 
+        "fields": {
+            "platform": 1, 
+            "codename": "", 
+            "version": "10.0", 
+            "name": "SUSE", 
+            "maker": "SUSE"
+        }
+    }, 
+    {
+        "pk": 23, 
+        "model": "platforms.operatingsystem", 
+        "fields": {
+            "platform": 1, 
+            "codename": "", 
+            "version": "10.1", 
+            "name": "SUSE", 
+            "maker": "SUSE"
+        }
+    }, 
+    {
+        "pk": 24, 
+        "model": "platforms.operatingsystem", 
+        "fields": {
+            "platform": 1, 
+            "codename": "", 
+            "version": "10.2", 
+            "name": "SUSE", 
+            "maker": "SUSE"
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "platforms.operatingsystem", 
+        "fields": {
+            "platform": 1, 
+            "codename": "Breezy Badger", 
+            "version": "5.10", 
+            "name": "Ubuntu", 
+            "maker": "Canonical"
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "platforms.operatingsystem", 
+        "fields": {
+            "platform": 1, 
+            "codename": "Dapper Drake", 
+            "version": "6.06 LTS", 
+            "name": "Ubuntu", 
+            "maker": "Canonical"
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "platforms.operatingsystem", 
+        "fields": {
+            "platform": 1, 
+            "codename": "Edgy Eft", 
+            "version": "6.10", 
+            "name": "Ubuntu", 
+            "maker": "Canonical"
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "platforms.operatingsystem", 
+        "fields": {
+            "platform": 1, 
+            "codename": "Feisty Fawn", 
+            "version": "7.04", 
+            "name": "Ubuntu", 
+            "maker": "Canonical"
+        }
+    }, 
+    {
+        "pk": 27, 
+        "model": "platforms.operatingsystem", 
+        "fields": {
+            "platform": 1, 
+            "codename": "Gutsy Gibbon", 
+            "version": "7.10", 
+            "name": "Ubuntu", 
+            "maker": "Canonical"
+        }
+    }, 
+    {
+        "pk": 29, 
+        "model": "platforms.operatingsystem", 
+        "fields": {
+            "platform": 1, 
+            "codename": "Hardy Heron", 
+            "version": "8.04 LTS", 
+            "name": "Ubuntu", 
+            "maker": "Canonical"
+        }
+    }, 
+    {
+        "pk": 17, 
+        "model": "platforms.operatingsystem", 
+        "fields": {
+            "platform": 3, 
+            "codename": "", 
+            "version": "2000", 
+            "name": "Windows", 
+            "maker": "Microsoft"
+        }
+    }, 
+    {
+        "pk": 15, 
+        "model": "platforms.operatingsystem", 
+        "fields": {
+            "platform": 3, 
+            "codename": "Server", 
+            "version": "2003", 
+            "name": "Windows", 
+            "maker": "Microsoft"
+        }
+    }, 
+    {
+        "pk": 12, 
+        "model": "platforms.operatingsystem", 
+        "fields": {
+            "platform": 3, 
+            "codename": "", 
+            "version": "98", 
+            "name": "Windows", 
+            "maker": "Microsoft"
+        }
+    }, 
+    {
+        "pk": 13, 
+        "model": "platforms.operatingsystem", 
+        "fields": {
+            "platform": 3, 
+            "codename": "", 
+            "version": "ME", 
+            "name": "Windows", 
+            "maker": "Microsoft"
+        }
+    }, 
+    {
+        "pk": 16, 
+        "model": "platforms.operatingsystem", 
+        "fields": {
+            "platform": 3, 
+            "codename": "", 
+            "version": "Vista", 
+            "name": "Windows", 
+            "maker": "Microsoft"
+        }
+    }, 
+    {
+        "pk": 14, 
+        "model": "platforms.operatingsystem", 
+        "fields": {
+            "platform": 3, 
+            "codename": "", 
+            "version": "XP", 
+            "name": "Windows", 
+            "maker": "Microsoft"
+        }
+    }
+]

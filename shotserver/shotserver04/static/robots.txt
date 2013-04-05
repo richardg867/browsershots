@@ -1,0 +1,15 @@
+User-agent: *
+Disallow: /png/
+Disallow: /static/
+Disallow: /media/
+Disallow: /screenshots/
+Disallow: /requests/
+Disallow: /websites/
+Disallow: /http
+
+User-agent: Mediapartners-Google
+Disallow: /png/
+Disallow: /static/
+Disallow: /media/
+Disallow: /screenshots/
+Disallow: /requests/

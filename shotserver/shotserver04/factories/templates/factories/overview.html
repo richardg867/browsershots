@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load human %}
+{% load ads %}
+
+{% block title %}{{ _("screenshot factories")|capfirst }}{% endblock %}
+
+{% block content %}
+<h1>{{ _("screenshot factories")|capfirst }}</h1>
+
+{% show_ad skyscraper %}
+
+<p>{% blocktrans with factory_list|length as count %}These {{ count }} computers are run by volunteers to make browser screenshots.{% endblocktrans %}</p>
+
+<table class="factories vertical">
+<thead>
+<tr>{{ factory_table_header }}</tr>
+</thead>
+<tbody>
+{% for factory in factory_list %}
+<tr class="{% cycle row1,row2 %}">{{ factory.table_row }}</tr>
+{% endfor %}
+</tbody>
+</table>
+
+{% show_ad leaderboard %}
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "adbase.html" %}
+{% load human %}
+
+{% block title %}{{ _("server status")|capfirst }}{% endblock %}
+
+{% block content %}
+<h1>{{ _("server status")|capfirst }}</h1>
+
+<ul>
+<li>Local time: {{ local_time|human_datetime }}</li>
+<li>Uptime: {{ started|timesince }}</li>
+<li>Load averages: {{ load_averages }}</li>
+<li>Free disk space: {{ free_disk_space|filesizeformat }} ({{ free_disk_percent }}%)</li>
+</ul>
+{% endblock %}

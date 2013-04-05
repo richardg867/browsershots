@@ -1,0 +1,1655 @@
+# Czech translation for shotserver
+# Copyright (c) 2007 Rosetta Contributors and Canonical Ltd 2007
+# This file is distributed under the same license as the shotserver package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2007.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: shotserver\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-01-31 19:00+0100\n"
+"PO-Revision-Date: 2008-01-04 19:31+0000\n"
+"Last-Translator: Vojtech Vondra <mailbox@ameeck.net>\n"
+"Language-Team: Czech <cs@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2008-01-31 11:04+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#: accounts/views.py:65
+msgid "You're already signed in"
+msgstr "Již jste přihlášen"
+
+#: accounts/views.py:66
+msgid "Please log out and then try again."
+msgstr "Prosím, odhlašte se a zkuste to znovu."
+
+#: accounts/views.py:75
+msgid "Username"
+msgstr "Uživatelské jméno"
+
+#: accounts/views.py:76
+msgid "Password"
+msgstr "Heslo"
+
+#: accounts/views.py:93
+msgid "Please enable cookies in your browser."
+msgstr "Povolte ve svém prohlížeči cookies, prosím."
+
+#: accounts/views.py:99
+msgid "Incorrect username or password."
+msgstr "Špatné jméno nebo heslo."
+
+#: accounts/views.py:101
+msgid "This account is inactive."
+msgstr "Tento účet je neaktivní."
+
+#: accounts/views.py:103 accounts/views.py:203
+msgid "Welcome to Browsershots!"
+msgstr "Vítejte v Browsershots!"
+
+#: accounts/views.py:104
+msgid "let me in"
+msgstr "přihlásit"
+
+#: accounts/views.py:111
+msgid "Forgot your password?"
+msgstr "Zapomněli jste heslo?"
+
+#: accounts/views.py:112
+msgid "Create a new account?"
+msgstr "Vytvořit nový účet?"
+
+#: accounts/views.py:127
+msgid "logged out"
+msgstr "odhlášen"
+
+#: accounts/views.py:129
+msgid "You have successfully logged out."
+msgstr "Úspěšně jsi se odhlásil."
+
+#: accounts/views.py:200 accounts/templates/accounts/profile.html:8
+#, python-format
+msgid "Hi %(first_name)s!"
+msgstr "Zdravím %(first_name)s!"
+
+#: accounts/views.py:229
+msgid "too many verification emails"
+msgstr "příliš mnoho ověřovacích emailů"
+
+#: accounts/views.py:230
+msgid "There were too many email requests from your IP in the last 24 hours."
+msgstr ""
+
+#: accounts/views.py:231 factories/views.py:58 start/views.py:86
+#: start/templates/start/start.html:20
+msgid "Please try again later."
+msgstr "Prosíme, zkuste znovu později."
+
+#: accounts/views.py:234
+msgid "email verification"
+msgstr ""
+
+#: accounts/views.py:236
+msgid "send email"
+msgstr "poslat email"
+
+#: accounts/views.py:254
+msgid "email error"
+msgstr ""
+
+#: accounts/views.py:255
+msgid "Could not send email."
+msgstr "Nebylo možné odeslat email."
+
+#: accounts/views.py:257
+msgid "email sent"
+msgstr "email odeslán"
+
+#: accounts/views.py:258
+#, python-format
+msgid "A verification email was sent to %(address)s."
+msgstr "Potvrzující email byl poslán na %(address)s."
+
+#: accounts/views.py:259
+msgid "Check your email inbox and follow the instructions in the message."
+msgstr ""
+"Zkontrolujte si svoji e-mailovou schránku a postupujte podle instrukcí v e-"
+"mailu."
+
+#: accounts/views.py:260
+msgid "If your email provider uses graylisting, it may take a few minutes."
+msgstr ""
+
+#: accounts/views.py:279
+msgid "username"
+msgstr "uživatelské jméno"
+
+#: accounts/views.py:282
+msgid "first name"
+msgstr "jméno"
+
+#: accounts/views.py:285
+msgid "last name"
+msgstr "příjmení"
+
+#: accounts/views.py:294
+msgid "Username must start with a lowercase letter."
+msgstr "Uživatelské jméno musí začínat malým písmenem."
+
+#: accounts/views.py:298
+msgid ""
+"Username may contain only lowercase letters, digits, underscore, hyphen."
+msgstr ""
+"Uživatelské jméno může obsahovat pouze malé písmena, čísla, podtržítka a "
+"pomlčky."
+
+#: accounts/views.py:301
+msgid "This username is reserved."
+msgstr "Toto  uživatelské jméno je rezervováno."
+
+#: accounts/views.py:310 browsers/views.py:49
+msgid "password"
+msgstr "heslo"
+
+#: accounts/views.py:313
+msgid "again"
+msgstr "znovu"
+
+#: accounts/views.py:323
+#, python-format
+msgid "The password must have %d or more characters."
+msgstr "Heslo musí mít %d nebo více znaků."
+
+#: accounts/views.py:327
+msgid "The password must not be completely numeric."
+msgstr "Heslo nesmí obsahovat jenom čísla."
+
+#: accounts/views.py:340
+msgid "Repeat password is not the same."
+msgstr "Hesla se neshodují."
+
+#: accounts/views.py:361
+msgid "This username is already taken."
+msgstr "Toto uživatelské jméno je již obsazeno."
+
+#: accounts/views.py:375
+msgid "Wrong IP address"
+msgstr "Špatná IP adresa"
+
+#: accounts/views.py:376
+msgid "The verification email was requested from a different IP address."
+msgstr "Potvrující email byl vyžádán z jiné IP adresy."
+
+#: accounts/views.py:378
+msgid "Bad verification code"
+msgstr "Špatný potvrzující kód"
+
+#: accounts/views.py:379
+msgid "The verification code has no email address."
+msgstr ""
+
+#: accounts/views.py:381
+msgid "Verification code expired"
+msgstr "Platnost potvrzujícího kódu vypršela"
+
+#: accounts/views.py:382
+msgid "The verification email was requested more than 24 hours ago."
+msgstr "Ověřovací email byl vyžádán před více než 24 hodinami."
+
+#: accounts/views.py:396
+msgid "choose a new password"
+msgstr "zvolte si nové heslo"
+
+#: accounts/views.py:398
+msgid "change password"
+msgstr "změnit heslo"
+
+#: accounts/views.py:405
+msgid "Password changed"
+msgstr "Heslo změněno"
+
+#: accounts/views.py:406
+msgid "Your new password has been saved."
+msgstr "Vaše nové heslo bylo uloženo."
+
+#: accounts/views.py:407 accounts/views.py:431
+msgid "Click the link in the top right corner to log in."
+msgstr ""
+
+#: accounts/views.py:419
+msgid "create a new account"
+msgstr "vytvořit nový účet"
+
+#: accounts/views.py:421
+msgid "create account"
+msgstr "vytvořit účet"
+
+#: accounts/views.py:429
+msgid "Account created"
+msgstr "Účet vytvořen"
+
+#: accounts/views.py:430
+msgid "A new user account was created."
+msgstr "Nový uživatelský účet byl vytvořen."
+
+#: accounts/templates/accounts/profile.html:5
+msgid "profile"
+msgstr "profil"
+
+#: accounts/templates/accounts/profile.html:11
+msgid "This is your private profile page. Only you can see it."
+msgstr "Toto je soukromá stránka vašeho profilu. Pouze vy k ní máte přístup."
+
+#: accounts/templates/accounts/profile.html:18
+msgid "month"
+msgstr ""
+
+#: accounts/templates/accounts/profile.html:19
+#, fuzzy
+msgid "total screenshots"
+msgstr "screenshoty"
+
+#: accounts/templates/accounts/profile.html:20
+#, fuzzy
+msgid "from my factories"
+msgstr "stroje"
+
+#: accounts/templates/accounts/profile.html:21
+msgid "percent"
+msgstr ""
+
+#: accounts/templates/accounts/profile.html:36
+msgid "your screenshot factories"
+msgstr "vaše screenshotové stroje"
+
+#: accounts/templates/accounts/profile.html:50
+msgid "Register a new screenshot factory?"
+msgstr "Zaregistrovat nový stroj na screenshoty?"
+
+#: accounts/templates/accounts/profile.html:51
+#: factories/templates/factories/details.html:71
+msgid "Register this browser for screenshots?"
+msgstr "Zaregistrovat tento prohlížeč pro screenshoty?"
+
+#: accounts/templates/accounts/profile.html:55
+msgid "recent factory errors"
+msgstr "poslední chyby stroje"
+
+#: accounts/templates/accounts/profile.html:59 browsers/models.py:93
+#: browsers/views.py:47 factories/models.py:95 factories/models.py:207
+#: factories/models.py:233 factories/models.py:254 messages/models.py:35
+#: nonces/models.py:39 requests/models.py:389 screenshots/models.py:115
+#: screenshots/templates/screenshots/details.html:58
+msgid "factory"
+msgstr "stroj"
+
+#: accounts/templates/accounts/profile.html:60
+msgid "code"
+msgstr "kód"
+
+#: accounts/templates/accounts/profile.html:61
+msgid "message"
+msgstr "zpráva"
+
+#: accounts/templates/accounts/profile.html:62
+msgid "age"
+msgstr "věk"
+
+#: accounts/templates/accounts/profile.html:78
+msgid "account balance"
+msgstr "zůstatek na účtu"
+
+#: browsers/models.py:39 browsers/models.py:64 factories/models.py:52
+#: factories/templates/factories/details.html:33 platforms/models.py:34
+#: platforms/models.py:58 sponsors/models.py:37 websites/models.py:47
+msgid "name"
+msgstr "název"
+
+#: browsers/models.py:40
+msgid "e.g. Gecko / KHTML / AppleWebKit"
+msgstr "např. Gecko / KHTML / AppleWebKit"
+
+#: browsers/models.py:42 browsers/models.py:67 platforms/models.py:64
+msgid "maker"
+msgstr "tvůrce"
+
+#: browsers/models.py:49 browsers/models.py:105
+#: factories/templates/factories/details.html:35
+#: screenshots/templates/screenshots/details.html:42
+msgid "engine"
+msgstr "jádro"
+
+#: browsers/models.py:50
+msgid "engines"
+msgstr "jádra"
+
+#: browsers/models.py:65
+msgid "e.g. Firefox / MSIE / Safari"
+msgstr "např. Firefox / MSIE / Safari"
+
+#: browsers/models.py:69
+msgid "terminal"
+msgstr "terminál"
+
+#: browsers/models.py:69
+msgid "Is this a text-mode browser?"
+msgstr "Je toto textový prohlížeč?"
+
+#: browsers/models.py:71
+msgid "unusual"
+msgstr ""
+
+#: browsers/models.py:71
+msgid "Hide from recent screenshot overview?"
+msgstr "Skrýt z přehledu posledních screenshotů?"
+
+#: browsers/models.py:78 browsers/models.py:97 requests/models.py:381
+msgid "browser group"
+msgstr "skupina prohlížečů"
+
+#: browsers/models.py:79
+msgid "browser groups"
+msgstr "skupiny prohlížečů"
+
+#: browsers/models.py:95
+msgid "user agent"
+msgstr "označení"
+
+#: browsers/models.py:99 features/models.py:60 features/models.py:81
+#: features/models.py:102 platforms/models.py:60
+msgid "version"
+msgstr "verze"
+
+#: browsers/models.py:101 requests/models.py:383
+msgid "major"
+msgstr "major"
+
+#: browsers/models.py:103 requests/models.py:385
+msgid "minor"
+msgstr "minor"
+
+#: browsers/models.py:107
+msgid "engine version"
+msgstr "verze jádra"
+
+#: browsers/models.py:109 factories/templates/factories/details.html:36
+#: requests/models.py:62 screenshots/templates/screenshots/details.html:46
+#: start/forms/features.py:66
+msgid "Javascript"
+msgstr "Javascript"
+
+#: browsers/models.py:111 factories/templates/factories/details.html:37
+#: requests/models.py:64 screenshots/templates/screenshots/details.html:50
+#: start/forms/features.py:68
+msgid "Java"
+msgstr "Java"
+
+#: browsers/models.py:113 factories/templates/factories/details.html:38
+#: requests/models.py:66 screenshots/templates/screenshots/details.html:54
+#: start/forms/features.py:70
+msgid "Flash"
+msgstr "Flash"
+
+#: browsers/models.py:115 factories/templates/factories/details.html:42
+msgid "command"
+msgstr "příkaz"
+
+#: browsers/models.py:116
+msgid "Leave empty to use default command."
+msgstr "Nechte prázdné pro použití výchozího příkazu."
+
+#: browsers/models.py:118
+msgid "active"
+msgstr "aktivní"
+
+#: browsers/models.py:119
+msgid "Designates that this browser is currently installed."
+msgstr "Ukazuje, že tento prohlížeč je nainstalován."
+
+#: browsers/models.py:121 factories/models.py:69
+#: factories/templates/factories/details.html:39
+msgid "last upload"
+msgstr "poslední nahrání"
+
+#: browsers/models.py:123 factories/models.py:71
+#: factories/templates/factories/details.html:40
+#: requests/templates/requests/overview.html:17
+msgid "uploads per hour"
+msgstr "nahrání za hodinu"
+
+#: browsers/models.py:125 factories/models.py:73
+#: factories/templates/factories/details.html:41
+#: requests/templates/requests/overview.html:18
+msgid "uploads per day"
+msgstr "nahrání za den"
+
+#: browsers/models.py:127 factories/models.py:80
+#: factories/templates/factories/details.html:14 nonces/models.py:43
+msgid "created"
+msgstr "Vytvořeno"
+
+#: browsers/models.py:149 requests/models.py:393
+#: requests/templates/requests/overview.html:15 screenshots/models.py:117
+#: screenshots/templates/screenshots/details.html:38
+msgid "browser"
+msgstr "prohlížeč"
+
+#: browsers/models.py:150
+msgid "browsers"
+msgstr "prohlížeče"
+
+#: browsers/models.py:176
+msgid "deactivate"
+msgstr "deaktivovat"
+
+#: browsers/models.py:179
+msgid "activate"
+msgstr "aktivovat"
+
+#: browsers/views.py:57
+msgid "Unknown factory name."
+msgstr "Neznámé jméno stroje."
+
+#: browsers/views.py:67
+msgid "Password mismatch."
+msgstr "Heslo nesouhlasí."
+
+#: browsers/templates/browsers/add.html:5
+#: browsers/templates/browsers/add.html:8
+msgid "add a new browser version"
+msgstr "přidat novou verzi prohlížeče"
+
+#: browsers/templates/browsers/add.html:20
+#: factories/templates/factories/details.html:18
+#: screenshots/templates/screenshots/details.html:116
+#: start/templates/start/start.html:37
+msgid "submit"
+msgstr "odeslat"
+
+#: browsers/templates/browsers/add.html:23
+msgid "updates"
+msgstr "aktualizace"
+
+#: browsers/templates/browsers/add.html:25
+msgid ""
+"You can also use this page when you've changed settings or updated the "
+"browser."
+msgstr ""
+"Můžete také použít tuto stránku poté, co jste změnili nastavení nebo "
+"aktualizovali prohlížeč."
+
+#: browsers/templates/browsers/add.html:26
+msgid ""
+"If the same browser is already registered for your factory, it will be "
+"replaced."
+msgstr "Pokud stejný prohlížeč již existuje na vašem stroji, bude nahrazen."
+
+#: browsers/templates/browsers/add.html:29
+msgid "other options"
+msgstr "další možnosti"
+
+#: browsers/templates/browsers/add.html:30
+#, python-format
+msgid ""
+"If your browser group or rendering engine is not available, please write to %"
+"(email)s."
+msgstr ""
+"Pokud váše skupina prohlížečů nebo vykreslovací engine není dostupný, "
+"napište na %(email)s."
+
+#: browsers/templates/browsers/add.html:44 features/models.py:34
+#: start/forms/features.py:46
+msgid "enabled"
+msgstr "povoleno"
+
+#: browsers/templates/browsers/add.html:44
+#: browsers/templates/browsers/add.html:48 features/models.py:36
+#: start/forms/features.py:43
+msgid "disabled"
+msgstr "nepovoleno"
+
+#: common/templates/404.html:3 common/templates/404.html.py:6
+msgid "page not found"
+msgstr "stránka nebyla nalezena"
+
+#: common/templates/404.html:7
+msgid "The requested page was not found."
+msgstr "požadovaná stránka nebyla nalezena."
+
+#: common/templates/500.html:3 common/templates/500.html.py:6
+msgid "internal server error"
+msgstr "interní chyba serveru"
+
+#: common/templates/base.html:24
+msgid "home"
+msgstr "domů"
+
+#: common/templates/base.html:25 factories/models.py:256
+#: screenshots/models.py:143 screenshots/models.py:301
+msgid "screenshots"
+msgstr "screenshoty"
+
+#: common/templates/base.html:26
+msgid "queue"
+msgstr "fronta"
+
+#: common/templates/base.html:27 factories/models.py:96
+msgid "factories"
+msgstr "stroje"
+
+#: common/templates/base.html:28
+msgid "search"
+msgstr "hledání"
+
+#: common/templates/base.html:34
+msgid "signed in as"
+msgstr "přihlášen jako"
+
+#: common/templates/base.html:35
+msgid "logout"
+msgstr "odhlásit se"
+
+#: common/templates/base.html:37
+msgid "login"
+msgstr "přihlásit se"
+
+#: common/templatetags/hosting_provider.py:45
+#, python-format
+msgid "hosted by %(provider)s"
+msgstr "hosting od %(provider)s"
+
+#: common/templatetags/human.py:51
+#, python-format
+msgid "%(seconds)d s"
+msgstr "%(seconds)d s"
+
+#: common/templatetags/human.py:54 requests/views.py:126
+#, python-format
+msgid "%(minutes)d min"
+msgstr "%(minutes)d min"
+
+#: common/templatetags/human.py:57
+#, python-format
+msgid "%(hours)d h"
+msgstr "%(hours)d h"
+
+#: common/templatetags/human.py:59
+#, python-format
+msgid "%(days)d d"
+msgstr "%(days)d d"
+
+#: common/templatetags/human.py:104
+#, python-format
+msgid "%(bytes)s bytes"
+msgstr "%(bytes)s bytů"
+
+#: common/templatetags/sql_queries.py:55
+#, python-format
+msgid "%(count)d database queries"
+msgstr "%(count)d dotazů na databázi"
+
+#: factories/models.py:53
+msgid "Hostname (lowercase)"
+msgstr "Hostitel (malá písmena)"
+
+#: factories/models.py:55
+msgid "administrator"
+msgstr "administrátor"
+
+#: factories/models.py:57 factories/templates/factories/details.html:12
+#: screenshots/templates/screenshots/details.html:62 sponsors/models.py:56
+msgid "sponsor"
+msgstr "sponzor"
+
+#: factories/models.py:59 factories/templates/factories/details.html:16
+#: factories/templates/factories/details.html:20
+#: screenshots/templates/screenshots/details.html:66
+msgid "hardware"
+msgstr "hardware"
+
+#: factories/models.py:60
+msgid "e.g. ThinkPad R32, P4 1.8 GHz, 768 MB"
+msgstr "např. ThinkPad R32, P4 1.8 GHz, 768 MB"
+
+#: factories/models.py:62 factories/templates/factories/details.html:17
+#: factories/templates/factories/details.html:21 platforms/models.py:71
+#: screenshots/templates/screenshots/details.html:70
+msgid "operating system"
+msgstr "operační systém"
+
+#: factories/models.py:64 requests/models.py:72
+msgid "IP"
+msgstr "IP"
+
+#: factories/models.py:65
+msgid "The last poll came from this IP address."
+msgstr "Poslední dotaz přišel z této IP adresy."
+
+#: factories/models.py:67
+msgid "last poll"
+msgstr "poslední dotaz"
+
+#: factories/models.py:75
+#, fuzzy
+msgid "errors per day"
+msgstr "nahrání za den"
+
+#: factories/models.py:77 requests/models.py:334
+msgid "queue estimate"
+msgstr "odhad doby čekání"
+
+#: factories/models.py:78
+msgid "Seconds between screenshot request and upload."
+msgstr "Počet vteřin mezi zachycením a nahráním."
+
+#: factories/models.py:210 screenshots/models.py:119 sponsors/models.py:44
+msgid "width"
+msgstr "šířka"
+
+#: factories/models.py:212 screenshots/models.py:121 sponsors/models.py:45
+msgid "height"
+msgstr "výška"
+
+#: factories/models.py:219 start/forms/options.py:64
+msgid "screen size"
+msgstr "velikost obrazovky"
+
+#: factories/models.py:220 factories/templates/factories/details.html:78
+msgid "screen sizes"
+msgstr "velikosti obrazovek"
+
+#: factories/models.py:236 factories/templates/factories/details.html:109
+#: factories/templates/factories/details.html:115 requests/models.py:60
+msgid "bits per pixel"
+msgstr "bitů na pixel"
+
+#: factories/models.py:243 start/forms/options.py:66
+msgid "color depth"
+msgstr "barevná hloubka"
+
+#: factories/models.py:244 factories/templates/factories/details.html:104
+msgid "color depths"
+msgstr "barevné hloubky"
+
+#: factories/models.py:255
+#, fuzzy
+msgid "date"
+msgstr "aktualizace"
+
+#: factories/views.py:56 start/views.py:84
+msgid "out of service"
+msgstr "mimo provoz"
+
+#: factories/views.py:57 start/views.py:85
+msgid "No active screenshot factories."
+msgstr "Žádné aktivní stroje."
+
+#: factories/views.py:77 factories/views.py:88 factories/views.py:106
+#, python-format
+msgid "Value %d is too small."
+msgstr "Hodnota %d je příliš malá."
+
+#: factories/views.py:79 factories/views.py:90 factories/views.py:108
+#, python-format
+msgid "Value %d is too big."
+msgstr "Hodnota %d je příliš velká."
+
+#: factories/views.py:114 requests/views.py:143 requests/views.py:148
+msgid "invalid request"
+msgstr "špatný požadavek"
+
+#: factories/views.py:119
+msgid "permission denied"
+msgstr "přístup odmítnut"
+
+#: factories/views.py:150
+msgid "This browser is already inactive."
+msgstr "Tento prohlížeč je již neaktivní."
+
+#: factories/views.py:196
+msgid "This screen size is already enabled."
+msgstr "Tato velikost obrazovky je již povolena."
+
+#: factories/views.py:198 factories/views.py:211
+msgid "Invalid data."
+msgstr ""
+
+#: factories/views.py:209
+msgid "This color depth is already enabled."
+msgstr "Tato barevná hloubka je již povolena."
+
+#: factories/views.py:295
+msgid "Name must start with a lowercase letter."
+msgstr "Jméno musí začínat malým písmenem."
+
+#: factories/views.py:299
+msgid "Name may contain only lowercase letters, digits, underscore, hyphen."
+msgstr "Jméno může obsahovat pouze písmena, čísla, podtržítka a pomlčky."
+
+#: factories/views.py:302
+msgid "This name is reserved."
+msgstr "Toto jméno je rezervováno."
+
+#: factories/views.py:319
+msgid "This name is already taken."
+msgstr "Toto jméno je již obsazeno."
+
+#: factories/views.py:338
+msgid "register a new screenshot factory"
+msgstr "registrace nového stroje na screenshoty"
+
+#: factories/views.py:339
+msgid "register"
+msgstr "registrace"
+
+#: factories/templates/factories/details.html:5
+#: factories/templates/factories/details.html:8
+#, python-format
+msgid "Screenshot Factory %(name)s"
+msgstr "Stroj na screenshoty %(name)s"
+
+#: factories/templates/factories/details.html:13
+msgid "admin"
+msgstr "admin"
+
+#: factories/templates/factories/details.html:26
+msgid "installed browsers"
+msgstr "instalované prohlížeče"
+
+#: factories/templates/factories/details.html:34
+msgid "short version"
+msgstr "zkrácená verze"
+
+#: factories/templates/factories/details.html:66
+msgid "No browsers registered for this factory."
+msgstr "Žádné prohlížeče nejsou registrovány pro tento stroj."
+
+#: factories/templates/factories/details.html:85
+#: factories/templates/factories/details.html:110
+msgid "add"
+msgstr "přidat"
+
+#: factories/templates/factories/details.html:91
+#: factories/templates/factories/details.html:116
+msgid "remove"
+msgstr "odstranit"
+
+#: factories/templates/factories/details.html:95
+#: factories/templates/factories/details.html:120
+msgid "default only"
+msgstr "pouze výchozí"
+
+#: factories/templates/factories/details.html:127
+#: screenshots/templates/screenshots/overview.html:4
+#: screenshots/templates/screenshots/overview.html:7
+msgid "recent screenshots"
+msgstr "poslední screenshoty"
+
+#: factories/templates/factories/details.html:134
+msgid "recent problem reports"
+msgstr "poslední chybové hlášení"
+
+#: factories/templates/factories/details.html:137
+#, python-format
+msgid "%(interval)s ago"
+msgstr "před %(interval)s"
+
+#: factories/templates/factories/overview.html:5
+#: factories/templates/factories/overview.html:8
+msgid "screenshot factories"
+msgstr "Stroje na screenshoty"
+
+#: features/models.py:61 features/models.py:82
+msgid "e.g. 1.4 / 1.5 / 1.6"
+msgstr "např. 1.4 / 1.5 / 1.6"
+
+#: features/models.py:67
+msgid "Javascript version"
+msgstr "Verze Javascriptu"
+
+#: features/models.py:68
+msgid "Javascript versions"
+msgstr "Verze Javascriptu"
+
+#: features/models.py:88
+msgid "Java version"
+msgstr "Verze Javy"
+
+#: features/models.py:89
+msgid "Java versions"
+msgstr "Verze Javy"
+
+#: features/models.py:103
+msgid "e.g. 5 / 6 / 7 / 8 / 9"
+msgstr "např. 5 / 6 / 7 / 8 / 9"
+
+#: features/models.py:109
+msgid "Flash version"
+msgstr "Verze Flashe"
+
+#: features/models.py:110
+msgid "Flash versions"
+msgstr "Verze Flashe"
+
+#: messages/models.py:37 screenshots/models.py:347
+msgid "error code"
+msgstr "kód chyby"
+
+#: messages/models.py:39 screenshots/models.py:349
+msgid "error message"
+msgstr "chybové hlášení"
+
+#: messages/models.py:41
+msgid "occurred"
+msgstr "stalo se"
+
+#: messages/models.py:49
+msgid "factory error message"
+msgstr "chybové hlášení stroje"
+
+#: messages/models.py:50
+msgid "factory error messages"
+msgstr "chybová hlášení stroje"
+
+#: nonces/models.py:35 screenshots/models.py:109
+msgid "hashkey"
+msgstr "hashovací klíč"
+
+#: nonces/models.py:37 screenshots/models.py:353
+msgid "IP address"
+msgstr "IP adresa"
+
+#: nonces/models.py:41
+msgid "email"
+msgstr "email"
+
+#: nonces/models.py:54
+msgid "nonce"
+msgstr ""
+
+#: nonces/models.py:55
+msgid "nonces"
+msgstr ""
+
+#: platforms/models.py:37
+msgid "position"
+msgstr "pozice"
+
+#: platforms/models.py:46 platforms/models.py:56 requests/models.py:379
+#: requests/templates/requests/overview.html:14
+msgid "platform"
+msgstr "platforma"
+
+#: platforms/models.py:47
+msgid "platforms"
+msgstr "platformy"
+
+#: platforms/models.py:62
+msgid "codename"
+msgstr "kódové označení"
+
+#: platforms/models.py:72
+msgid "operating systems"
+msgstr "operační systémy"
+
+#: requests/models.py:54 screenshots/models.py:113 websites/models.py:92
+msgid "website"
+msgstr "webová stránka"
+
+#: requests/models.py:56
+msgid "screen width"
+msgstr "šířka obrazovky"
+
+#: requests/models.py:58
+msgid "screen height"
+msgstr "výška obrazovky"
+
+#: requests/models.py:68 start/forms/special.py:35
+#, fuzzy
+msgid "only my own factories"
+msgstr "stroje"
+
+#: requests/models.py:70
+msgid "submitter"
+msgstr "odesílatel"
+
+#: requests/models.py:74 websites/models.py:49 websites/models.py:84
+msgid "submitted"
+msgstr "navrhovatel"
+
+#: requests/models.py:76
+msgid "expire"
+msgstr "vyprší"
+
+#: requests/models.py:94 requests/models.py:377
+msgid "request group"
+msgstr "skupina požadavků"
+
+#: requests/models.py:95
+msgid "request groups"
+msgstr "skupiny požadavků"
+
+#: requests/models.py:104
+msgid "screenshot request group"
+msgstr "skupina požadavků na screenshoty"
+
+#: requests/models.py:125
+#, python-format
+msgid "submitted %(interval)s ago"
+msgstr "zasláno před %(interval)s"
+
+#: requests/models.py:139
+#, python-format
+msgid "expires in %(interval)s"
+msgstr "vyprší za %(interval)s"
+
+#: requests/models.py:144
+msgid "extend"
+msgstr "rozšířit"
+
+#: requests/models.py:154
+#, fuzzy, python-format
+msgid "Only for screenshot factories run by %(admin)s"
+msgstr "vaše screenshotové stroje"
+
+#: requests/models.py:164 start/forms/options.py:41
+#, python-format
+msgid "%(width)d pixels wide"
+msgstr "%(width)d pixelů široké"
+
+#: requests/models.py:167 start/forms/options.py:54
+#, python-format
+msgid "%(color_depth)d bits per pixel"
+msgstr "%(color_depth)d bitů na pixel"
+
+#: requests/models.py:220
+msgid "Your screenshots will appear here when they are uploaded."
+msgstr "Vaše screenshoty se zde objeví, jakmile budou nahrány."
+
+#: requests/models.py:222
+msgid "[Reload this page] or bookmark it and come back later."
+msgstr "[Aktualizujte tuto stránku] nebo si ji zazáložkujte a přijďte později."
+
+#: requests/models.py:224
+msgid "Your screenshot requests have expired."
+msgstr "Vaše požadavky vypršely."
+
+#: requests/models.py:234
+#, python-format
+msgid "%(count)d browsers selected"
+msgstr "%(count)d prohlížečů vybráno"
+
+#: requests/models.py:242
+#, python-format
+msgid "%(count)d starting"
+msgstr "začíná %(count)d"
+
+#: requests/models.py:244
+#, python-format
+msgid "%(count)d loading"
+msgstr "načítá %(count)d"
+
+#: requests/models.py:246 requests/models.py:249
+#, python-format
+msgid "%(count)d uploaded"
+msgstr "%(count)d nahráno"
+
+#: requests/models.py:252
+#, python-format
+msgid "%(count)d failed"
+msgstr "%(count)d selhalo"
+
+#: requests/models.py:255
+#, python-format
+msgid "%(count)d expired"
+msgstr "%(count)d vypršelo"
+
+#: requests/models.py:330
+#, python-format
+msgid "%(min_interval)s to %(max_interval)s"
+msgstr ""
+
+#: requests/models.py:332
+msgid "details"
+msgstr "podrobnosti"
+
+#: requests/models.py:358
+msgid "download all screenshots"
+msgstr "stáhnout všechny screenshoty"
+
+#: requests/models.py:361
+#, python-format
+msgid "download %(count)d screenshots"
+msgstr "stáhnout %(count)d screenshotů"
+
+#: requests/models.py:387
+msgid "priority"
+msgstr "priorita"
+
+#: requests/models.py:391
+msgid "locked"
+msgstr "zamknuto"
+
+#: requests/models.py:396
+msgid "redirected"
+msgstr "přesměrováno"
+
+#: requests/models.py:398 screenshots/models.py:142 screenshots/models.py:345
+msgid "screenshot"
+msgstr "screenshot"
+
+#: requests/models.py:415
+msgid "request"
+msgstr "dotaz"
+
+#: requests/models.py:416
+msgid "requests"
+msgstr "požadavků"
+
+#: requests/models.py:439 screenshots/models.py:125
+#: screenshots/templates/screenshots/details.html:94
+msgid "uploaded"
+msgstr "nahráno"
+
+#: requests/models.py:441
+msgid "failed"
+msgstr "selhalo"
+
+#: requests/models.py:443
+msgid "loading"
+msgstr "načítá se"
+
+#: requests/models.py:445
+msgid "starting"
+msgstr "spouštím"
+
+#: requests/views.py:118
+msgid "expired"
+msgstr "vypršel"
+
+#: requests/views.py:122
+msgid "unavailable"
+msgstr "nedostupný"
+
+#: requests/views.py:144
+msgid "You must send a POST request to this page."
+msgstr ""
+
+#: requests/views.py:149
+msgid "You must specify a numeric request group ID."
+msgstr ""
+
+#: requests/views.py:154
+msgid "request group expired"
+msgstr "skupina požadavků vypršela"
+
+#: requests/views.py:155
+#, python-format
+msgid "This request group already expired %d minutes ago."
+msgstr "Tato skupina požadavků vypršela před %d minutami."
+
+#: requests/views.py:158 websites/templates/websites/details.html:38
+#: websites/templates/websites/unknown.html:14
+msgid "Request new screenshots?"
+msgstr "Zaslat požadavek na nové screenshoty?"
+
+#: requests/templates/requests/details.html:9
+#: screenshots/templates/screenshots/details.html:23
+#: websites/templates/websites/details.html:9
+#, python-format
+msgid "for %(url)s"
+msgstr "pro %(url)s"
+
+#: requests/templates/requests/overview.html:5
+#: requests/templates/requests/overview.html:8
+msgid "screenshot request queue"
+msgstr "Fronta požadavků na screenshoty"
+
+#: requests/templates/requests/overview.html:16
+msgid "pending requests"
+msgstr "čekající požadavky"
+
+#: requests/templates/requests/overview.html:34
+msgid "No pending requests."
+msgstr "žádné čekající požadavky."
+
+#: screenshots/models.py:38
+msgid "This is not the requested browser."
+msgstr "Toto není požadovaný prohlížeč."
+
+#: screenshots/models.py:39
+msgid "This is not the requested operating system."
+msgstr "Toto není požadovaný operační systém."
+
+#: screenshots/models.py:41
+msgid "This is not the requested Javascript version."
+msgstr "Toto není požadovaná verze Javascriptu."
+
+#: screenshots/models.py:42
+msgid "This is not the requested Java version."
+msgstr "Toto není požadovaná verze Javy."
+
+#: screenshots/models.py:43
+msgid "This is not the requested Flash version."
+msgstr "Toto není požadovaná verze Flashe."
+
+#: screenshots/models.py:44
+msgid "A language pack needs to be installed."
+msgstr "Je potřeba nainstalovat jazykový balík."
+
+#: screenshots/models.py:46
+msgid "There is a dialog box in front of the browser window."
+msgstr "Před oknem prohlížeče je dialogové okno."
+
+#: screenshots/models.py:47
+msgid "The browser window is not maximized."
+msgstr "Okno prohlížeče není maximalizováno."
+
+#: screenshots/models.py:48
+msgid "The page is not finished loading."
+msgstr "Stránka se nenačetla celá."
+
+#: screenshots/models.py:52
+#, python-format
+msgid "This is not %(browser)s."
+msgstr "Toto není %(browser)s."
+
+#: screenshots/models.py:53
+#, python-format
+msgid "This is not %(operating_system)s."
+msgstr "Toto není %(operating_system)s."
+
+#: screenshots/models.py:55
+#, python-format
+msgid "Javascript is not %(javascript)s."
+msgstr "Javascript není %(javascript)s."
+
+#: screenshots/models.py:56
+#, python-format
+msgid "Java is not %(java)s."
+msgstr "Java není %(java)s."
+
+#: screenshots/models.py:57
+#, python-format
+msgid "Flash is not %(flash)s."
+msgstr "Flash není %(flash)s."
+
+#: screenshots/models.py:111
+msgid "user"
+msgstr "uživatel"
+
+#: screenshots/models.py:123
+#, fuzzy
+msgid "colors"
+msgstr "barevné hloubky"
+
+#: screenshots/models.py:273
+msgid "first"
+msgstr "první"
+
+#: screenshots/models.py:274
+msgid "previous"
+msgstr "předchozí"
+
+#: screenshots/models.py:275
+msgid "next"
+msgstr "následující"
+
+#: screenshots/models.py:276
+msgid "last"
+msgstr "poslední"
+
+#: screenshots/models.py:287
+#, python-format
+msgid "%(index)d out of %(total)d"
+msgstr "%(index)d. z %(total)d"
+
+#: screenshots/models.py:311
+#, python-format
+msgid "with %(browser)s"
+msgstr "v %(browser)s"
+
+#: screenshots/models.py:322
+#, python-format
+msgid "on %(platform)s"
+msgstr "na %(platform)s"
+
+#: screenshots/models.py:351
+msgid "reported"
+msgstr "nahlášeno"
+
+#: screenshots/models.py:361
+msgid "problem report"
+msgstr "ohlášení chyby"
+
+#: screenshots/models.py:362
+msgid "problem reports"
+msgstr "ohlášení chyb"
+
+#: screenshots/views.py:117
+msgid "HTML is not allowed here."
+msgstr "Není zde povoleno HTML."
+
+#: screenshots/views.py:121
+msgid "URLs are not allowed here."
+msgstr "URL zde nejsou povoleny."
+
+#: screenshots/templates/screenshots/details.html:28
+msgid "Click for full size."
+msgstr "Klikněte pro plnou velikost."
+
+#: screenshots/templates/screenshots/details.html:74
+msgid "dimensions"
+msgstr "rozměry"
+
+#: screenshots/templates/screenshots/details.html:78
+msgid "file size"
+msgstr "velikost souboru"
+
+#: screenshots/templates/screenshots/details.html:82
+msgid "requested"
+msgstr "Vyžádáno"
+
+#: screenshots/templates/screenshots/details.html:86
+msgid "started"
+msgstr "spuštěno"
+
+#: screenshots/templates/screenshots/details.html:90
+msgid "page loaded"
+msgstr "Stránka načtena"
+
+#: screenshots/templates/screenshots/details.html:101
+msgid "Report a problem with this screenshot?"
+msgstr "Nahlásit problém s tímto screenshotem?"
+
+#: sponsors/models.py:39
+msgid "slug"
+msgstr ""
+
+#: sponsors/models.py:40
+msgid "This is used to generate the link to the logo image."
+msgstr ""
+
+#: sponsors/models.py:42 websites/models.py:75
+msgid "URL"
+msgstr "URL"
+
+#: sponsors/models.py:47
+msgid "premium"
+msgstr "premium"
+
+#: sponsors/models.py:48
+msgid "Premium sponsors are always shown on the front page."
+msgstr "Premium sponzoři jsou vždy zobrazeni na hlavní stránce."
+
+#: sponsors/models.py:50
+msgid "front page"
+msgstr "hlavní strana"
+
+#: sponsors/models.py:57
+msgid "sponsors"
+msgstr "sponzoři"
+
+#: start/views.py:66
+msgid "login required"
+msgstr "vyžadováno přihlášení"
+
+#: start/views.py:67
+msgid "Anonymous screenshot requests are not allowed."
+msgstr "Anonymní požadavky nejsou povoleny."
+
+#: start/views.py:70
+msgid "Please log in with your username and password."
+msgstr "Prosím, přihlašte se."
+
+#: start/views.py:229
+#, python-format
+msgid ""
+"There were already %(count)d screenshot requests for this website today."
+msgstr ""
+
+#: start/views.py:230
+#, python-format
+msgid ""
+"You have already requested %(count)d screenshots for this website today."
+msgstr ""
+
+#: start/views.py:232
+#, python-format
+msgid "There were already %(count)d screenshot requests for %(domain)s today."
+msgstr ""
+
+#: start/views.py:233
+#, python-format
+msgid "You have already requested %(count)d screenshots for %(domain)s today."
+msgstr ""
+
+#: start/views.py:235
+#, python-format
+msgid "There were already %(count)d screenshot requests from your IP today."
+msgstr ""
+
+#: start/views.py:236
+#, fuzzy, python-format
+msgid "You have already requested %(count)d screenshots today."
+msgstr "stáhnout %(count)d screenshotů"
+
+#: start/views.py:238
+#, fuzzy
+msgid "Please create a user account."
+msgstr "vytvořit nový účet"
+
+#: start/views.py:239
+msgid "Please sign up for priority processing."
+msgstr ""
+
+#: start/views.py:240
+#, python-format
+msgid "Please write to %(email)s."
+msgstr ""
+
+#: start/views.py:290
+msgid "all"
+msgstr ""
+
+#: start/views.py:291
+#, fuzzy
+msgid "none"
+msgstr "jádro"
+
+#: start/forms/features.py:35 start/forms/options.py:36
+#: start/forms/options.py:49
+msgid "don't care"
+msgstr "nechat být"
+
+#: start/forms/special.py:36
+#, fuzzy
+msgid "Test your own screenshot factories with priority."
+msgstr "vaše screenshotové stroje"
+
+#: start/forms/url.py:56
+msgid "Enter your web address here:"
+msgstr "Zadejte vaši stránku:"
+
+#: start/forms/url.py:94
+#, python-format
+msgid "URL scheme %(scheme)s is not supported."
+msgstr "Schéma URL %(scheme)s není povoleno."
+
+#: start/forms/url.py:99
+msgid "Malformed URL (server name not specified)."
+msgstr "Neplatná URL (není zvolen název serveru)."
+
+#: start/forms/url.py:102
+msgid "Malformed URL (spaces in server name)."
+msgstr "Neplatná URL (mezery v názvu serveru)."
+
+#: start/forms/url.py:131
+#, fuzzy, python-format
+msgid "Domain name %(domain)s is disallowed."
+msgstr "IP adresa %(ip)s je zakázána."
+
+#: start/forms/url.py:136
+#, python-format
+msgid "Could not resolve IP address for %(hostname)s."
+msgstr "Nelze zjistit IP adresu %(hostname)s."
+
+#: start/forms/url.py:152
+#, python-format
+msgid "Server IP address %(ip)s is disallowed."
+msgstr "IP adresa %(ip)s je zakázána."
+
+#: start/forms/url.py:179
+#, python-format
+msgid "Could not get robots.txt from %(hostname)s."
+msgstr "Nelze získat robots.txt z %(hostname)s."
+
+#: start/forms/url.py:190
+#, python-format
+msgid "Browsershots was blocked by %(robots_txt_url)s."
+msgstr ""
+
+#: start/forms/url.py:191
+#, python-format
+msgid "Please read the %(faq)s."
+msgstr ""
+
+#: start/forms/url.py:202
+#, python-format
+msgid "Could not connect to %(hostname)s."
+msgstr "Nelze se připojit k %(hostname)s."
+
+#: start/forms/url.py:204
+#, python-format
+msgid "Could not send HTTP request to %(hostname)s."
+msgstr "Nelze zaslat HTTP požadavek na %(hostname)s."
+
+#: start/forms/url.py:206
+#, python-format
+msgid "Could not get page content from %(hostname)s."
+msgstr "Nelze získat obsah stránky z %(hostname)s."
+
+#: start/forms/url.py:249
+msgid "Malformed URL (database integrity error)."
+msgstr "Neplatná URL (chyba integrity databáze)."
+
+#: start/forms/url.py:271
+#, python-format
+msgid "Server failed to respond within %d seconds."
+msgstr "Server neodpovědel během %d vteřin."
+
+#: start/templates/start/start.html:9 start/templates/start/start.html:12
+msgid "Test your web design in different browsers"
+msgstr "Otestujte váš webdesign v různých prohlížečích"
+
+#: start/templates/start/start.html:21
+msgid "Do you need more screenshots per day?"
+msgstr ""
+
+#: start/templates/start/start.html:26
+msgid "Click here for results from previous screenshot requests:"
+msgstr ""
+
+#: start/templates/start/start.html:50
+#, fuzzy
+msgid "select"
+msgstr "označit vše"
+
+#: start/templates/start/start.html:83
+msgid "project links"
+msgstr "odkazy"
+
+#: start/templates/start/start.html:85
+msgid "documentation"
+msgstr "dokumentace"
+
+#: start/templates/start/start.html:86
+msgid "mailing lists"
+msgstr "mailing listy"
+
+#: start/templates/start/start.html:87
+msgid "XML-RPC interface"
+msgstr "XML-RPC rozhraní"
+
+#: start/templates/start/start.html:88
+msgid "source code"
+msgstr "zdrojový kód"
+
+#: start/templates/start/start.html:89
+msgid "downloads"
+msgstr "ke stažení"
+
+#: start/templates/start/start.html:90
+msgid "translations"
+msgstr "překlady"
+
+#: start/templates/start/start.html:95
+msgid "What is Browsershots?"
+msgstr "Co je Browsershots?"
+
+#: start/templates/start/start.html:97
+msgid ""
+"Browsershots makes screenshots of your web design in different browsers."
+msgstr ""
+"Browsershots vytvářejí screenshoty vašich stránek v různých prohlížečích."
+
+#: start/templates/start/start.html:98
+msgid "It is a free open-source online service created by Johann C. Rocholl."
+msgstr ""
+"Je to online služba, poskytována zadarmo a vytvořena  Johann C. Rochollem."
+
+#: start/templates/start/start.html:99
+msgid "When you submit your web address, it will be added to the job queue."
+msgstr "Když zadáte vaši stránku, bude přidána do fronty k zpracování."
+
+#: start/templates/start/start.html:100
+msgid ""
+"A number of distributed computers will open your website in their browser."
+msgstr "Několik spravovaných strojů otevře vaší stránku ve svém prohlížeči."
+
+#: start/templates/start/start.html:101
+msgid ""
+"Then they will make screenshots and upload them to the central server here."
+msgstr "Poté vytvoří screenshot a zašlou jej sem na centrální server."
+
+#: start/templates/start/start.html:107
+msgid "latest news"
+msgstr "poslední novinky"
+
+#: start/templates/start/start.html:119
+msgid "premium sponsors"
+msgstr "premium sponzoři"
+
+#: websites/models.py:38
+msgid "Missing slash after the hostname."
+msgstr "Chybí lomítko za názvem hostitele."
+
+#: websites/models.py:57 websites/models.py:78
+msgid "domain"
+msgstr "doména"
+
+#: websites/models.py:58
+msgid "domains"
+msgstr "domény"
+
+#: websites/models.py:80
+msgid "profanities"
+msgstr "prohřešky"
+
+#: websites/models.py:82
+msgid "fetched"
+msgstr "získáno"
+
+#: websites/models.py:93
+msgid "websites"
+msgstr "webové stránky"
+
+#: websites/templates/websites/details.html:5
+#: websites/templates/websites/details.html:8
+msgid "website overview"
+msgstr "přehled stránek"
+
+#: websites/templates/websites/details.html:42
+#: websites/templates/websites/unknown.html:18
+msgid "other pages on the same domain"
+msgstr "Další stránky na stejné doméně"
+
+#: websites/templates/websites/unknown.html:5
+#: websites/templates/websites/unknown.html:8
+msgid "unknown website"
+msgstr "neznámý web"
+
+#: websites/templates/websites/unknown.html:11
+msgid "This address was never submitted, or removed after inactivity."
+msgstr "Tato adresa nebyla nikdy vložena, nebo byla odstraněna po neaktivitě."
+
+#~ msgid "hardware architecture"
+#~ msgstr "hardwarová architektura"
+
+#~ msgid "Screenshot Factories"
+#~ msgstr "Stroje na screenshoty"
+
+#~ msgid "architecture"
+#~ msgstr "architektura"
+
+#~ msgid "architectures"
+#~ msgstr "architektury"
+
+#~ msgid "sender"
+#~ msgstr "odesílatel"
+
+#~ msgid "receiver"
+#~ msgstr "příjemce"
+
+#~ msgid "points"
+#~ msgstr "bodů"
+
+#~ msgid "paid"
+#~ msgstr "placeno"
+
+#~ msgid "transaction"
+#~ msgstr "transakce"
+
+#~ msgid "transactions"
+#~ msgstr "transakce"
+
+#~ msgid "considered"
+#~ msgstr "zváženo"
+
+#~ msgid "balance"
+#~ msgstr "zůstatek"
+
+#~ msgid "balances"
+#~ msgstr "zůstatky"
+
+#~ msgid "bid"
+#~ msgstr "přihození"
+
+#~ msgid "bids"
+#~ msgstr "přihození"
+
+#~ msgid "account"
+#~ msgstr "účet"
+
+#~ msgid "This is your private account page. Only you can see it."
+#~ msgstr "Toto je soukromá stránka vašeho účtu. Jenom vy k ní máte přístup."
+
+#~ msgid "points received"
+#~ msgstr "obdržených bodů"
+
+#~ msgid "points paid"
+#~ msgstr "zaplacených bodů"
+
+#~ msgid "Screenshot request queue"
+#~ msgstr "Fronta požadavků na screenshoty"
+
+#~ msgid "log in"
+#~ msgstr "přihlásit se"
+
+#~ msgid "sign in"
+#~ msgstr "přihlásit se"
+
+#~ msgid "Your username and password didn't match."
+#~ msgstr "Vaše uživatelské jméno a heslo nesouhlasí."
+
+#~ msgid "Please try again."
+#~ msgstr "Zkuste to prosím znovu."
+
+#~ msgid "content"
+#~ msgstr "obsah"
+
+#~ msgid "e.g. i686 / PPC"
+#~ msgstr "např. i686 / PPC"
+
+#, fuzzy
+#~ msgid "usage report"
+#~ msgstr "ohlášení chyby"
+
+#, fuzzy
+#~ msgid "Submit"
+#~ msgstr "odeslat"
+
+#~ msgid "deselect all"
+#~ msgstr "odznačit vše"

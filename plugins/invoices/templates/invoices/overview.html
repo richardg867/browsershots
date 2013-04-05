@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load human %}
+{% load i18n %}
+
+{% block title %}{{ _("invoices")|capfirst }}{% endblock %}
+
+{% block content %}
+<h1>{{ _("invoices")|capfirst }}</h1>
+
+{% if priorities_list %}
+<table>
+<tr>
+<th>{{ _("invoice")|capfirst }}</th>
+<th>{{ _("date")|capfirst }}</th>
+<th>{{ _("payment")|capfirst }}</th>
+<th>{{ _("download")|capfirst }}</th>
+</tr>
+{% for priority in priorities_list %}
+<tr>
+<td>{{ priority.id }}</td>
+<td>{{ priority.activated|human_date }}</td>
+<td>{{ priority.payment }} {{ priority.currency }}</td>
+<td><a href="/invoices/{{ priority.id }}.pdf">PDF</a></td>
+</tr>
+{% endfor %}
+</table>
+
+<p>
+<b>Billing address:</b><br />
+{% for line in address %}{{ line }}<br />
+{% endfor %}</p>
+
+<p><a href="/invoices/address/">Change your billing address?</a></p>
+{% else %}
+<p class="admonition hint">
+{{ _("Your invoices will appear here when you make a purchase.") }}
+</p>
+<p>
+{{ _("No purchases could be found for this user account.") }}
+{% blocktrans with "mailto:johann@browsershots.org" as href %}Please <a href="{{ href }}">send email</a> if you think this is a bug.{% endblocktrans %}
+</p>
+{% endif %}
+{% endblock %}

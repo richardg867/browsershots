@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load human %}
+
+{% block title %}{{ _("add a new browser version")|capfirst }}{% endblock %}
+
+{% block content %}
+<h1>{{ _("add a new browser version")|capfirst }}</h1>
+
+{{ form.non_field_errors }}
+{{ password_form.non_field_errors }}
+<form action="/browsers/add/" method="post" id="add_browser_form">
+{% for group in field_groups %}
+{% for row in group %}<p>
+{% for field in row %}{{ field.errors }}{{ field.label|capfirst }}:
+{{ field }} {{ field.help_text }}
+{% endfor %}</p>
+{% endfor %}<hr />
+{% endfor %}
+<p><input class="button" id="submit" name="submit" type="submit" value="{{ _("submit")|capfirst }}" /></p>
+</form>
+
+<h2>{{ _("updates")|capfirst }}</h2>
+<p>
+{{ _("You can also use this page when you've changed settings or updated the browser.") }}
+{{ _("If the same browser is already registered for your factory, it will be replaced.") }}
+</p>
+
+<h2>{{ _("other options")|capfirst }}</h2>
+<p>{% blocktrans with admin_email as email %}If your browser group or rendering engine is not available, please write to {{ email }}.{% endblocktrans %}</p>
+
+<script type="text/javascript" src="/static/js/brwsniff.js"></script>
+
+<script type="text/javascript">
+function auto_select(id, text) {
+  field = document.getElementById(id);
+  l = field.options.length;
+  for (i = 0; i < l; i++) {
+    if (field.options[i].text == text) { field.selectedIndex = i; }
+  }
+}
+
+auto_select("id_javascript", jsVersion());
+auto_select("id_java", navigator.javaEnabled() ? "{{ _("enabled") }}" : "{{ _("disabled") }}");
+
+flash = hasFlashPlugin();
+if (flash[0] == 2) { auto_select("id_flash", flash[1]); }
+if (flash[0] == 1) { auto_select("id_flash", "{{ _("disabled") }}"); }
+</script>
+{% endblock %}

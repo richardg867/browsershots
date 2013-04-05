@@ -1,0 +1,21 @@
+{% extends "adbase.html" %}
+{% load i18n %}
+{% load human %}
+
+{% block title %}{{ request_group }}{% endblock %}
+
+{% block content %}
+<h1>{{ request_group }}</h1>
+<p>{% blocktrans with website|human_link as url %}for {{ url }}{% endblocktrans %}</p>
+
+{% for platform, estimates in platform_queue_estimates %}
+<div class="estimates">
+<h3>{{ platform }}</h3>
+<table>
+{% for estimate in estimates %}
+<tr><td>{{ estimate.browser }}</td><td>{{ estimate.status }}</td></tr>
+{% endfor %}
+</table>
+</div>
+{% endfor %}
+{% endblock %}

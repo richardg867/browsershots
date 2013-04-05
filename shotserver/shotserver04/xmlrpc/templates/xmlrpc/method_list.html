@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}XML-RPC Methods{% endblock %}
+
+{% block content %}
+<h1>XML-RPC Methods</h1>
+<p>This server supports the following XML-RPC methods:</p>
+<ul>
+{% for method in method_list %}
+<li><a href="{{ method }}/">{{ method }}</a></li>
+{% endfor %}
+</ul>
+{% endblock %}

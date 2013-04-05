@@ -1,0 +1,9 @@
+For global installation:
+$ sudo python setup.py install
+
+For installation to your Trac environment:
+$ python setup.py bdist_egg
+$ sudo cp dist/*.egg /var/lib/trac/projectname/plugins/
+
+It's probably a good idea to restart the web server:
+$ sudo /etc/init.d/apache2 restart

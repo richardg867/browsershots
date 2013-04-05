@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load human %}
+{% load countries %}
+
+{% block title %}{{ _("invoice")|capfirst }}{% endblock %}
+
+{% block content %}
+<h1>{{ _("invoice")|capfirst }}</h1>
+
+<p>
+Customer:<br />
+{{ user.first_name|capfirst }} {{ user.last_name|capfirst }}<br />
+{{ priority.country|country_name }}
+</p>
+
+<table>
+<tr>
+<th>Order</th>
+<th>Item</th>
+<th>Price</th>
+</tr>
+<tr>
+<td>{{ priority.id }}</td>
+<td>Priority processing for {{ user.username }}<br />
+from {{ priority.activated|human_date }}
+to {{ priority.expire|human_date }}</td>
+<td>{{ priority.currency }} {{ priority.payment }}</td>
+</tr>
+</table>
+
+<p>
+Browsershots<br />
+Johann C. Rocholl<br />
+Pütnitzer Str. 12<br />
+18311 Ribnitz-Damgarten<br />
+GERMANY
+</p>
+{% endblock %}

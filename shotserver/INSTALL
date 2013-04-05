@@ -1,0 +1,167 @@
+= How to install the ShotServer =
+
+'''This documentation is for the development version 0.4 of Browsershots 
+(based on [http://www.djangoproject.com/ Django]).''' The documentation for 
+the old stable version 0.3 is [InstallServerOld here].
+
+If you want to support the development of Browsershots, you can hire me as 
+a contractor to set up Browsershots as an in-house browser testing system 
+for you, and adapt it to your requirements. I speak German and English (and 
+a little French and Swedish), and will come to your office even if it's in 
+Timbuktu. Send email to [mailto:johann@browsershots.org 
+johann@browsershots.org] if you're interested. My rates are cheap because 
+I'm still a student, so hurry!
+
+[[PageOutline(2-3,,inline)]]
+
+----
+
+== Hardware and OS ==
+
+See RequirementsForServer.
+
+----
+
+== Software ==
+
+=== Prerequisites ===
+
+{{{
+sudo apt-get install netpbm
+}}}
+
+=== Install Django source code ===
+
+Until Django 1.0 is released, Browsershots 0.4 will use the development 
+version (trunk) of Django.
+
+{{{
+svn checkout http://code.djangoproject.com/svn/django/trunk django
+cd django
+sudo python setup.py install
+}}}
+
+=== Install ShotServer source code ===
+
+Use Subversion to check out the latest development version of the software 
+(the same code that is running on http://v04.browsershots.org/):
+
+{{{
+svn checkout http://svn.browsershots.org/trunk/shotserver
+}}}
+
+For the quick-start development server, you don't need to install the 
+Browsershots source code in '''/usr/lib/''' because you run the development 
+server from your local copy. Only for use with a real web server like 
+Apache, you would do the following:
+
+{{{
+cd shotserver
+sudo python setup.py install
+}}}
+
+=== Install the database ===
+
+You need a recent version of PostgreSQL. If version 8.2 is not available on 
+your distribution, 8.1 will work too.
+{{{
+sudo apt-get install postgresql-8.2 python-psycopg
+}}}
+
+You can create the database as the same user that will be running the 
+development server, so you don't need to worry about passwords.
+{{{
+createdb shotserver04
+CREATE DATABASE
+}}}
+
+If necessary, create the database user first (replace www-data with your 
+username):
+{{{
+sudo -u postgres createuser www-data
+Shall the new role be a superuser? (y/n) n
+Shall the new role be allowed to create databases? (y/n) y
+Shall the new role be allowed to create more new roles? (y/n) n
+CREATE ROLE
+}}}
+
+Let Django create the database tables for you:
+{{{
+cd shotserver/shotserver04
+./manage.py syncdb
+}}}
+
+When it asks if you would like to create an admin account, say yes.
+
+=== Create content folders ===
+
+If you haven't changed the directories in '''settings.py''', you need the 
+following folders:
+{{{
+sudo mkdir -p /var/www/v04.browsershots.org/png
+}}}
+
+The '''png''' folder must be writable by the user running the server.
+{{{
+sudo chown www-data:www-data /var/www/v04.browsershots.org/png
+}}}
+
+== Quick start with the development server ==
+
+On a production system, you would use Apache 2 or some other serious web 
+server. But to get started quickly, it is recommended that you use the 
+Django development server first, and then switch to a real web server later 
+when it works okay.
+
+=== Run the development server ===
+
+You can do this on your normal user account, but you must have write access 
+to the database '''shotserver04''' and to the directory 
+'''/var/www/browsershots.org/png/'''.
+
+{{{
+cd shotserver/shotserver04
+./manage.py runserver
+}}}
+
+More detailed instructions are available in the 
+[http://www.djangoproject.com/documentation/django-admin/ Django 
+documentation].
+
+== Admin interface ==
+
+Point your browser to http://127.0.0.1:8000/admin/ and enter your username 
+and password.
+
+=== Adjust the sites configuration ===
+
+ * Go to the "Sites" admin page http://127.0.0.1:8000/admin/sites/site/
+ * Change "example.com" to "127.0.0.1:8000" or equivalent
+ * Change the display name to "Browsershots"
+
+=== Create screenshot factories ===
+
+http://127.0.0.1:8000/admin/factories/factory/add/
+
+== Web frontend ==
+
+Point your browser to http://127.0.0.1:8000/ to see the web interface. 
+Replace 127.0.0.1 with the hostname of your development machine if you want 
+to access it from other computers.
+
+=== Add browsers to your factories ===
+
+Visit http://127.0.0.1:8000/browsers/add/ with each browser on your 
+screenshot factory. The page should detect your browser settings 
+automatically. Enter your password and click submit to register your 
+browser in the database.
+
+You can use http://127.0.0.1:8000/admin/browsers/browser/ to add or delete 
+browsers manually or change their settings.
+
+== Run Django with mod_python on Apache ==
+
+After you get the development server to run, you may want to switch to a 
+real web server for performance and stability. See the 
+[http://www.djangoproject.com/documentation/modpython/ Django 
+documentation] for details, and INSTALL.APACHE for example configuration.
