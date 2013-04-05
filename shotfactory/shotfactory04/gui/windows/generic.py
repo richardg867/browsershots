@@ -36,21 +36,6 @@ class Gui(windows.Gui):
         """
         # Nothing
 
-    def start_browser(self, config, url, options):
-        """
-        Start browser and load website.
-        """
-        self.command = config['command']
-        print 'running', self.command
-        try:
-            import subprocess
-        except ImportError:
-            os.spawnl(os.P_DETACH, self.command, os.path.basename(self.command), url)
-        else:
-            subprocess.Popen([self.command, url])
-        print "Sleeping %d seconds while page is loading." % options.wait
-        time.sleep(options.wait)
-
     def find_scrollable(self):
         """
         Find the scrollable window.
