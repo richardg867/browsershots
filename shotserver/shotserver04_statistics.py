@@ -25,7 +25,7 @@ line in /etc/crontab (replace www-data with the database owner):
 """
 
 __revision__ = "$Rev: 2620 $"
-__date__ = "$Date: 2008-02-02 16:57:55 -0300 (sáb, 02 fev 2008) $"
+__date__ = "$Date: 2008-02-02 16:57:55 -0300 (sab, 02 fev 2008) $"
 __author__ = "$Author: johann $"
 
 import sys

@@ -19,7 +19,7 @@ XML-RPC dispatcher with full introspection and multicall support.
 """
 
 __revision__ = "$Rev: 2363 $"
-__date__ = "$Date: 2007-11-24 19:23:07 -0300 (sáb, 24 nov 2007) $"
+__date__ = "$Date: 2007-11-24 19:23:07 -0300 (sab, 24 nov 2007) $"
 __author__ = "$Author: johann $"
 
 import sys

@@ -19,7 +19,7 @@ Test suite for nonces app.
 """
 
 __revision__ = "$Rev: 2894 $"
-__date__ = "$Date: 2008-06-14 18:27:37 -0300 (sáb, 14 jun 2008) $"
+__date__ = "$Date: 2008-06-14 18:27:37 -0300 (sab, 14 jun 2008) $"
 __author__ = "$Author: johann $"
 
 from unittest import TestCase

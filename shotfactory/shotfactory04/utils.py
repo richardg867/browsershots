@@ -19,7 +19,7 @@ Helper functions, with doctest.
 """
 
 __revision__ = "$Rev: 2677 $"
-__date__ = "$Date: 2008-02-09 12:17:46 -0300 (sáb, 09 fev 2008) $"
+__date__ = "$Date: 2008-02-09 12:17:46 -0300 (sab, 09 fev 2008) $"
 __author__ = "$Author: johann $"
 
 

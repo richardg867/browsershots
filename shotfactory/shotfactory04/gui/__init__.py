@@ -19,7 +19,7 @@ Base class for GUI-specific wrappers.
 """
 
 __revision__ = "$Rev: 2499 $"
-__date__ = "$Date: 2007-12-29 13:51:29 -0300 (sáb, 29 dez 2007) $"
+__date__ = "$Date: 2007-12-29 13:51:29 -0300 (sab, 29 dez 2007) $"
 __author__ = "$Author: hawk $"
 
 import time

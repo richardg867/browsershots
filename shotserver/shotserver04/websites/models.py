@@ -19,7 +19,7 @@ Website models.
 """
 
 __revision__ = "$Rev: 3088 $"
-__date__ = "$Date: 2008-09-13 13:18:16 -0300 (sáb, 13 set 2008) $"
+__date__ = "$Date: 2008-09-13 13:18:16 -0300 (sab, 13 set 2008) $"
 __author__ = "$Author: johann $"
 
 import cgi

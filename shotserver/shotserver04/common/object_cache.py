@@ -20,7 +20,7 @@ Primary keys must be integers, and must be called 'id'.
 """
 
 __revision__ = "$Rev: 2809 $"
-__date__ = "$Date: 2008-05-10 03:15:14 -0300 (sáb, 10 mai 2008) $"
+__date__ = "$Date: 2008-05-10 03:15:14 -0300 (sab, 10 mai 2008) $"
 __author__ = "$Author: johann $"
 
 from django.core.cache import cache
