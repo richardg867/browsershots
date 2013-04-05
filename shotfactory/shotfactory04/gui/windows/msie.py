@@ -78,6 +78,7 @@ class Gui(windows.Gui):
         """
         Start browser and load website.
         """
+        self.major = config['major']
         self.check_version_override(config['major'], config['minor'])
         command = config['command'] or r'c:\progra~1\intern~1\iexplore.exe'
         print 'running', command
@@ -94,7 +95,10 @@ class Gui(windows.Gui):
         """
         Find the scrollable window.
         """
-        ieframe = self.find_window_by_classname('IEFrame')
+        if self.major < 5:
+            ieframe = self.find_window_by_classname('CabinetWClass')
+        else:
+            ieframe = self.find_window_by_classname('IEFrame')
         frametab = self.find_child_window_by_classname(
             ieframe, "Frame Tab")
         if frametab:
