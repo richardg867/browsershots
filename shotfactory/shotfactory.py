@@ -126,7 +126,10 @@ def browsershot(options, server, config, password):
             platform_name.lower(), browser_module)
     else:
         raise NotImplementedError("unsupported platform: " + platform_name)
-    gui_module = __import__(module_name, globals(), locals(), ['non-empty'])
+    try:
+        gui_module = __import__(module_name, globals(), locals(), ['non-empty'])
+    except ImportError:
+        gui_module = __import__('shotfactory04.gui.%s.generic' % platform_name.lower(), globals(), locals(), ['non-empty'])
     gui = gui_module.Gui(config, options)
     url = server.get_request_url(config)
 
