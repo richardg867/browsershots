@@ -87,6 +87,8 @@ class Gui(base.Gui):
             'k-meleon.exe',
             'flock.exe',
             'navigator.exe',
+            'maxthon.exe',
+            'avant.exe',
             )
         for name in process_names:
             # Kill all processes matching name, using
