@@ -63,7 +63,8 @@ class Gui(windows.Gui):
             return
         expected_minor = '%d' % minor
         registered_minor = registered.split('.')[1]
-        while len(expected_minor) < len(registered_minor):
+        requested_minor = '0'
+        while len(requested_minor) < len(registered_minor):
             requested_minor += '0'
         requested = '%d.%d' % (major, requested_minor)
         if registered != requested:
