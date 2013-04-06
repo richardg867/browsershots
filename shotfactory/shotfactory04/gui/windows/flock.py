@@ -57,7 +57,11 @@ class Gui(windows.Gui):
         """
         Start browser and load website.
         """
-        command = config['command'] or r'c:\progra~1\flock\flock\flock.exe'
+        if config['major'] == 2:
+            defcmd = r'c:\progra~1\flock\flock.exe'
+        else:
+            defcmd = r'c:\progra~1\flock\flock\flock.exe'
+        command = config['command'] or defcmd
         print 'running', command
         try:
             import subprocess
