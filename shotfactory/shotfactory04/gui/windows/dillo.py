@@ -29,7 +29,7 @@ from shotfactory04.gui import windows
 
 class Gui(windows.Gui):
     """
-    Special functions for Maxthon on Windows.
+    Special functions for Dillo on Windows.
     """
 
     def reset_browser(self):
@@ -68,7 +68,7 @@ class Gui(windows.Gui):
 
     def find_scrollable(self):
         """Find scrollable window."""
-        return self.find_maximizable()
+        return win32gui.WindowFromPoint((self.width/2, self.height/2))
 
 
 # Test browser interface from command line                                              
