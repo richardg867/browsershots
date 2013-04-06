@@ -29,6 +29,7 @@ import win32api
 import win32gui
 import win32con
 import pywintypes
+import getpass
 from shotfactory04 import gui as base
 from shotfactory04.utils import remove_version_number, short_filename
 
@@ -72,6 +73,7 @@ class Gui(base.Gui):
     def close(self):
         """Close the browser."""
         # win32gui.PostMessage(self.msie_window, win32con.WM_CLOSE, 0, 0)
+        username = getpass.getuser()
         process_names = (
             'iexplore.exe',
             'chrome.exe',
@@ -96,10 +98,10 @@ class Gui(base.Gui):
             # Kill all processes matching name, using
             # pv.exe from teamcti.com (freeware):
             # http://www.teamcti.com/pview/prcview.htm
-            os.system('pv.exe -kf %s "2>nul" > nul' % name)
+            os.system('pv.exe -kf -y%s %s "2>nul" > nul' % (username, name))
             short = short_filename(name)
             if short != name:
-                os.system('pv.exe -kf %s "2>nul" > nul' % short)
+                os.system('pv.exe -kf -y%s %s "2>nul" > nul' % (username, short))
 
 
     def find_window_by_title_suffix(self, suffix):
