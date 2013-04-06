@@ -46,7 +46,6 @@ class Gui(windows.Gui):
         """
         Start browser and load website.
         """
-        self.major = config['major']
         command = config['command'] or r'c:\progra~1\maxthon\bin\maxthon.exe'
         print 'running', command
         try:
@@ -57,10 +56,6 @@ class Gui(windows.Gui):
             subprocess.Popen([command, url])
         print "Sleeping %d seconds while page is loading." % options.wait
         time.sleep(options.wait)
-
-    def find_maximizable(self):
-        """Find window to maximize."""
-        return self.find_window_by_classname('Maxthon3Cls_MainFrm')
 
     def find_scrollable(self):
         """Find scrollable window."""
