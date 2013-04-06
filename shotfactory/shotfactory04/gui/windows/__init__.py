@@ -90,6 +90,7 @@ class Gui(base.Gui):
             'maxthon.exe',
             'avant.exe',
             'dillo.exe',
+            'luna.exe',
             )
         for name in process_names:
             # Kill all processes matching name, using
