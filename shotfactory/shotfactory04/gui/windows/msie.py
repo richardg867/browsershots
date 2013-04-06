@@ -108,8 +108,12 @@ class Gui(windows.Gui):
             ieframe, "TabWindowClass")
         if tabs:
             ieframe = tabs
-        return self.find_child_window_by_classname(
-            ieframe, "Shell DocObject View")
+        if self.major > 8:
+            return self.find_child_window_by_classname(
+                ieframe, "Internet Explorer_Server")
+        else:
+            return self.find_child_window_by_classname(
+                ieframe, "Shell DocObject View")
 
 
 # Test scrolling from command line

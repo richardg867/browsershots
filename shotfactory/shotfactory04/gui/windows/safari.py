@@ -49,6 +49,7 @@ class Gui(windows.Gui):
         """
         Start browser and load website.
         """
+        self.major = config['major']
         command = config['command'] or r'c:\progra~1\safari\safari.exe'
         print 'running', command
         try:
@@ -64,18 +65,21 @@ class Gui(windows.Gui):
         """
         Find the scrollable window.
         """
-        hwnd = win32gui.WindowFromPoint((self.width/2, self.height/2))
-        for dummy in range(20):
-            if not hwnd:
-                return None
-            if self.verbose >= 3:
-                print 'handle', hwnd
-                print 'classname', win32gui.GetClassName(hwnd)
-                print 'text', win32gui.GetWindowText(hwnd)
-                print
-            if win32gui.GetClassName(hwnd) == 'WebViewWindowClass':
-                return hwnd
-            hwnd = win32gui.GetParent(hwnd)
+        if self.major > 4:
+            return win32gui.WindowFromPoint((self.width/2, self.height/2))
+        else:
+            hwnd = win32gui.WindowFromPoint((self.width/2, self.height/2))
+            for dummy in range(20):
+                if not hwnd:
+                    return None
+                if self.verbose >= 3:
+                    print 'handle', hwnd
+                    print 'classname', win32gui.GetClassName(hwnd)
+                    print 'text', win32gui.GetWindowText(hwnd)
+                    print
+                if win32gui.GetClassName(hwnd) == 'WebViewWindowClass':
+                    return hwnd
+                hwnd = win32gui.GetParent(hwnd)
 
 
 # Test scrolling from command line
